@@ -10,12 +10,23 @@
 .wrapper {
     margin: 0 auto;
     width: $desktop-wrap;
-    flex-grow: 1;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.map-heading {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    margin: 60px 0 40px 0;
+}
+
 @import "block/_header.scss";
 @import "block/_footer.scss";
+@import "block/_promo.scss";
+@import "block/_advantages.scss";
+@import "block/_news.scss";
+@import "block/_banner.scss";

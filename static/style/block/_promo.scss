@@ -1,0 +1,41 @@
+.slider-wrap {
+    background-image: url("https://s3-alpha-sig.figma.com/img/12bb/765c/3adb025a77d3c89a499258ebb1787bfc?Expires=1661731200&Signature=UF-Ledu-B41lnn11a1aF2igSheoRyAhJIdZrsmQIC49kq1iQ9sK5Qu5ozutO7qlpFzH8U6NT6XZxz9yYkDDiAjAyjmWIQl8fQEcu9Eyd9l3P~Alinkx2p11bwxUQ-bi5ceOqDGHhBf3~CFtzqsQmagsuXze6XK8sSPrDGJZnLbmN9ZA7iPa1jXTPuG-jIpNSmnsB6uDs~7OG2e~~iN0AeDmoBgVi7IeD-7YDOPvkjm86JcSLKMj9qK2mP0Q4O~arNRXp~Xl3oZxiuHfRdGRu~sGINqR5lJT667eIltxHQStWNzFs6CFflT1d6sYXUVbr~omm9V4p3aDlwKJdmdvRjQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+    height: 400px;
+    background-color: $main-lightgrey;
+    background-size: cover;
+    background-position: bottom;
+}
+.promo {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 65px;
+        &-item {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            color: $main-black;
+            margin-bottom: 80px;
+            &__red {
+                font-weight: 600;
+                font-size: 60px;
+                color: $main-red;
+            }
+        }
+    }
+    &-col1 {
+        width: 330px;
+        margin-right: 60px;
+    }
+    &-col2 {
+        width: 340px;
+        margin-right: 60px;
+    }
+    &-col3 {
+        width: 270px;
+    }
+}
+
