@@ -1,0 +1,21 @@
+@import "_var.scss";
+@import "_mixins.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: $desktop-wrap;
+    flex-grow: 1;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import "block/_header.scss";
+@import "block/_footer.scss";
