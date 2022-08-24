@@ -1,0 +1,34 @@
+.promo {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 65px;
+        &-item {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            color: $main-black;
+            margin-bottom: 80px;
+            &__red {
+                font-weight: 600;
+                font-size: 60px;
+                color: $main-red;
+            }
+        }
+    }
+    &-col1 {
+        width: 330px;
+        margin-right: 60px;
+    }
+    &-col2 {
+        width: 340px;
+        margin-right: 60px;
+    }
+    &-col3 {
+        width: 270px;
+    }
+}
+
