@@ -41,10 +41,10 @@
                 border: 2px solid $main-red;
                 background-color: $main-red;
                 cursor: pointer;
+                transition: 0.5s ease;
                 &:hover {
                     color: $main-red;
                     background-color: $main-white;
-                    transition: 0.5s;
                 }
             }
         }

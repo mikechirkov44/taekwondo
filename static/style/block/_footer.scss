@@ -42,6 +42,9 @@
             font-size: 14px;
             line-height: 17px;
             color: #bfbfbf;
+            &:hover {
+                text-decoration: underline;
+            }
         }
         &__span {
             font-size: 14px;
@@ -56,8 +59,23 @@
         flex-direction: row;
         &-item {
             margin: 30px 20px 0 0;
-            &:hover path {
-                fill: $main-red;
+        }
+        &-link:hover {
+            svg circle {
+                fill: $main-white;
+                transition: 0.3s;
+            }
+        }
+        &-link__last:hover {
+            svg {
+                circle {
+                    fill: $main-darkgrey;
+                    transition: 0.3s;
+                }
+                path {
+                    fill: $main-white;
+                    transition: 0.3s;
+                }
             }
         }
     }
