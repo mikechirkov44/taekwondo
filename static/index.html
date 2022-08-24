@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -58,7 +58,56 @@
         </div>
     </header>
     <section class="slider">
-        <div class="slider-wrap"></div>
+        <div class="slider-wrap wrapper">
+            <button class="slider-btn slider-btn__prev" onclick="moveSlide(-1)"></button>
+            <div class="slider-items">
+                <div class="slider-item">
+                    <div class="slider-item1">
+                            <img src="./img/itn.png" alt="itm">
+                            <img src="./img/logo.png" alt="logo">
+                            <img src="./img/blazon.png" alt="blazon">
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item2">
+                        <img class="slider-item2__img" src="./img/maxresdefault.png" alt="founder">
+                        <div class="slider-item2__text">
+                            <article class="slider-item2__text__article">Быть полным решимости идти, хотя путь будет трудным, и&nbsp;делать&nbsp;то, что нужно делать, хоть это будет нелегко</article>
+                            <span class="slider-item2__text__small">Основатель тхэквондо генерал Чой Хонг&nbsp;Хи</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item3">
+                        <img src="./img/logo.png" alt="logo">
+                        <div class="slider-item3__text">
+                            <article class="slider-item3__text__article">
+                                &laquo;... В&nbsp;числе первостепенных задач не&nbsp;ставится сделать из ребёнка суперспортсмена, поскольку, если мы&nbsp;будем гнаться за&nbsp;показателями, ему будет просто скучно. 
+                                <br>
+                                Мы&nbsp;проводим интересные, зрелищные тренировки, где основной акцент делается именно на&nbsp;процесс, вывозим детей на&nbsp;соревнования, на&nbsp;сборы в&nbsp;летние лагеря. Работа, проводимая в&nbsp;регионах&nbsp;&mdash; обычно личная инициатива энтузиастов...&raquo;
+                            </article>
+                            <span class="slider-item3__text__small">Маклаков Вячеслав Павлович 
+                                <br>
+                                Президент РСОО &laquo;Костромская Федерация Тхэквондо ИТФ&raquo;
+                            </span>
+                        </div>
+                        <img src="./img/2021-maklakov__1.png" alt="maklakov">
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn slider-btn__next" onclick="moveSlide(1)"></button>
+            <div class="slider-item__dots">
+                <svg class="slider-item__dot" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse rx="3.7922" ry="3.77202" transform="matrix(1 0 0 -1 4.5422 4.7104)"/>
+                </svg>
+                <svg class="slider-item__dot" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">                           
+                    <ellipse rx="3.7922" ry="3.77202" transform="matrix(1 0 0 -1 4.5422 4.7104)"/>
+                </svg>
+                <svg class="slider-item__dot" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">                             
+                    <ellipse rx="3.7922" ry="3.77202" transform="matrix(1 0 0 -1 4.5422 4.7104)"/>
+                </svg>
+            </div>
+        </div>
     </section>
     <section class="promo">
         <div class="wrapper">
@@ -159,11 +208,18 @@
         </div>
     </section>
     <section class="banner">
-        <div class="banner-wrap">
+        <div class="wrapper banner-wrap">
             <div class="banner-offer">
-                <div class="banner-offer__text"></div>
-                <span class="banner-offer__text__small"></span>
-                <button class="banner-offer__btn"></button>
+                <div class="banner-offer__text">Занятия проходят 3&nbsp;раза в&nbsp;неделю. Продолжительность тренировки от&nbsp;1&nbsp;часа</div>
+                <div class="banner-offer__bottom">
+                    <span class="banner-offer__bottom__text">Мы&nbsp;ждем Вас на&nbsp;первом бесплатном занятии</span>
+                    <button class="banner-offer__bottom__btn">Записаться</button>
+                </div>
+            </div>
+            <img src="./img/banner-offer_girl.png" alt="banner-girl" class="banner-offer__img">
+            <div class="banner-cost">
+                <span class="banner-cost__text">Стоимость занятий от&nbsp;1600 рублей в&nbsp;месяц</span>
+                <img src="./img/monastery.png" alt="monastery" class="banner-cost__img">
             </div>
         </div>
     </section>
@@ -287,5 +343,6 @@
             </div>    
         </div>
     </footer>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
