@@ -9,6 +9,7 @@ class NewsAdmin(admin.ModelAdmin):
     ordering = ('pk', )
     list_per_page = 3
     search_fields = ('title', 'preambule', 'text')
+    date_hierarchy = ('created_at')
 
     def mark_as_delete(self, request, queryset):
         queryset.update(deleted=True)
