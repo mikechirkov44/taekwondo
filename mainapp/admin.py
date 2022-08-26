@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import News
+from .models import News, NewsImages
+
+
+class NewsImagesInline(admin.TabularInline):
+    fk_name: "News"
+    model = NewsImages
 
 
 @admin.register(News)
@@ -10,10 +15,10 @@ class NewsAdmin(admin.ModelAdmin):
     list_per_page = 3
     search_fields = ('title', 'preambule', 'text')
     date_hierarchy = ('created_at')
+    inlines = [NewsImagesInline]
 
     def mark_as_delete(self, request, queryset):
         queryset.update(deleted=True)
-
     mark_as_delete.short_description = 'Пометить удаленным'
 
 
