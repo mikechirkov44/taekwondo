@@ -16,12 +16,13 @@
                 font-weight: 600;
                 font-size: 60px;
                 color: $main-red;
+                opacity: 0;
             }
         }
     }
     &-col1 {
         width: 330px;
-        margin-right: 60px;
+        margin-right: 70px;
     }
     &-col2 {
         width: 340px;
@@ -30,5 +31,10 @@
     &-col3 {
         width: 270px;
     }
+}
+
+.visible {
+    opacity: 1;
+    transition: 1.8s;
 }
 

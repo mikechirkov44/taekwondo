@@ -120,11 +120,11 @@ body {
   color: #FFFFFF;
   padding: 10px 50px;
   border-radius: 6px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .subscribe-btn:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   background-color: #FFFFFF;
   color: #E31E26;
 }
@@ -200,6 +200,10 @@ body {
   color: #bfbfbf;
 }
 
+.footer-list-link:hover {
+  text-decoration: underline;
+}
+
 .footer-list__span {
   font-size: 14px;
   line-height: 20px;
@@ -222,8 +226,22 @@ body {
   margin: 30px 20px 0 0;
 }
 
-.footer-social-item:hover path {
-  fill: #E31E26;
+.footer-social-link:hover svg circle {
+  fill: #FFFFFF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-social-link__last:hover svg circle {
+  fill: #424141;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-social-link__last:hover svg path {
+  fill: #FFFFFF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .promo-list {
@@ -254,11 +272,12 @@ body {
   font-weight: 600;
   font-size: 60px;
   color: #E31E26;
+  opacity: 0;
 }
 
 .promo-col1 {
   width: 330px;
-  margin-right: 60px;
+  margin-right: 70px;
 }
 
 .promo-col2 {
@@ -268,6 +287,12 @@ body {
 
 .promo-col3 {
   width: 270px;
+}
+
+.visible {
+  opacity: 1;
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
 }
 
 .advantages {
@@ -372,11 +397,22 @@ body {
 }
 
 .main-news__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
   text-decoration: none;
   padding: 10px 34px;
   background-color: #2B2A29;
   color: #FFFFFF;
+  border: 2px solid #2B2A29;
   border-radius: 6px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main-news__link:hover {
+  color: #2B2A29;
+  background-color: transparent;
 }
 
 .banner {
@@ -451,13 +487,13 @@ body {
   border: 2px solid #E31E26;
   background-color: #E31E26;
   cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .banner-offer__bottom__btn:hover {
   color: #E31E26;
   background-color: #FFFFFF;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .banner-cost {
@@ -650,12 +686,12 @@ body {
   height: 100%;
   background-color: #2B2A29;
   opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .slider-btn:hover {
   opacity: 0.2;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .slider-btn__prev {

@@ -26,10 +26,19 @@
         }
     }
     &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
         text-decoration: none;
         padding: 10px 34px;
-        background-color: #2B2A29;
+        background-color: $main-black;
         color: $main-white;
+        border: 2px solid $main-black;
         border-radius: 6px;
+        transition: 0.5s ease;
+        &:hover {
+            color: $main-black;
+            background-color: transparent;
+        }
     }
 }
