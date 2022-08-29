@@ -14,11 +14,44 @@
     <header class="header">
         <div class="wrapper header-wrap">
             <div class="header-left">
-                <button class="sidebar">
-                    <svg class="menu-burger__svg" width="15" height="13" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 7.42857H16M1 1H16M1 13.8571H16" stroke="#424141" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li>
+                            <a class="menu__item" href="#">О тхэквондо</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Информация о Федерации</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Наши залы</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Тренерский состав</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Календарь соревнований</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Доска почета</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Видео</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Личный кабинет</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
                 <a href="index.html" class="header-logo">
                     <svg class="header-logo__svg" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5 1C40.5809 1 52 12.4191 52 26.5C52 40.5809 40.5809 52 26.5 52C12.4191 52 1 40.5809 1 26.5C1 12.4191 12.4191 1 26.5 1Z" stroke="#2B2A29" stroke-width="0.288" stroke-miterlimit="22.9256"/>
@@ -71,16 +104,16 @@
                 <div class="slider-item">
                     <div class="slider-item2">
                         <img class="slider-item2__img" src="./img/maxresdefault.png" alt="founder">
-                        <div class="slider-item2__text">
+                        <blockquote class="slider-item2__text">
                             <article class="slider-item2__text__article">Быть полным решимости идти, хотя путь будет трудным, и&nbsp;делать&nbsp;то, что нужно делать, хоть это будет нелегко</article>
                             <span class="slider-item2__text__small">Основатель тхэквондо генерал Чой Хонг&nbsp;Хи</span>
-                        </div>
+                        </blockquote>
                     </div>
                 </div>
                 <div class="slider-item">
                     <div class="slider-item3">
                         <img src="./img/logo.png" alt="logo">
-                        <div class="slider-item3__text">
+                        <blockquote class="slider-item3__text">
                             <article class="slider-item3__text__article">
                                 &laquo;... В&nbsp;числе первостепенных задач не&nbsp;ставится сделать из ребёнка суперспортсмена, поскольку, если мы&nbsp;будем гнаться за&nbsp;показателями, ему будет просто скучно. 
                                 <br>
@@ -90,7 +123,7 @@
                                 <br>
                                 Президент РСОО &laquo;Костромская Федерация Тхэквондо ИТФ&raquo;
                             </span>
-                        </div>
+                        </blockquote>
                         <img src="./img/2021-maklakov__1.png" alt="maklakov">
                     </div>
                 </div>
@@ -113,27 +146,27 @@
         <div class="wrapper">
             <ul class="promo-list">
                 <li class="promo-list-item promo-col1">
-                    <span class="promo-list-item__red" data-value="28">28</span>
+                    <span class="promo-list-item__red visible" data-value="28">28</span>
                     &nbsp;лет существования Костромской Федерации тхэквондо ИТФ
                 </li>
                 <li class="promo-list-item promo-col2">
-                    <span class="promo-list-item__red" data-value="563">563</span>
+                    <span class="promo-list-item__red visible" data-value="563">563</span>
                     &nbsp;спортсменов обучается в&nbsp;Костромской области тхэквондо ИТФ
                 </li>
                 <li class="promo-list-item promo-col3">
-                    <span class="promo-list-item__red" data-value="4">4</span>
+                    <span class="promo-list-item__red visible" data-value="4">4</span>
                     &nbsp;года&nbsp;&mdash; возраст младшего спортсмена
                 </li>
                 <li class="promo-list-item promo-col1">
-                    <span class="promo-list-item__red" data-value="10">10</span>
+                    <span class="promo-list-item__red visible" data-value="10">10</span>
                     &nbsp;инструкторов&nbsp;&mdash; воспитанников Костромской Федерации 
                 </li>
                 <li class="promo-list-item promo-col2">
-                    <span class="promo-list-item__red" data-value="5">5</span>
+                    <span class="promo-list-item__red visible" data-value="5">5</span>
                     &nbsp;лет подряд&nbsp;&mdash; лучшая команда России по&nbsp;программе &laquo;Командный туль&raquo;
                 </li>
                 <li class="promo-list-item promo-col3">
-                    <span class="promo-list-item__red" data-value="11">11</span>
+                    <span class="promo-list-item__red visible" data-value="11">11</span>
                     &nbsp;залов для тренировок в&nbsp;Костроме и&nbsp;области
                 </li>
             </ul>
@@ -200,9 +233,39 @@
         <div class="wrapper main-news-wrap">
             <h1 class="main-news__heading">Последние новости Костромской Федерации Тхэквондо ИТФ</h1>
             <ul class="main-news-list">
-                <li class="main-news-list__item">news1</li>
-                <li class="main-news-list__item">news2</li>
-                <li class="main-news-list__item">news3</li>
+                <li class="main-news-list__item">
+                    <img class="news-img" src="./img/news-vacation.png" alt="news-vacation">
+                    <a href="" class="news-link">
+                        <span class="news-link__text">Летний лагерь</span>
+                        <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">                            
+                            <path d="M22.5 44.7178C10.6259 44.7178 1 35.0919 1 23.2178C1 11.3437 10.6259 1.71777 22.5 1.71777C34.3741 1.71777 44 11.3437 44 23.2178C44 35.0919 34.3741 44.7178 22.5 44.7178Z" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.5006 14.6178L31.1006 23.2178L22.5006 31.8178" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.9006 23.2178H31.1006" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="main-news-list__item">
+                    <img class="news-img" src="./img/news-trainers.png" alt="news-vacation">
+                    <a href="" class="news-link">
+                        <span class="news-link__text">Лучшие спортсмены и <br> тренеры нашей федерации</span>
+                        <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">                            
+                            <path d="M22.5 44.7178C10.6259 44.7178 1 35.0919 1 23.2178C1 11.3437 10.6259 1.71777 22.5 1.71777C34.3741 1.71777 44 11.3437 44 23.2178C44 35.0919 34.3741 44.7178 22.5 44.7178Z" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.5006 14.6178L31.1006 23.2178L22.5006 31.8178" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.9006 23.2178H31.1006" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="main-news-list__item">
+                    <img class="news-img" src="./img/news-comitet.png" alt="news-vacation">
+                    <a href="" class="news-link">
+                        <span class="news-link__text">Награждение от&nbsp;комитета по&nbsp;спорту</span>
+                        <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">                            
+                            <path d="M22.5 44.7178C10.6259 44.7178 1 35.0919 1 23.2178C1 11.3437 10.6259 1.71777 22.5 1.71777C34.3741 1.71777 44 11.3437 44 23.2178C44 35.0919 34.3741 44.7178 22.5 44.7178Z" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.5006 14.6178L31.1006 23.2178L22.5006 31.8178" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.9006 23.2178H31.1006" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
             <a href="#" class="main-news__link">Узнать больше</a>
         </div>
@@ -280,7 +343,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-contacts">
+            <address class="footer-contacts">
                 <h3 class="footer-subheading">Контакты</h3>
                 <ul class="footer-list">
                     <li class="footer-list-item">
@@ -341,10 +404,10 @@
                         </ul>
                     </li>
                 </ul>
-            </div>    
+            </address>    
         </div>
     </footer>
     <script src="./js/slider.js"></script>
-    <script src="./js/numbers.js"></script>
+    <!--<script src="./js/numbers.js"></script>-->
 </body>
 </html>

@@ -14,15 +14,17 @@
     }
     &-list {
         display: flex;
-        align-self: stretch;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
         list-style-type: none;
         margin-bottom: 30px;
         &__item {
+            position: relative;
             width: 400px;
             height: 288px;
-            background-color: $main-lightgrey;
             border-radius: 10px;
+            box-shadow: 3px 3px 3px 0px #ACB0B2CC;
         }
     }
     &__link {
@@ -39,6 +41,40 @@
         &:hover {
             color: $main-black;
             background-color: transparent;
+        }
+    }
+}
+
+.news {
+    &-img {
+        width: 401px;
+        height: inherit;
+    }
+    &-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0px;
+        height: 70px;
+        width: 401px;
+        padding: 0 14px 0 19px;
+        background: #424141CC;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            background-color: $main-darkgrey;
+            text-decoration: underline;
+            color: $main-white;
+        }
+        &__text {
+            max-width: 300px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $main-white;
         }
     }
 }
