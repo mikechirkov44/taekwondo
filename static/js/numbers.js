@@ -1,3 +1,5 @@
+"use strict"
+
 const numbers = document.querySelectorAll("span.promo-list-item__red")
 
 function render() {
