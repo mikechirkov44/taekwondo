@@ -1,0 +1,35 @@
+.founder {
+    &-wrap {
+        display: flex;
+    }
+    &__img {
+        padding: 81px 135px 85px 160px;
+    }
+    &-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 64px;
+        & h6 {
+            @include font(600, 20px, 24px, $main-darkgrey);
+            margin-bottom: 16px;
+        }
+        & h3 {
+            @include font(500, 40px, 48px, $main-darkgrey);
+            margin-bottom: 16px;
+        }
+        & h5 {
+            @include font(600, 20px, 24px, $main-black);
+            margin-bottom: 16px;
+        }
+        &__text {
+            @include small-font;
+        }
+    }
+    &__line {
+        width: 437px;
+        background-color: $main-red;
+        border: 2px solid $main-red;
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,74 @@
+.footer {
+    background-color: $main-darkgrey;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 35px 0;
+    }
+    &-logo {
+        display: flex;
+        flex-direction: column;
+        @include font(600, 10px, 14px, #bfbfbf);
+        &__svg {
+            margin-bottom: 4px;
+        }
+    }
+    &-admin {
+        text-decoration: none;
+        color: #bfbfbf;
+        margin-top: 14px;
+        font-weight: 400;
+    }
+    &-subheading {
+        @include font(500, 20px, 28px, $main-white);
+        margin-bottom: 10px;
+        font-style: normal;
+    }
+    &-list {
+        list-style-type: none;
+        &-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        &-link {
+            text-decoration: none;
+            @include font(400, 14px, 17px, #bfbfbf);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &__span {
+            @include font(400, 14px, 20px, #bfbfbf);
+            margin-left: 11px;
+        }
+    }
+    &-social {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        
+        &-item {
+            margin: 30px 20px 0 0;
+        }
+        &-link:hover {
+            svg circle {
+                fill: $main-white;
+                transition: 0.3s;
+            }
+        }
+        &-link__last:hover {
+            svg {
+                circle {
+                    fill: $main-darkgrey;
+                    transition: 0.3s;
+                }
+                path {
+                    fill: $main-white;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
