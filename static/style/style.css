@@ -456,6 +456,53 @@ body {
   margin-bottom: 64px;
 }
 
+.history-promo {
+  background-color: #424141;
+}
+
+.history-promo-wrap {
+  padding: 73px 90px;
+}
+
+.history-promo-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.history-promo-card {
+  width: 245px;
+  height: 274px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px 16px;
+}
+
+.history-promo-card__text {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  text-align: center;
+}
+
 .advantages {
   background-color: #424141;
   height: 420px;
@@ -726,6 +773,95 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #FFFFFF;
+}
+
+.history-banner {
+  background-image: url("/static/img/history-banner-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.history-banner-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 400px;
+}
+
+.history-banner__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 400px;
+  margin-top: 53px;
+  margin-bottom: 53px;
+}
+
+.history-banner__text h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #424141;
+  width: 500px;
+}
+
+.history-banner__text__small {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+}
+
+.history-banner__text__promo {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #2B2A29;
+}
+
+.history-banner__text__btn {
+  padding: 10px 50px;
+  border: 1px solid #E31E26;
+  border-radius: 6px;
+  background-color: #E31E26;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.history-banner__text__btn:hover {
+  background-color: transparent;
+  color: #E31E26;
+}
+
+.history-banner__img {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+
+.history-banner__photo {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  z-index: 1;
 }
 
 .slider {
@@ -1355,5 +1491,197 @@ body {
 
 .invisible {
   visibility: hidden;
+}
+
+.history-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.history-text {
+  margin-top: 61px;
+  margin-bottom: 55px;
+  max-width: 50%;
+}
+
+.history-text h3 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #2B2A29;
+  margin-bottom: 6px;
+}
+
+.history-text__line {
+  width: 307px;
+  background-color: #E31E26;
+  border: 2px solid #E31E26;
+  margin-bottom: 67px;
+}
+
+.history-text-item {
+  margin-left: 90px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+}
+
+.history-text-item span {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #2B2A29;
+}
+
+.history-timeline {
+  background-color: #424141;
+  height: 520px;
+}
+
+.history-mission-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.history-mission__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.info {
+  margin-top: 65px;
+  margin-bottom: 100px;
+  max-width: 670px;
+}
+
+.info h3 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #2B2A29;
+  margin-bottom: 6px;
+}
+
+.info__line {
+  width: 307px;
+  background-color: #E31E26;
+  border: 2px solid #E31E26;
+  margin-bottom: 46px;
+}
+
+.info__text {
+  margin-left: 106px;
+  margin-bottom: 22px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+}
+
+.info__text span {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #2B2A29;
+}
+
+.quote {
+  position: relative;
+  height: 258px;
+  width: 75%;
+  background-color: #424141;
+}
+
+.quote::before {
+  content: '';
+  display: block;
+  margin-left: calc(50% - 50vw);
+  background-color: #424141;
+  height: inherit;
+}
+
+.quote-left {
+  position: absolute;
+  top: -35px;
+  left: 35px;
+}
+
+.quote-right {
+  position: absolute;
+  bottom: -35px;
+  right: 163px;
+}
+
+.quote-text {
+  position: absolute;
+  top: 31px;
+  left: 150px;
+  max-width: 518px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  color: #FFFFFF;
+}
+
+.caption {
+  width: 100%;
+  background-color: #DFE3EB;
+}
+
+.caption-wrap {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 160px;
+}
+
+.caption h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  margin-bottom: 6px;
+}
+
+.caption__line {
+  width: 278px;
+  background-color: #E31E26;
+  border: 1px solid #E31E26;
+  margin-bottom: 9px;
+}
+
+.caption__name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
 }
 /*# sourceMappingURL=style.css.map */
