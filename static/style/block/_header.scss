@@ -1,4 +1,10 @@
 .header {
+    &::after {
+        content: '';
+        display: block;
+        box-shadow: 0px 4px 0px 0px $main-darkgrey;
+        height: 2px;
+    }
     &-wrap {
         position: relative;
         display: flex;

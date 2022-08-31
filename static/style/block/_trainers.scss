@@ -1,0 +1,168 @@
+.trainers {
+    &-wrap {
+        list-style-type: none;
+        & .main {
+            height: 700px;
+            position: relative;
+            & .trainer-wrap {
+                align-items: unset;
+            }
+            & .trainer-info {
+                padding-left: 15px;
+                width: 695px;
+                margin-top: 80px;
+            }
+            & .timetable {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                right: 50%;
+                &__text {
+                    width: max-content;
+                }
+            }
+        }
+    }
+    & h3 {
+        @include font(500, 32px, 39px, $main-black);
+        text-align: center;
+        margin-top: 60px;
+    } 
+}
+
+
+.trainer {
+    &:nth-of-type(2n) {
+        background-color: $main-darkgrey;
+        & .name {
+            color: $main-white;
+        }
+        & .deserts-item {
+            color: $main-white;
+        }
+        & .timetable__text {
+            color: $main-white;
+        }
+        & .timetable__btn {
+            color: $main-darkgrey;
+            background-color: $main-white;
+            border: 1px solid $main-white;
+            &:hover {
+                color: $main-white;
+                background-color: $main-darkgrey;
+            }
+        }
+    }
+    &-wrap {
+        display: flex;
+        align-items: center;
+        height: 600px;
+        margin: 0 auto;
+        width: $desktop-wrap;
+    }
+    &-img {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        & .name {
+            @include font(500, 24px, 29px, $main-black);
+            margin-bottom: 40px;
+        }
+        & .deserts{
+            list-style-type: none;
+            &-container {
+                display: flex;
+                margin-bottom: 80px;
+            }
+            &-line {
+                border: 2px solid #F95858;
+                background-color: #F95858;
+                margin-right: 25px;
+            }
+            &-item {
+                @include small-font;
+                color: $main-black;
+                margin-bottom: 15px;
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+        & .timetable {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__text {
+                @include font(500, 24px, 29px, $main-black);
+                margin-bottom: 40px;
+            }
+            &__btns {
+                width: 550px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            &__btn {
+                @include small-font;
+                font-family: 'Montserrat', sans-serif;
+                color: $main-white;
+                padding: 20px;
+                width: 250px;
+                border-radius: 6px;
+                background-color: $main-darkgrey;
+                border: 1px solid $main-darkgrey;
+                transition: 0.3s;
+                &:nth-of-type(1) {
+                    margin-right: 25px;
+                    margin-bottom: 25px;
+                }
+                &:nth-of-type(2) {
+                    margin-right: 0;
+                    margin-bottom: 25px;
+                }
+                &:nth-of-type(4) {
+                    margin-left: 25px;
+                }
+                &:hover {
+                    color: $main-white;
+                    background-color: $main-lightgrey;
+                    border: 1px solid $main-lightgrey;
+                }
+            }
+        }     
+    }
+}
+
+.maklakova {
+    background-image: url('/static/img/Маклакова-bg.png');
+    background-size: cover;
+    min-height: 400px;
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 82px 0;
+    }
+    &__btn {
+        padding: 10px 50px;
+        background-color: $main-red;
+        color: $main-white;
+        border-radius: 6px;
+        transition: 0.3s;
+        &:hover {
+            background-color: #F95858;
+        }
+    }
+    & .deserts-container {
+        max-width: 415px;
+        padding-left: 35px;
+    }
+
+}
