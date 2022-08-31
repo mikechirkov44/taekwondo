@@ -1,0 +1,52 @@
+.principles {
+    &-wrap {
+        display: flex;
+    }
+    &-about {
+        margin-top: 64px;
+        width: 420px;
+        & h3 {
+            @include font(500, 40px, 48px, $main-black);
+            margin-bottom: 16px;
+        }
+        &__text {
+            @include font(500, 32px, 39px, $main-black);
+            margin-bottom: 47px;
+        }
+    }
+    &__line {
+        width: 490px;
+        background-color: $main-red;
+        border: 2px solid $main-red;
+        margin-bottom: 24px;
+    }
+    &-details {
+        margin-left: 124px;
+        margin-top: 224px;
+    }
+    &-detail {
+        width: 607px;
+        border: 1px solid #000000;
+        margin-bottom: 8px;
+        &[open] summary {
+            list-style-type: none;
+            padding-left: 38px;
+            color: $main-white;
+            background-color: $main-darkgrey;
+            margin-top: 28px;
+        }
+        &[open] div {
+            padding-top: 16px;
+            padding-left: 26px;
+            min-height: 94px;
+            @include small-font;
+        }
+    }
+    &-summary {
+        @include font(600, 20px, 24px, $main-black);
+        list-style-type: disc;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+    }
+}

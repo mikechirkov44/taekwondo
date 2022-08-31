@@ -84,10 +84,7 @@
             flex-direction: column;
             height: 100%;
             &__article {
-                font-family: "SudoVar";
-                font-weight: 400;
-                font-size: 25px;
-                line-height: 33px;
+                @include font(400, 25px, 33px, $main-black);
                 max-width: 624px;
                 margin-top: 42px;
             }
@@ -125,10 +122,6 @@
             right: 0;
         }
     }
-}
-
-.slide1 {
-    
 }
 
 .active-dot {

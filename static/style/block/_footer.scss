@@ -9,10 +9,7 @@
     &-logo {
         display: flex;
         flex-direction: column;
-        font-weight: 600;
-        font-size: 10px;
-        line-height: 14px;
-        color: #bfbfbf;
+        @include font(600, 10px, 14px, #bfbfbf);
         &__svg {
             margin-bottom: 4px;
         }
@@ -24,11 +21,9 @@
         font-weight: 400;
     }
     &-subheading {
-        color: $main-white;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 28px;
+        @include font(500, 20px, 28px, $main-white);
         margin-bottom: 10px;
+        font-style: normal;
     }
     &-list {
         list-style-type: none;
@@ -39,17 +34,13 @@
         }
         &-link {
             text-decoration: none;
-            font-size: 14px;
-            line-height: 17px;
-            color: #bfbfbf;
+            @include font(400, 14px, 17px, #bfbfbf);
             &:hover {
                 text-decoration: underline;
             }
         }
         &__span {
-            font-size: 14px;
-            line-height: 20px;
-            color: #bfbfbf;
+            @include font(400, 14px, 20px, #bfbfbf);
             margin-left: 11px;
         }
     }
@@ -57,6 +48,7 @@
         list-style-type: none;
         display: flex;
         flex-direction: row;
+        
         &-item {
             margin: 30px 20px 0 0;
         }

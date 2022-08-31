@@ -14,28 +14,20 @@
         margin-bottom: 55px;
         &__text {
             width: 228px;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            color: $main-white;
+            @include font(500, 20px, 24px, $main-white);
         }
         &__bottom {
             display: flex;
             flex-direction: column;
             align-items: center;
             &__text {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 19px;
+                @include small-font;
                 color: $main-white;
                 margin-bottom: 15px;
                 width: 388px;
             }
             &__btn {
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 19px;
-                color: $main-white;
+                @include font(500, 16px, 19px, $main-white);
                 padding: 10px 49px;
                 border-radius: 6px;
                 border: 2px solid $main-red;
@@ -58,10 +50,63 @@
             position: absolute;
             top: 90px;
             width: 213px;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            color: $main-white;
+            @include font(500, 20px, 24px, $main-white);
         }
+    }
+}
+
+.history-banner {
+    background-image: url("/static/img/history-banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    &-wrap {
+        display: flex;
+        position: relative;
+        min-height: 400px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 400px;
+        margin-top: 53px;
+        margin-bottom: 53px;
+        & h2 {
+            @include font(600, 40px, 48px, $main-darkgrey);
+            width: 500px;
+        }
+        &__small {
+            @include small-font;
+        }
+        &__promo {
+            @include font(400, 20px, 29px, $main-black);
+        }
+        &__btn {
+            padding: 10px 50px;
+            border: 1px solid $main-red;
+            border-radius: 6px;
+            background-color: $main-red;
+            @include font(500, 16px, 19px, $main-white);
+            transition: 0.3s;
+            &:hover {
+                background-color: transparent;
+                color: $main-red;
+            }
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+    }
+    &__photo {
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        z-index: 1;
     }
 }
