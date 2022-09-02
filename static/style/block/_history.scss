@@ -2,6 +2,9 @@
     &-wrap {
         display: flex;
         justify-content: space-between;
+        & img {
+            margin-top: 10px;
+        }
     }
     &-text {
         margin-top: 61px;
@@ -118,7 +121,7 @@
         margin-bottom: 6px;
     }
     &__line {
-        width: 278px;
+        width: 260px;
         background-color: $main-red;
         border: 1px solid $main-red;
         margin-bottom: 9px;

@@ -2,29 +2,27 @@
     &-list {
         display: flex;
         justify-content: space-between;
-        flex-grow: 1;
         flex-wrap: wrap;
         list-style-type: none;
-        margin: 65px;
+        margin: 60px 0 134px 90px;
         &-item {
+            position: relative;
             @include font(600, 20px, 25px, $main-black);
             margin-bottom: 80px;
+            width: 300px;
+            margin-right: 80px;
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
             &__red {
+                position: absolute;
+                display: inline-block;
+                top: 17px;
+                right: 102%;
                 @include font(600, 60px, 25px, $main-red);
                 opacity: 0;
             }
         }
-    }
-    &-col1 {
-        width: 330px;
-        margin-right: 70px;
-    }
-    &-col2 {
-        width: 340px;
-        margin-right: 60px;
-    }
-    &-col3 {
-        width: 270px;
     }
 }
 
@@ -34,7 +32,8 @@
 }
 
 .about-promo {
-    background-size: contain;
+    background: border-box;
+    background-size: 100% 100%;
     background-position: top;
     background-repeat: no-repeat;
     background-image: url("/static/img/landscape.png");

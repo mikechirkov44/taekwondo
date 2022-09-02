@@ -1,0 +1,90 @@
+[data-hidden = true] { display: none; }
+[data-hidden = false] { display: block; }
+.nav-ctrl span, .dots-ctrl li { transition: all 0.3s; }
+
+.gallery {
+    width: 100%;
+    margin: 0 auto 30px;
+    visibility: hidden;
+    & .slider {
+        width: 100%;
+        max-width: 1240px;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+.stage {
+    display: flex;
+    overflow: hidden;
+    & div {
+        float: left;
+        position: relative;
+
+        & img {
+            width: 100%;
+            min-height: 380px;
+        }
+    }
+}
+
+.control {
+    width: 100%;
+    position: relative;
+}
+
+.nav-ctrl {
+    width: 100%;
+    & span {
+        position: absolute;
+        bottom: 4px;
+        width: 13%; 
+        height: 380px;
+        display: block;
+        background-color: $main-darkgrey;
+        opacity: 0;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.2;
+        }
+        &.disable {
+            opacity: 0;
+        }
+    }
+    & .prev {
+        left: 0;
+    }
+    & .next {
+        right: 0;
+    }
+    & .main-prev, .main-next {
+        bottom: 24px;
+    }
+}
+
+.dots-ctrl {
+    position: relative;
+    text-align: center;
+}
+
+.dots-ctrl li {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $main-lightgrey;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.dots-ctrl li+li {
+    margin-left: 10px;
+}
+
+.dots-ctrl .active {
+    background-color: $main-red;
+}
+
+.dots-ctrl li:hover {
+    background-color: $main-pink;
+}

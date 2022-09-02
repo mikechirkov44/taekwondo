@@ -11,3 +11,25 @@
     line-height: $line-height;
     color: $color;
 }
+
+@mixin red_btn {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $main-red;
+    border: 1px solid $main-red;
+    @include font(500, 16px, 19px, $main-white);
+    padding: 10px 50px;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $main-pink;
+        border: 1px solid $main-pink;
+    }
+
+    &:active {
+        border: 1px solid $main-red;
+        background-color: $main-white;
+        color: $main-red;
+    }
+}
