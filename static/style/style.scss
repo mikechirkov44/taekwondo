@@ -16,6 +16,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+main {
+    padding-top: 123px;
+    min-height: calc(100vh - 230px);
+}
+
 .map-heading {
     font-weight: 500;
     font-size: 40px;
@@ -37,7 +42,6 @@ body {
 @import "block/_advantages.scss";
 @import "block/_news.scss";
 @import "block/_banner.scss";
-@import "block/_slider.scss";
 @import "block/_ideals.scss";
 @import "block/_founder.scss";
 @import "block/_timeline.scss";
@@ -46,3 +50,6 @@ body {
 @import "block/_history.scss";
 @import "block/_trainers.scss";
 @import "block/_contacts.scss";
+@import "block/_not_found.scss";
+@import "block/_halls.scss";
+@import "block/_gallery.scss";

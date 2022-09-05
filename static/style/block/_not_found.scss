@@ -1,0 +1,27 @@
+.main-error-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding-bottom: 145px;
+    & h1 {
+        @include font(500, 180px, 220px, $main-lightgrey);
+    }
+    & p {
+        @include font(500, 40px, 48px, $main-lightgrey);
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    &__link {
+        text-decoration: none;
+        @include font(500, 16px, 19px, $main-white);
+        padding: 10px 50px;
+        border-radius: 6px;
+        background-color: $main-red;
+        transition: 0.3s;
+        border: none;
+        &:hover {
+            background-color: #F95858;
+        }
+    }
+}

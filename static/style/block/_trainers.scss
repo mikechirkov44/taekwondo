@@ -44,12 +44,19 @@
             color: $main-white;
         }
         & .timetable__btn {
+            font-family: 'Montserrat', sans-serif;
             color: $main-darkgrey;
             background-color: $main-white;
             border: 1px solid $main-white;
             &:hover {
                 color: $main-white;
-                background-color: $main-darkgrey;
+                background-color: $main-lightgrey;
+                border: 1px solid $main-lightgrey;
+            }
+            &:active {
+                color: $main-white;
+                background-color: transparent;
+                border: 1px solid $main-white;
             }
         }
     }
@@ -135,6 +142,11 @@
                     background-color: $main-lightgrey;
                     border: 1px solid $main-lightgrey;
                 }
+                &:active {
+                    color: $main-darkgrey;
+                    background-color: transparent;
+                    border: 1px solid $main-darkgrey;
+                }
             }
         }     
     }
@@ -151,14 +163,7 @@
         padding: 82px 0;
     }
     &__btn {
-        padding: 10px 50px;
-        background-color: $main-red;
-        color: $main-white;
-        border-radius: 6px;
-        transition: 0.3s;
-        &:hover {
-            background-color: #F95858;
-        }
+        @include red_btn;
     }
     & .deserts-container {
         max-width: 415px;
