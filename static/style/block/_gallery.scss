@@ -37,17 +37,11 @@
 .nav-ctrl {
     width: 100%;
     & span {
+        display: block;
         position: absolute;
         bottom: 4px;
-        width: 13%; 
-        height: 380px;
-        display: block;
-        background-color: $main-darkgrey;
         opacity: 0;
         transition: 0.3s;
-        &:hover {
-            opacity: 0.2;
-        }
         &.disable {
             opacity: 0;
         }
@@ -60,6 +54,12 @@
     }
     & .main-prev, .main-next {
         bottom: 24px;
+        width: 13%; 
+        height: 380px;
+        background-color: $main-darkgrey;
+        &:hover {
+            opacity: 0.2;
+        }
     }
 }
 
