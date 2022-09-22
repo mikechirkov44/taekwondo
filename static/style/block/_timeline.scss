@@ -1,4 +1,42 @@
 .timeline {
+    & .gallery,
+    .slider {
+        height: 100%;
+    }
+    & .control {
+        width: $desktop-wrap;
+        margin: 0 auto;
+    }
+    &-years {
+        height: 55px;
+        background-color: $main-black;
+        display: flex;
+        align-items: center;
+
+    }
     height: 420px;
     background-color: $main-darkgrey;
+    &-nav-ctrl {
+        width: 100%;
+        & .next, .prev {
+            position: absolute;
+            bottom: 100px;
+            display: block;
+            opacity: 1;
+            transition: 0.3s;
+            &:hover path {
+                stroke: $main-pink;
+                opacity: 1;
+            }
+            &.disable {
+                opacity: 0;
+            }
+        }
+        & .prev {
+            left: 0;
+        }
+        & .next {
+            right: 0;
+        }
+    }
 }

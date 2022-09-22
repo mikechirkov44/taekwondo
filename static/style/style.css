@@ -1308,6 +1308,57 @@ header::after {
   background-color: #424141;
 }
 
+.timeline .gallery,
+.timeline .slider {
+  height: 100%;
+}
+
+.timeline .control {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.timeline-years {
+  height: 55px;
+  background-color: #2B2A29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline-nav-ctrl {
+  width: 100%;
+}
+
+.timeline-nav-ctrl .next, .timeline-nav-ctrl .prev {
+  position: absolute;
+  bottom: 100px;
+  display: block;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.timeline-nav-ctrl .next:hover path, .timeline-nav-ctrl .prev:hover path {
+  stroke: #F95858;
+  opacity: 1;
+}
+
+.timeline-nav-ctrl .next.disable, .timeline-nav-ctrl .prev.disable {
+  opacity: 0;
+}
+
+.timeline-nav-ctrl .prev {
+  left: 0;
+}
+
+.timeline-nav-ctrl .next {
+  right: 0;
+}
+
 .principles-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2629,19 +2680,12 @@ header::after {
 }
 
 .nav-ctrl span {
+  display: block;
   position: absolute;
   bottom: 4px;
-  width: 13%;
-  height: 380px;
-  display: block;
-  background-color: #424141;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.nav-ctrl span:hover {
-  opacity: 0.2;
 }
 
 .nav-ctrl span.disable {
@@ -2658,6 +2702,13 @@ header::after {
 
 .nav-ctrl .main-prev, .nav-ctrl .main-next {
   bottom: 24px;
+  width: 13%;
+  height: 380px;
+  background-color: #424141;
+}
+
+.nav-ctrl .main-prev:hover, .nav-ctrl .main-next:hover {
+  opacity: 0.2;
 }
 
 .dots-ctrl {
