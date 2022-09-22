@@ -29,6 +29,29 @@ main {
     margin: 60px 0 40px 0;
 }
 
+#scroll__btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 7;
+    display: none;
+}
+
+#popup {
+    display: none;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(172, 176, 178, 0.1);
+    backdrop-filter: blur(15px);
+}
+
 @font-face {
     font-family: "SudoVar";
     font-weight: 400;
@@ -53,3 +76,7 @@ main {
 @import "block/_not_found.scss";
 @import "block/_halls.scss";
 @import "block/_gallery.scss";
+@import "block/_calendar.scss";
+@import "block/_halloffame.scss";
+@import "block/_video.scss";
+@import "block/_popup.scss"
