@@ -133,6 +133,15 @@
         align-items: center;
         justify-content: space-between;
         margin: 60px 0;
+        & path {
+            transition: 0.3s;
+        }
+        & a:hover path {
+            stroke: $main-pink;
+        }
+        & a:active path {
+            stroke: $main-black;
+        }
         &__text {
             width: -webkit-fill-available;
             text-align: center;

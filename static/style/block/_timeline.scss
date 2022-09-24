@@ -11,6 +11,7 @@
             @include font(500, 32px, 39px, $main-white);
             padding: 6px 0;
             margin-right: 238px;
+            cursor: pointer;
             &:last-of-type {
                 margin-right: auto;
             }
@@ -64,14 +65,31 @@
 .controls {
     position: relative;
     &-prev {
+        cursor: pointer;
         position: absolute;
         top: -72px;
         left: -70px;
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-white;
+        }
     }
     &-next {
+        cursor: pointer;
         position: absolute;
         top: -417px;
         right: -70px;
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-white;
+        }
+    }
+    & path {
+        transition: 0.3s;
     }
 }
 
@@ -114,11 +132,28 @@
         }
     }
     & .controls {
-        &-next path {
-            stroke: $main-darkgrey;
+        &-next {
+            & path {
+                stroke: $main-darkgrey;
+            }
+            &:hover path {
+                stroke: $main-pink;
+            }
+            &:active path {
+                stroke: $main-black;
+            }
         }
-        &-prev path {
-            stroke: $main-lightgrey;
+        &-prev {
+            & path {
+                stroke: $main-lightgrey;
+            }
+            &:hover path {
+                stroke: $main-pink;
+            }
+            &:active path {
+                stroke: $main-black;
+            }
+
         }
     }
 }
