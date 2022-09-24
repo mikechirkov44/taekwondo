@@ -1,11 +1,11 @@
 const slides = document.querySelectorAll('.slide');
-const sliderLine = document.querySelector('.slider-line')
+const sliderLine = document.querySelector('.timeline-slider-line')
 const years = document.querySelectorAll('.timeline-year');
 let active = 0;
 let width;
 
 function init() {
-    width = document.querySelector('.slider').offsetWidth;
+    width = document.querySelector('.timeline-slider').offsetWidth;
     sliderLine.style.width = 1+(width * slides.length) + 'px';
 };
 

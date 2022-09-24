@@ -856,7 +856,6 @@ header::after {
 }
 
 .news-item__slider {
-  height: 380px;
   margin-bottom: 40px;
 }
 
@@ -1338,13 +1337,13 @@ header::after {
   color: #F95858;
 }
 
-.slider {
+.timeline-slider {
   overflow: hidden;
   padding: 60px 0;
   height: 465px;
 }
 
-.slider-line {
+.timeline-slider-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1353,14 +1352,14 @@ header::after {
   transition: all ease 1s;
 }
 
-.slider .slide {
+.timeline-slider .slide {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.slider ul {
+.timeline-slider ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1370,21 +1369,21 @@ header::after {
   list-style-type: none;
 }
 
-.slider ul h2 {
+.timeline-slider ul h2 {
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
   color: #ACB0B2;
 }
 
-.slider ul h3 {
+.timeline-slider ul h3 {
   font-weight: 500;
   font-size: 32px;
   line-height: 39px;
   color: #FFFFFF;
 }
 
-.slider li {
+.timeline-slider li {
   max-width: 365px;
   margin-right: 65px;
   display: -webkit-box;
@@ -1397,11 +1396,11 @@ header::after {
   position: relative;
 }
 
-.slider li:last-of-type {
+.timeline-slider li:last-of-type {
   margin-right: 20px;
 }
 
-.slider li p {
+.timeline-slider li p {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
@@ -1443,14 +1442,14 @@ header::after {
   background-color: #424141;
 }
 
-.history-timeline .slider h3 {
+.history-timeline .timeline-slider h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #2B2A29;
 }
 
-.history-timeline .slider .special {
+.history-timeline .timeline-slider .special {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1463,19 +1462,19 @@ header::after {
           justify-content: center;
 }
 
-.history-timeline .slider h2 {
+.history-timeline .timeline-slider h2 {
   color: #E31E26;
 }
 
-.history-timeline .slider p {
+.history-timeline .timeline-slider p {
   color: #2B2A29;
 }
 
-.history-timeline .slider .year-line {
+.history-timeline .timeline-slider .year-line {
   border: 1px solid #2B2A29;
 }
 
-.history-timeline .slider .big {
+.history-timeline .timeline-slider .big {
   max-width: 460px;
   min-width: 412px;
 }

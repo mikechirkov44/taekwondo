@@ -21,7 +21,7 @@
     }
 }
 
-.slider {
+.timeline-slider {
     overflow: hidden;
     padding: 60px 0;
     height: 465px;
@@ -90,7 +90,7 @@
     & .years {
         background-color: $main-darkgrey;
     }
-    & .slider {
+    & .timeline-slider {
         & h3 {
             @include font(500, 24px, 29px, $main-black);
         }
