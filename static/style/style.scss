@@ -38,6 +38,15 @@ main {
     right: 50px;
     z-index: 7;
     display: none;
+    & path {
+        transition: 0.3s;
+    }
+    &:hover path:first-of-type {
+        fill: $main-pink;
+    }
+    &:active path:first-of-type {
+        fill: $main-black;
+    }
 }
 
 #popup {

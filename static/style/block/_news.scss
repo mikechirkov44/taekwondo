@@ -38,7 +38,10 @@
         border: 2px solid $main-black;
         border-radius: 6px;
         transition: 0.5s ease;
-        &:hover {
+        &:hover{
+            background-color: $main-darkgrey;
+        }
+        &:active{
             color: $main-black;
             background-color: transparent;
         }
@@ -147,6 +150,15 @@
         align-items: center;
         justify-content: space-between;
         margin: 60px 0 40px 0;
+        & path {
+            transition: 0.3s;
+        }
+        & a:hover path {
+            stroke: $main-pink;
+        }
+        & a:active path {
+            stroke: $main-black;
+        }
         &__text {
             width: -webkit-fill-available;
             text-align: center;
@@ -156,7 +168,6 @@
         }
     }
     &__slider {
-        height: 380px;
         margin-bottom: 40px;
     }
     &__bottom {

@@ -72,6 +72,15 @@
         }
         & svg {
             margin-right: 85px;
+            & path {
+               transition: 0.3s; 
+            }
+            &:hover path {
+                fill: $main-pink;
+            }
+            &:active path {
+                fill: $main-black;
+            }
         }
 
         & .date {

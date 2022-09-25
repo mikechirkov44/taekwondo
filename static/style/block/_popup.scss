@@ -13,6 +13,12 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-black;
+        }
     }
     & h1 {
         @include font(500, 32px, 39px, $main-black);
@@ -108,5 +114,40 @@
                 }
             }
         }
+    }
+}
+
+.popup-feedback {
+    & h3 {
+        @include font(600, 20px, 24px, $main-black);
+        margin-bottom: 15px;
+        margin-top: 53px
+    }
+    & p {
+        @include font(500, 16px, 19px, $main-black);
+        margin-bottom: 40px;
+        max-width: 600px;
+        text-align: center;
+    }
+    & form input {
+        width: 722px;
+        &::placeholder {
+            padding: 18px 43px;
+        }
+    }
+    & textarea {
+        resize: none;
+        height: 244px;
+        width: 722px;
+        border-radius: 6px;
+        border: 1px solid $main-darkgrey;
+        padding: 23px 43px;
+        @include font(500, 16px, 19px, $main-black);
+        &::placeholder {
+            @include font(500, 16px, 19px, $main-lightgrey);
+        }
+    }
+    & .feedback__btn {
+        @include red_btn;
     }
 }

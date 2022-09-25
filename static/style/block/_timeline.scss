@@ -1,42 +1,159 @@
 .timeline {
-    & .gallery,
-    .slider {
-        height: 100%;
-    }
-    & .control {
-        width: $desktop-wrap;
-        margin: 0 auto;
+    background-color: $main-darkgrey;
+    & .years {
+        background-color: $main-black;
     }
     &-years {
-        height: 55px;
-        background-color: $main-black;
         display: flex;
         align-items: center;
-
+        list-style-type: none;
+        & .timeline-year {
+            @include font(500, 32px, 39px, $main-white);
+            padding: 6px 0;
+            margin-right: 238px;
+            cursor: pointer;
+            &:last-of-type {
+                margin-right: auto;
+            }
+        }
+        & .active-year {
+            color: $main-pink;
+        }
     }
-    height: 420px;
-    background-color: $main-darkgrey;
-    &-nav-ctrl {
+}
+
+.timeline-slider {
+    overflow: hidden;
+    padding: 60px 0;
+    height: 465px;
+    &-line {
+        display: flex;
+        left: 0;
+        transition: all ease 1s;
+    }
+    & .slide {
         width: 100%;
-        & .next, .prev {
-            position: absolute;
-            bottom: 100px;
-            display: block;
-            opacity: 1;
-            transition: 0.3s;
+        display: flex;
+    }
+    & ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        & h2 {
+            @include font(700, 50px, 60px, $main-lightgrey);
+        }
+        & h3 {
+            @include font(500, 32px, 39px, $main-white);
+        }
+    }
+    & li {
+        max-width: 365px;
+        margin-right: 65px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &:last-of-type {
+            margin-right: 20px;
+        }
+        & p {
+            @include font(300, 16px, 19px, $main-white);
+            margin-top: 32px;
+        }
+    }
+}
+
+.controls {
+    position: relative;
+    &-prev {
+        cursor: pointer;
+        position: absolute;
+        top: -72px;
+        left: -70px;
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-white;
+        }
+    }
+    &-next {
+        cursor: pointer;
+        position: absolute;
+        top: -417px;
+        right: -70px;
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-white;
+        }
+    }
+    & path {
+        transition: 0.3s;
+    }
+}
+
+.year-line {
+    margin: 0 auto;
+    position: absolute;
+    top: 70px;
+    left: -40px;
+    content: '';
+    border: 1px solid $main-white;
+    width: calc(100% + 3048px);
+}
+
+.history-timeline {
+    background-color: $main-white;
+    & .years {
+        background-color: $main-darkgrey;
+    }
+    & .timeline-slider {
+        & h3 {
+            @include font(500, 24px, 29px, $main-black);
+        }
+        & .special {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        & h2 {
+            color: $main-red;
+        }
+        & p {
+            color: $main-black;
+        }
+        & .year-line {
+            border: 1px solid $main-black;
+        }
+        & .big {
+            max-width: 460px;
+            min-width: 412px;
+        }
+    }
+    & .controls {
+        &-next {
+            & path {
+                stroke: $main-darkgrey;
+            }
             &:hover path {
                 stroke: $main-pink;
-                opacity: 1;
             }
-            &.disable {
-                opacity: 0;
+            &:active path {
+                stroke: $main-black;
             }
         }
-        & .prev {
-            left: 0;
-        }
-        & .next {
-            right: 0;
+        &-prev {
+            & path {
+                stroke: $main-lightgrey;
+            }
+            &:hover path {
+                stroke: $main-pink;
+            }
+            &:active path {
+                stroke: $main-black;
+            }
+
         }
     }
 }

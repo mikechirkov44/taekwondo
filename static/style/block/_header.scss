@@ -52,6 +52,16 @@ header::after {
         margin-left: 4px;
         font-size: 16px;
         line-height: 20px;
+        transition: 0.3s ease;
+    }
+    & path {
+        transition: 0.3s ease;
+    }
+    &:hover path {
+        fill: $main-pink;
+    }
+    &:hover .phone-number {
+        color: $main-pink;
     }
 }
 
