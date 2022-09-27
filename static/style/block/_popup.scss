@@ -1,5 +1,5 @@
 .popup {
-    margin: 10% auto 15% auto;
+    margin: 5% auto 15% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,6 +74,7 @@
 }
 
 .popup-hall {
+    margin: 10% auto 15% auto;
     max-width: 900px;
     height: 500px;
     border-radius: 6px;
@@ -132,7 +133,7 @@
     & form input {
         width: 722px;
         &::placeholder {
-            padding: 18px 43px;
+            padding:  0 27px;
         }
     }
     & textarea {
@@ -141,10 +142,11 @@
         width: 722px;
         border-radius: 6px;
         border: 1px solid $main-darkgrey;
-        padding: 23px 43px;
+        padding: 18px 43px;
         @include font(500, 16px, 19px, $main-black);
         &::placeholder {
-            @include font(500, 16px, 19px, $main-lightgrey);
+            @include font(400, 16px, 19px, $main-lightgrey);
+            font-family: 'Montserrat', sans-serif;
         }
     }
     & .feedback__btn {

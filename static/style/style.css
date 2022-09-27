@@ -3396,7 +3396,7 @@ header::after {
 }
 
 .popup {
-  margin: 10% auto 15% auto;
+  margin: 5% auto 15% auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3538,6 +3538,7 @@ header::after {
 }
 
 .popup-hall {
+  margin: 10% auto 15% auto;
   max-width: 900px;
   height: 500px;
   border-radius: 6px;
@@ -3626,19 +3627,19 @@ header::after {
 }
 
 .popup-feedback form input::-webkit-input-placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback form input:-ms-input-placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback form input::-ms-input-placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback form input::placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback textarea {
@@ -3647,7 +3648,7 @@ header::after {
   width: 722px;
   border-radius: 6px;
   border: 1px solid #424141;
-  padding: 23px 43px;
+  padding: 18px 43px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -3655,31 +3656,35 @@ header::after {
 }
 
 .popup-feedback textarea::-webkit-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback textarea:-ms-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback textarea::-ms-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback textarea::placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback .feedback__btn {
