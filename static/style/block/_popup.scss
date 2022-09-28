@@ -19,6 +19,12 @@
         &:active path {
             stroke: $main-black;
         }
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-black;
+        }
     }
     & h1 {
         @include font(500, 32px, 39px, $main-black);

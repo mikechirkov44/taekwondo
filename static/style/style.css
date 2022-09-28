@@ -53,6 +53,19 @@ main {
   fill: #2B2A29;
 }
 
+#scroll__btn path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#scroll__btn:hover path:first-of-type {
+  fill: #F95858;
+}
+
+#scroll__btn:active path:first-of-type {
+  fill: #2B2A29;
+}
+
 #popup {
   display: none;
   z-index: 11;
@@ -161,6 +174,21 @@ header::after {
   margin-left: 4px;
   font-size: 16px;
   line-height: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.phone path {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.phone:hover path {
+  fill: #F95858;
+}
+
+.phone:hover .phone-number {
+  color: #F95858;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -717,6 +745,10 @@ header::after {
 }
 
 .main-news__link:active {
+  background-color: #424141;
+}
+
+.main-news__link:active {
   color: #2B2A29;
   background-color: transparent;
 }
@@ -873,6 +905,19 @@ header::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 60px 0 40px 0;
+}
+
+.news-item__top path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.news-item__top a:hover path {
+  stroke: #F95858;
+}
+
+.news-item__top a:active path {
+  stroke: #2B2A29;
 }
 
 .news-item__top path {
@@ -2772,6 +2817,19 @@ header::after {
   stroke: #2B2A29;
 }
 
+.hall-item__top path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hall-item__top a:hover path {
+  stroke: #F95858;
+}
+
+.hall-item__top a:active path {
+  stroke: #2B2A29;
+}
+
 .hall-item__top__text {
   width: -webkit-fill-available;
   text-align: center;
@@ -2880,6 +2938,7 @@ header::after {
   display: flex;
   overflow: hidden;
   min-height: 380px;
+  min-height: 380px;
 }
 
 .stage div {
@@ -2899,6 +2958,7 @@ header::after {
 }
 
 .nav-ctrl {
+  height: 100%;
   height: 100%;
   width: 100%;
 }
@@ -2959,6 +3019,26 @@ header::after {
 
 .dots-ctrl li:hover {
   background-color: #F95858;
+}
+
+.main-item__slider {
+  position: relative;
+}
+
+.main-item__slider .slider {
+  max-width: 1440px;
+}
+
+.main-item__slider .stage {
+  height: 400px;
+}
+
+.main-item__slider .stage img {
+  height: 400px;
+}
+
+.main-item__slider .dots-ctrl {
+  margin-bottom: 15px;
 }
 
 .main-item__slider {
@@ -3105,6 +3185,19 @@ header::after {
 
 .competition-item svg {
   margin-right: 85px;
+}
+
+.competition-item svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.competition-item svg:hover path {
+  fill: #F95858;
+}
+
+.competition-item svg:active path {
+  fill: #2B2A29;
 }
 
 .competition-item svg path {
@@ -3420,6 +3513,14 @@ header::after {
   top: 25px;
   right: 25px;
   cursor: pointer;
+}
+
+.popup .close__svg:hover path {
+  stroke: #F95858;
+}
+
+.popup .close__svg:active path {
+  stroke: #2B2A29;
 }
 
 .popup .close__svg:hover path {

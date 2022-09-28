@@ -1,4 +1,6 @@
+from pyexpat import model
 from django.db import models
+from django.core.validators import RegexValidator
 
 
 class BaseModel(models.Model):
@@ -43,3 +45,49 @@ class NewsImages(models.Model):
     class Meta:
         verbose_name = "Изображение для новости"
         verbose_name_plural = "Изображения для новости"
+
+
+class Contact(models.Model):
+    """Определяем модель для формы обратной связи"""
+
+    CHOICES_HALLS = (
+        ('1', 'Спартак'),
+        ('2', 'Апельсин'),
+        ('3', 'Лицей №41'),
+        ('4', 'Гимназия №25'),
+        ('5', 'Школа №21'),
+        ('6', 'Школа №31'),
+        ('7', 'Дворец Культуры'),
+        ('8', 'Школа №37'),
+        ('9', 'Отель "Третьяков"'),
+    )
+
+    CHOICES_COACHES = (
+        ('1', 'Маклаков В.П.'),
+        ('2', 'Шустова М.А.'),
+        ('3', 'Соколов П.И.'),
+        ('4', 'кошкаров Б.Н.'),
+        ('5', 'Цыварев И.В.'),
+        ('6', 'Сер А.Р.'),
+        ('7', 'Усачева О.А.'),
+    )
+
+    parents_name = models.CharField(
+        max_length=200, verbose_name="ФИО родителя")
+    child_name = models.CharField(max_length=50, verbose_name="ФИО ребенка")
+    age = models.PositiveSmallIntegerField(verbose_name="Возраст ребенка")
+    phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
+    phone_number = models.CharField(
+        validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name="Номер телефона")
+    hall = models.CharField(max_length=200, unique=False,
+                            verbose_name="Зал для тренировок", choices=CHOICES_HALLS)
+    coach_name = models.CharField(
+        unique=False, max_length=200, verbose_name="ФИО тренера", choices=CHOICES_COACHES)
+    request_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return f'{self.parents_name} - {self.phone_number}'
+
+    class Meta():
+        verbose_name_plural = " Контакты"
+        verbose_name = "Контакт"
