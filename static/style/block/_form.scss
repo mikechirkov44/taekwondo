@@ -3,6 +3,9 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    & label {
+        display: none;
+    }
     & input,
     select {
         appearance: none;

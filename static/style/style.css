@@ -3637,6 +3637,10 @@ form {
           align-items: center;
 }
 
+form label {
+  display: none;
+}
+
 form input,
 form select {
   -webkit-appearance: none;
