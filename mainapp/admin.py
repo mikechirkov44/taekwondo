@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, NewsImages
+from .models import News, NewsImages, Contact
 
 
 class NewsImagesInline(admin.TabularInline):
@@ -24,3 +24,13 @@ class NewsAdmin(admin.ModelAdmin):
 
 admin.site.site_title = 'Костромская Федерация Тхэквондо-ИТФ'
 admin.site.site_header = 'Костромская Федерация Тхэквондо-ИТФ'
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('parents_name', 'child_name', 'age', 'phone_number')
+    list_filter = ('request_date',)
+    ordering = ('pk', )
+    list_per_page = 3
+    search_fields = ('parents_name', 'child_name')
+    date_hierarchy = ('request_date')
