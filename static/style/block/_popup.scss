@@ -1,5 +1,5 @@
 .popup {
-    margin: 10% auto 15% auto;
+    margin: 5% auto 15% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,61 +19,22 @@
         &:active path {
             stroke: $main-black;
         }
+        &:hover path {
+            stroke: $main-pink;
+        }
+        &:active path {
+            stroke: $main-black;
+        }
     }
     & h1 {
         @include font(500, 32px, 39px, $main-black);
         margin-top: 50px;
         margin-bottom: 40px;
     }
-    & form {
-        margin-bottom: 51px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        & input, select {
-            appearance: none;
-            padding:0 16px;
-            width: 522px;
-            height: 57px;
-            border: 1px solid $main-darkgrey;
-            margin-bottom: 16px;
-            border-radius: 6px;
-            @include small-font;
-            font-family: 'Montserrat', sans-serif;
-            &::placeholder {
-                font-family: 'Montserrat', sans-serif;
-                @include small-font;
-                color: $main-lightgrey;
-            }
-        }
-        & option {
-            color: $main-darkgrey;
-        }
-        & button {
-            margin-top: 23px;
-            font-family: 'Montserrat', sans-serif;
-            background-color: $main-black;
-            border: 1px solid $main-black;
-            @include font(500, 16px, 19px, $main-white);
-            padding: 10px 50px;
-            border-radius: 6px;
-            transition: 0.3s;
-            cursor: pointer;
-            &:hover {
-                background-color: $main-lightgrey;
-                border: 1px solid $main-lightgrey;
-            }
-        
-            &:active {
-                border: 1px solid $main-black;
-                background-color: $main-white;
-                color: $main-black;
-            }
-        }
-    }
 }
 
 .popup-hall {
+    margin: 10% auto 15% auto;
     max-width: 900px;
     height: 500px;
     border-radius: 6px;
@@ -132,7 +93,7 @@
     & form input {
         width: 722px;
         &::placeholder {
-            padding: 18px 43px;
+            padding:  0 27px;
         }
     }
     & textarea {
@@ -141,10 +102,11 @@
         width: 722px;
         border-radius: 6px;
         border: 1px solid $main-darkgrey;
-        padding: 23px 43px;
+        padding: 18px 43px;
         @include font(500, 16px, 19px, $main-black);
         &::placeholder {
-            @include font(500, 16px, 19px, $main-lightgrey);
+            @include font(400, 16px, 19px, $main-lightgrey);
+            font-family: 'Montserrat', sans-serif;
         }
     }
     & .feedback__btn {

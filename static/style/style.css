@@ -3396,7 +3396,7 @@ header::after {
 }
 
 .popup {
-  margin: 10% auto 15% auto;
+  margin: 5% auto 15% auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3430,6 +3430,14 @@ header::after {
   stroke: #2B2A29;
 }
 
+.popup .close__svg:hover path {
+  stroke: #F95858;
+}
+
+.popup .close__svg:active path {
+  stroke: #2B2A29;
+}
+
 .popup h1 {
   font-weight: 500;
   font-size: 32px;
@@ -3439,105 +3447,8 @@ header::after {
   margin-bottom: 40px;
 }
 
-.popup form {
-  margin-bottom: 51px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.popup form input, .popup form select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 0 16px;
-  width: 522px;
-  height: 57px;
-  border: 1px solid #424141;
-  margin-bottom: 16px;
-  border-radius: 6px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #2B2A29;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.popup form input::-webkit-input-placeholder, .popup form select::-webkit-input-placeholder {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #2B2A29;
-  color: #ACB0B2;
-}
-
-.popup form input:-ms-input-placeholder, .popup form select:-ms-input-placeholder {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #2B2A29;
-  color: #ACB0B2;
-}
-
-.popup form input::-ms-input-placeholder, .popup form select::-ms-input-placeholder {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #2B2A29;
-  color: #ACB0B2;
-}
-
-.popup form input::placeholder, .popup form select::placeholder {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #2B2A29;
-  color: #ACB0B2;
-}
-
-.popup form option {
-  color: #424141;
-}
-
-.popup form button {
-  margin-top: 23px;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #2B2A29;
-  border: 1px solid #2B2A29;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
-  padding: 10px 50px;
-  border-radius: 6px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.popup form button:hover {
-  background-color: #ACB0B2;
-  border: 1px solid #ACB0B2;
-}
-
-.popup form button:active {
-  border: 1px solid #2B2A29;
-  background-color: #FFFFFF;
-  color: #2B2A29;
-}
-
 .popup-hall {
+  margin: 10% auto 15% auto;
   max-width: 900px;
   height: 500px;
   border-radius: 6px;
@@ -3626,19 +3537,19 @@ header::after {
 }
 
 .popup-feedback form input::-webkit-input-placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback form input:-ms-input-placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback form input::-ms-input-placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback form input::placeholder {
-  padding: 18px 43px;
+  padding: 0 27px;
 }
 
 .popup-feedback textarea {
@@ -3647,7 +3558,7 @@ header::after {
   width: 722px;
   border-radius: 6px;
   border: 1px solid #424141;
-  padding: 23px 43px;
+  padding: 18px 43px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -3655,31 +3566,35 @@ header::after {
 }
 
 .popup-feedback textarea::-webkit-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback textarea:-ms-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback textarea::-ms-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback textarea::placeholder {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #ACB0B2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .popup-feedback .feedback__btn {
@@ -3706,5 +3621,108 @@ header::after {
   border: 1px solid #E31E26;
   background-color: #FFFFFF;
   color: #E31E26;
+}
+
+form {
+  margin-bottom: 51px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form input,
+form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0 16px;
+  width: 522px;
+  height: 57px;
+  border: 1px solid #424141;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  font-family: "Montserrat", sans-serif;
+}
+
+form input::-webkit-input-placeholder,
+form select::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  color: #ACB0B2;
+}
+
+form input:-ms-input-placeholder,
+form select:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  color: #ACB0B2;
+}
+
+form input::-ms-input-placeholder,
+form select::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  color: #ACB0B2;
+}
+
+form input::placeholder,
+form select::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2B2A29;
+  color: #ACB0B2;
+}
+
+form option {
+  color: #424141;
+}
+
+form button {
+  margin-top: 23px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #2B2A29;
+  border: 1px solid #2B2A29;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  padding: 10px 50px;
+  border-radius: 6px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ACB0B2;
+  border: 1px solid #ACB0B2;
+}
+
+form button:active {
+  border: 1px solid #2B2A29;
+  background-color: #FFFFFF;
+  color: #2B2A29;
 }
 /*# sourceMappingURL=style.css.map */

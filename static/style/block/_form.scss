@@ -1,0 +1,47 @@
+form {
+    margin-bottom: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & input,
+    select {
+        appearance: none;
+        padding: 0 16px;
+        width: 522px;
+        height: 57px;
+        border: 1px solid $main-darkgrey;
+        margin-bottom: 16px;
+        border-radius: 6px;
+        @include small-font;
+        font-family: "Montserrat", sans-serif;
+        &::placeholder {
+            font-family: "Montserrat", sans-serif;
+            @include small-font;
+            color: $main-lightgrey;
+        }
+    }
+    & option {
+        color: $main-darkgrey;
+    }
+    & button {
+        margin-top: 23px;
+        font-family: "Montserrat", sans-serif;
+        background-color: $main-black;
+        border: 1px solid $main-black;
+        @include font(500, 16px, 19px, $main-white);
+        padding: 10px 50px;
+        border-radius: 6px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $main-lightgrey;
+            border: 1px solid $main-lightgrey;
+        }
+
+        &:active {
+            border: 1px solid $main-black;
+            background-color: $main-white;
+            color: $main-black;
+        }
+    }
+}
