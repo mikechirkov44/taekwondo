@@ -1,4 +1,6 @@
+from email.policy import default
 from pyexpat import model
+from tabnanny import verbose
 from django.db import models
 from django.core.validators import RegexValidator
 
@@ -51,8 +53,8 @@ class Contact(models.Model):
     """Определяем модель для формы обратной связи"""
 
     CHOICES_HALLS = (
-        ('1', 'Спартак'),
-        ('2', 'Апельсин'),
+        ('1', 'С/К Спартак'),
+        ('2', 'Ф/К Апельсин'),
         ('3', 'Лицей №41'),
         ('4', 'Гимназия №25'),
         ('5', 'Школа №21'),
@@ -60,13 +62,16 @@ class Contact(models.Model):
         ('7', 'Дворец Культуры'),
         ('8', 'Школа №37'),
         ('9', 'Отель "Третьяков"'),
+        ('10', 'С/К "Синия птица"'),
+        ('11', 'Зал единоборств'),
+
     )
 
     CHOICES_COACHES = (
         ('1', 'Маклаков В.П.'),
         ('2', 'Шустова М.А.'),
         ('3', 'Соколов П.И.'),
-        ('4', 'кошкаров Б.Н.'),
+        ('4', 'Кошкаров Б.Н.'),
         ('5', 'Цыварев И.В.'),
         ('6', 'Сер А.Р.'),
         ('7', 'Усачева О.А.'),
@@ -83,7 +88,9 @@ class Contact(models.Model):
                             verbose_name="Зал для тренировок", choices=CHOICES_HALLS)
     coach_name = models.CharField(
         unique=False, max_length=200, verbose_name="ФИО тренера", choices=CHOICES_COACHES)
-    request_date = models.DateTimeField(auto_now_add=True)
+    request_date = models.DateTimeField(
+        auto_now_add=True, verbose_name="Дата заявки")
+    is_contacted = models.BooleanField(default=False, verbose_name="Связались")
 
     def __str__(self) -> str:
         return f'{self.parents_name} - {self.phone_number}'
