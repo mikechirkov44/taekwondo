@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import News, NewsImages, Contact
 
 
@@ -7,8 +8,10 @@ class NewsImagesInline(admin.TabularInline):
     model = NewsImages
 
 
-@admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(SummernoteModelAdmin):
+
+    summernote_fields = ('text', )
+
     list_display = ('pk', 'title', 'preambule', 'deleted')
     list_filter = ('deleted', 'created_at')
     ordering = ('pk', )
@@ -24,6 +27,7 @@ class NewsAdmin(admin.ModelAdmin):
 
 admin.site.site_title = 'Костромская Федерация Тхэквондо-ИТФ'
 admin.site.site_header = 'Костромская Федерация Тхэквондо-ИТФ'
+admin.site.register(News, NewsAdmin)
 
 
 @admin.register(Contact)
