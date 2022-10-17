@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from .forms import ContactForm
+from django.views.generic import TemplateView
 
 
 class ContactCreate(CreateView):
@@ -32,3 +33,15 @@ def email(subject, content):
 
 def success(request):
     return HttpResponse('Письмо отправлено!')
+
+
+class MainPageView(TemplateView):
+    template_name = "mainapp/index.html"
+
+
+class AboutPageView(TemplateView):
+    template_name = "mainapp/about.html"
+
+
+class ContactsPageView(TemplateView):
+    template_name = "mainapp/contacts.html"
