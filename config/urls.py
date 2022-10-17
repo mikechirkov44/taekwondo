@@ -22,10 +22,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url="mainapp/")),
-    path('mainapp/', include('mainapp.urls')),
-    path('/form', ContactCreate.as_view(), name='contact_page'),
-    path('summernote/', include('django_summernote.urls')),
-    path('success/', success, name='success_page')
+    path("admin/", admin.site.urls),
+    path("", RedirectView.as_view(url="mainapp/")),
+    path("mainapp/", include("mainapp.urls")),
+    path("form/", ContactCreate.as_view(), name="contact_page"),
+    path("summernote/", include("django_summernote.urls")),
+    path("success/", success, name="success_page")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

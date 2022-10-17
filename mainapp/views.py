@@ -45,3 +45,11 @@ class AboutPageView(TemplateView):
 
 class ContactsPageView(TemplateView):
     template_name = "mainapp/contacts.html"
+
+
+class HistoryPageView(TemplateView):
+    template_name = "mainapp/history.html"
+
+
+class NewsPageView(TemplateView):
+    template_name = "mainapp/news.html"
