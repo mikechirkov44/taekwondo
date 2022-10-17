@@ -9,7 +9,7 @@
     &-logo {
         display: flex;
         flex-direction: column;
-        @include font(600, 10px, 14px, #bfbfbf);
+        @include font(600, 10px, 14px, $main-white);
         &__svg {
             margin-bottom: 4px;
         }
@@ -32,16 +32,15 @@
             display: flex;
             align-items: center;
         }
-        &-link {
+        &-link, span {
             text-decoration: none;
             @include font(400, 14px, 17px, #bfbfbf);
             &:hover {
                 text-decoration: underline;
             }
         }
-        &__span {
-            @include font(400, 14px, 20px, #bfbfbf);
-            margin-left: 11px;
+        & svg {
+            margin-right: 11px;
         }
     }
     &-social {
@@ -71,4 +70,90 @@
             }
         }
     }
+}
+
+
+
+
+@media (max-width: 1240px) {
+    .footer {
+        &-wrap {
+            padding: 12px 0 21px 0;
+        }
+        &-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include font(500, 10px, 12px, $main-white);
+            &__svg {
+                margin-bottom: 11px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+        &-admin {
+            @include font(400, 10px, 12px, #BFBFBF);
+            margin-top: 11px;
+        }
+        &-subheading {
+            @include font(500, 12px, 14px, $main-white);
+            margin-bottom: 10px;
+        }
+        &-list {
+            @include font(500, 12px, 14px, $main-white);
+            max-width: 130px;
+            &-item {
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                & svg {
+                    display: none;
+                    margin-right: 2;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #BFBFBF;
+                    border-radius: 5px;
+                    margin-right: 8px;
+                }
+            }
+            &-link, span {
+                text-decoration: none;
+                @include font(400, 10px, 12px, #bfbfbf);
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-social {
+            &-item {
+                margin: 14px 18px 0 0;
+
+                & svg {
+                    display: block;
+                }
+            }
+            &-link:hover {
+                svg circle {
+                    fill: $main-white;
+                    transition: 0.3s;
+                }
+            }
+            &-link__last:hover {
+                svg {
+                    circle {
+                        fill: $main-darkgrey;
+                        transition: 0.3s;
+                    }
+                    path {
+                        fill: $main-white;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }  
 }

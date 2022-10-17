@@ -12,7 +12,7 @@
         width: 280px;
         height: 416px;
         border-radius: 24px;
-        border: 2px solid #424141;
+        border: 2px solid $main-darkgrey;
         background-color: $main-white;
         display: flex;
         flex-direction: column;
@@ -33,6 +33,25 @@
         &__text {
             @include small-font;
             text-align: center;
+        }
+    }
+}
+
+
+
+@media (max-width: 1240px) {
+    .advantages {
+        height: 712px;
+        &-list {
+            flex-wrap: wrap;
+            top: -21px;
+        }
+        &-card {
+            width: 320px;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid $main-darkgrey;
+            margin-bottom: 64px;
         }
     }
 }

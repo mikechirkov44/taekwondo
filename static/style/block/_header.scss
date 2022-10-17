@@ -171,4 +171,35 @@ header::after {
 
 @media (max-width: 1240px) {
     
+    .header {
+        &-wrap {
+            padding: 35px 0;
+        }
+    
+        &-logo {
+            & svg {
+                width: 37;
+                height: 37;
+            }
+            @include font(400, 14px, 17px, $main-black);
+        }
+    }
+    
+    .phone {
+        margin-right: 20px;
+        &-number {
+            margin-left: 4px;
+            @include font(400, 14px, 17px, $main-black);
+        }
+    }
+    
+    .subscribe-btn {
+        padding: 8px 24px;
+        @include font(400, 11px, 13px, $main-white);
+    }
+    
+    .hamburger-menu {
+        width: 50px;
+        position: relative;
+    }
 }

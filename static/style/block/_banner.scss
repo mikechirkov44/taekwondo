@@ -101,3 +101,58 @@
         z-index: 1;
     }
 }
+
+
+@media (max-width: 1240px) {
+    .banner {
+        height: 316px;
+        background: #595959;
+
+        & img {
+            width: 221px;
+            height: 311px;
+        }
+        &-offer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 48px;
+            margin-bottom: 37px;
+            &__text {
+                width: 228px;
+                @include font(600, 15px, 19px, $main-white);
+            }
+            &__bottom {
+                &__text {
+                    @include font(400, 12px, 15px, $main-white);
+                    margin-bottom: 25px;
+                    width: 322px;
+                }
+                &__btn {
+                    padding: 8px 24px;
+                    @include font(400, 11px, 13px, $main-white);
+                }
+            }
+        }
+        &-cost {
+            margin-bottom: 35px;
+            margin-top: 48px;
+            width: 210px;
+            &__text {
+                position: absolute;
+                top: 0;
+                width: 176px;
+                @include font(600, 15px, 19px, $main-white);
+            }
+
+            & img {
+                position: absolute;
+                bottom: 0;
+                right: -60px;
+                width: 300px;
+                height: 133px;
+            }
+        }
+    }
+}
