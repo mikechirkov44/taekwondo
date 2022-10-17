@@ -439,7 +439,7 @@ header::after {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style-type: none;
-  margin: 60px 0 134px 90px;
+  margin: 90px 0 90px 90px;
 }
 
 .promo-list-item {
@@ -2888,7 +2888,6 @@ header::after {
 }
 
 .stage div img {
-  width: 100%;
   min-height: 380px;
 }
 
@@ -3461,6 +3460,23 @@ header::after {
   color: #2B2A29;
 }
 
+.popup-hall p {
+  text-align: center;
+}
+
+.popup-hall__timetables {
+  height: 60%;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .popup-hall__timetable {
   height: 100%;
   display: -webkit-box;
@@ -3488,6 +3504,7 @@ header::after {
 }
 
 .popup-hall__timetable .days {
+  width: 120px;
   text-align: end;
   margin-right: 25px;
 }
@@ -3503,6 +3520,7 @@ header::after {
 }
 
 .popup-hall__timetable .time li {
+  width: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3728,5 +3746,22 @@ form button:active {
   border: 1px solid #2B2A29;
   background-color: #FFFFFF;
   color: #2B2A29;
+}
+
+@media (max-width: 1240px) {
+  .wrapper {
+    width: 680px;
+  }
+  main {
+    padding-top: 110px;
+    min-height: calc(100vh - 129px);
+  }
+  .map-heading {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #2B2A29;
+    margin: 80px 0 30px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
