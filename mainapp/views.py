@@ -53,3 +53,19 @@ class HistoryPageView(TemplateView):
 
 class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
+
+
+class HallsPageView(TemplateView):
+    template_name = "mainapp/halls.html"
+
+
+class Hall_of_FamePageView(TemplateView):
+    template_name = "mainapp/hall_of_fame.html"
+
+
+class TrainersPageView(TemplateView):
+    template_name = "mainapp/trainers.html"
+
+
+class CalendarPageView(TemplateView):
+    template_name = "mainapp/calendar.html"
