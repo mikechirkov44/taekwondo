@@ -126,3 +126,138 @@
         @include small-font;
     }
 }
+
+
+
+
+
+@media (max-width: 1240px) {
+    .history {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            & img {
+                margin-top: 10px;
+            }
+        }
+        &-text {
+            margin-top: 61px;
+            margin-bottom: 55px;
+            max-width: 50%;
+            & h3 {
+                @include font(500, 40px, 48px, $main-black);
+                margin-bottom: 6px;
+            }
+            &__line {
+                width: 307px;
+                background-color: $main-red;
+                border: 2px solid $main-red;
+                margin-bottom: 67px;
+            }
+            &-item {
+                margin-left: 90px;
+                margin-bottom: 30px;
+                @include small-font;
+                & span {
+                    @include font(500, 32px, 39px, $main-black);
+                }
+            }
+        }
+    }
+    
+    .history-mission {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        &__img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    
+    .info {
+        margin-top: 65px;
+        margin-bottom: 100px;
+        max-width: 670px;
+        & h3 {
+            @include font(500, 40px, 48px, $main-black);
+            margin-bottom: 6px;
+        }
+        &__line {
+            width: 307px;
+            background-color: $main-red;
+            border: 2px solid $main-red;
+            margin-bottom: 46px;
+        }
+        &__text {
+            margin-left: 106px;
+            margin-bottom: 22px;
+            @include small-font;
+            & span {
+                @include font(500, 32px, 39px, $main-black);
+            }
+        }
+    }
+    
+    .quote {
+        position: relative;
+        height: 258px;
+        width: 75%;
+        background-color: $main-darkgrey;
+        &::before {
+            content: '';
+            display: block;
+            margin-left: calc(50% - 50vw);
+            background-color: $main-darkgrey;
+            height: inherit;
+        }
+        &-left {
+            position: absolute;
+            top: -35px;
+            left: 35px;
+        }
+        &-right {
+            position: absolute;
+            bottom: -35px;
+            right: 163px;
+        }
+        &-text {
+            position: absolute;
+            top: 31px;
+            left: 150px;
+            max-width: 518px;
+            @include small-font;
+            color: $main-white;
+        }
+    }
+    
+    .caption {
+        width: 100%;
+        background-color: #DFE3EB;
+        &-wrap {
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            margin-right: 160px
+        }
+        & h6 {
+            @include font(500, 16px, 19px, $main-black);
+            margin-bottom: 6px;
+        }
+        &__line {
+            width: 260px;
+            background-color: $main-red;
+            border: 1px solid $main-red;
+            margin-bottom: 9px;
+        }
+        &__name {
+            @include small-font;
+        }
+    }
+}
