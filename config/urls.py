@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from mainapp.views import ContactCreate, success
+from mainapp.views import ContactCreate, success, page_not_found
 from django.views.generic import RedirectView
 
 from django.conf import settings
@@ -29,3 +29,4 @@ urlpatterns = [
     path("summernote/", include("django_summernote.urls")),
     path("success/", success, name="success_page")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+handler404 = page_not_found

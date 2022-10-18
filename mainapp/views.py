@@ -1,10 +1,11 @@
 from django.views.generic import CreateView
 from .models import Contact
 from django.urls import reverse_lazy
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.core.mail import send_mail
 from .forms import ContactForm
 from django.views.generic import TemplateView
+from django.shortcuts import render
 
 
 class ContactCreate(CreateView):
@@ -69,3 +70,11 @@ class TrainersPageView(TemplateView):
 
 class CalendarPageView(TemplateView):
     template_name = "mainapp/calendar.html"
+
+
+class VideoPageView(TemplateView):
+    template_name = "mainapp/video.html"
+
+
+def page_not_found(request, exception):
+    return render(request, 'mainapp/not_found.html', status=404)
