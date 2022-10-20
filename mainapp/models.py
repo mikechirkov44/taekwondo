@@ -1,6 +1,3 @@
-from email.policy import default
-from pyexpat import model
-from tabnanny import verbose
 from django.db import models
 from django.core.validators import RegexValidator
 
@@ -29,7 +26,7 @@ class News(BaseModel):
     text = models.TextField(blank=True, null=True,
                             verbose_name="Teкст новости")
     main_picture = models.ImageField(
-        blank=True, verbose_name="Главное изображение", upload_to='news/%Y/%m/%d')
+        blank=True, verbose_name="Главное изображение", upload_to='img/')
 
     def __str__(self):
         return f"{self.pk} {self.title}"
@@ -42,7 +39,7 @@ class News(BaseModel):
 class NewsImages(models.Model):
     news = models.ForeignKey(News, default=None, related_name='images',
                              on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='news/%Y/%m/%d', blank=True)
+    image = models.ImageField(upload_to='img/', blank=True)
 
     class Meta:
         verbose_name = "Изображение для новости"

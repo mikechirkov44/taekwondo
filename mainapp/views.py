@@ -1,11 +1,13 @@
 from django.views.generic import CreateView
-from .models import Contact
+
+from .models import Contact, News
 from django.urls import reverse_lazy
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse
 from django.core.mail import send_mail
 from .forms import ContactForm
-from django.views.generic import TemplateView
-from django.shortcuts import render
+from django.views.generic import TemplateView, DetailView, ListView
+from django.shortcuts import render, get_object_or_404
+from mainapp import models as mainapp_models
 
 
 class ContactCreate(CreateView):
@@ -54,6 +56,25 @@ class HistoryPageView(TemplateView):
 
 class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
+
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context['news_qs'] = mainapp_models.News.objects.filter(deleted=False)[
+            :5]
+        return context
+
+
+class NewsPageDetailView(TemplateView):
+    template_name = "mainapp/news_detail.html"
+
+    def get_context_data(self, pk=None,  **kwargs):
+        # Get all previous data
+        context = super().get_context_data(pk=pk, **kwargs)
+        # Create your own data
+        context['news_object'] = get_object_or_404(mainapp_models.News, pk=pk)
+        return context
 
 
 class HallsPageView(TemplateView):
