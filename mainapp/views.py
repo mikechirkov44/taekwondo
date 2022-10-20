@@ -1,9 +1,13 @@
 from django.views.generic import CreateView
-from .models import Contact
+
+from .models import Contact, News
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from .forms import ContactForm
+from django.views.generic import TemplateView, DetailView, ListView
+from django.shortcuts import render, get_object_or_404
+from mainapp import models as mainapp_models
 
 
 class ContactCreate(CreateView):
@@ -32,3 +36,67 @@ def email(subject, content):
 
 def success(request):
     return HttpResponse('Письмо отправлено!')
+
+
+class MainPageView(TemplateView):
+    template_name = "mainapp/index.html"
+
+
+class AboutPageView(TemplateView):
+    template_name = "mainapp/about.html"
+
+
+class ContactsPageView(TemplateView):
+    template_name = "mainapp/contacts.html"
+
+
+class HistoryPageView(TemplateView):
+    template_name = "mainapp/history.html"
+
+
+class NewsPageView(TemplateView):
+    template_name = "mainapp/news.html"
+
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context['news_qs'] = mainapp_models.News.objects.filter(deleted=False)[
+            :5]
+        return context
+
+
+class NewsPageDetailView(TemplateView):
+    template_name = "mainapp/news_detail.html"
+
+    def get_context_data(self, pk=None,  **kwargs):
+        # Get all previous data
+        context = super().get_context_data(pk=pk, **kwargs)
+        # Create your own data
+        context['news_object'] = get_object_or_404(mainapp_models.News, pk=pk)
+        return context
+
+
+class HallsPageView(TemplateView):
+
+    template_name = "mainapp/halls.html"
+
+
+class Hall_of_FamePageView(TemplateView):
+    template_name = "mainapp/hall_of_fame.html"
+
+
+class TrainersPageView(TemplateView):
+    template_name = "mainapp/trainers.html"
+
+
+class CalendarPageView(TemplateView):
+    template_name = "mainapp/calendar.html"
+
+
+class VideoPageView(TemplateView):
+    template_name = "mainapp/video.html"
+
+
+def page_not_found(request, exception):
+    return render(request, 'mainapp/not_found.html', status=404)
