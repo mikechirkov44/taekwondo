@@ -1,0 +1,972 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="trainers">
+            <h3>Тренерский состав Костромской федерации Тхэквондо ИТФ России</h3>
+            <ul class="trainers-wrap ">
+                <li class="trainer main">
+                    <div class="trainer-wrap">
+                        <div class="trainer-info">
+                            <span class="name">Маклаков Вячеслав Павлович</span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Основатель костромской школы тхэквондо ИТФ в&nbsp;1994 году</li>
+                                    <li class="deserts-item">Президент Региональной Спортивной Общественной Организации &laquo;Костромская Феде-рация Тхэквондо ИТФ&raquo;</li>
+                                    <li class="deserts-item">Чемпион мира 2006 года&nbsp;г. София</li>
+                                    <li class="deserts-item">Международный инструктор&nbsp;VI дан</li>
+                                    <li class="deserts-item">Судья международной категории &laquo;А&raquo;</li>
+                                    <li class="deserts-item">&laquo;Заслуженный тренер России&raquo;</li>
+                                    <li class="deserts-item">&laquo;Отличник физической культуры и&nbsp;спорта&raquo;</li>
+                                    <li class="deserts-item">Старший тренер юниорской сборной России</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_spartak').style.display='block'" class="timetable__btn">С/К &laquo;СПАРТАК&raquo;</button>
+                                    <div class="hall_spartak" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_spartak').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>С/К &laquo;СПАРТАК&raquo;</h3>
+                                                <p>Петрковский бульвар, д. 42</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Понедельник</li>
+                                                    <li>Среда</li>
+                                                    <li>Пятница</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>08:30-10:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>15:30-17:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:30-20:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_spartak_kids').style.display='block'"  class="timetable__btn">С/К &laquo;СПАРТАК&raquo;<p>(набор детей 5-7&nbsp;лет)</p></button>
+                                    <div class="hall_spartak_kids" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_spartak_kids').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>С/К &laquo;СПАРТАК&raquo;</h3>
+                                                <p>Петрковский бульвар, д. 42</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                    <li>Четверг</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:00-19:15</p>
+                                                    </li>
+                                                    <li> <!-- необходим для позиционирования, не убирать  --> </li>  
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Суббота</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>15:00-16:00</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>16:00-18:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Маклаков.png' %}" alt="Маклаков">
+                        </div>
+                    </div>
+                </li>
+                <li class="trainer">
+                    <div class="trainer-wrap">
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Шустова.png' %}" alt="Шустова">
+                        </div>
+                        <div class="trainer-info">
+                            <span class="name">Шустова Наталья Александровна</span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Высшее педагогическое образование</li>
+                                    <li class="deserts-item">Тренер сборной Костромской области</li>
+                                    <li class="deserts-item">Международный инструктор&nbsp;IV дан</li>
+                                    <li class="deserts-item">Судья международной категории &laquo;А&raquo;</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_spartak__shustova').style.display='block'" class="timetable__btn">С/К &laquo;СПАРТАК&raquo;</button>
+                                    <div class="hall_spartak__shustova" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_spartak__shustova').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>С/К &laquo;СПАРТАК&raquo;</h3>
+                                                <p>Петрковский бульвар, д. 42</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Понедельник</li>
+                                                    <li>Среда</li>
+                                                    <li>Пятница</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:00-18:00</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:00-19:30</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_lyceum41').style.display='block'"  class="timetable__btn">Лицей &#8470;&nbsp;41</button>
+                                    <div class="hall_lyceum41" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_lyceum41').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Лицей &#8470;&nbsp;41</h3>
+                                                <p>ул. Новосёлов, д.&nbsp;11</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                    <li>Четверг</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:30-18:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:30-20:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Суббота</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>15:00-16:00</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>16:00-18:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="trainer">
+                    <div class="trainer-wrap">
+                        <div class="trainer-info">
+                            <span class="name">Соколов Павел Игоревич</span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Высшее педагогическое образование</li>
+                                    <li class="deserts-item">Тренер сборной Костромской области</li>
+                                    <li class="deserts-item">Инструктор II&nbsp;дан</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_spartak__sokolov').style.display='block'" class="timetable__btn">С/К &laquo;СПАРТАК&raquo;</button>
+                                    <div class="hall_spartak__sokolov" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_spartak__sokolov').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>С/К &laquo;СПАРТАК&raquo;</h3>
+                                                <p>Петрковский бульвар, д. 42</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                    <li>Четверг</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>19:00-20:30</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_gymnasia25').style.display='block'"  class="timetable__btn">Гимназия &#8470;&nbsp;25</button>
+                                    <div class="hall_gymnasia25" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_gymnasia25').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Гимназия &#8470;&nbsp;25</h3>
+                                                <p>мкр. Давыдовский 1/32</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Понедельник</li>
+                                                    <li>Среда</li>
+                                                    <li>Пятница</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:30-20:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Соколов.png' %}" alt="Соколов">
+                        </div>
+                    </div>
+                </li>
+                <li class="trainer">
+                    <div class="trainer-wrap">
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Кошкаров.png' %}" alt="Кошкаров">
+                        </div>
+                        <div class="trainer-info">
+                            <span class="name">Кошкаров Борис Николаевич</span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Высшее педагогическое образование</li>
+                                    <li class="deserts-item">Тренер сборной Костромской области</li>
+                                    <li class="deserts-item">Инструктор II&nbsp;дан</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_school21').style.display='block'" class="timetable__btn">Школа &#8470;&nbsp;21</button>
+                                    <div class="hall_school21" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_school21').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Школа &#8470;&nbsp;21</h3>
+                                                <p>мкр. Панова&nbsp;9</p>
+                                            </div>
+                                            <div class="popup-hall__timetables">
+                                                <div class="popup-hall__timetable">
+                                                    <ul class="days">
+                                                        <li>Понедельник</li>
+                                                        <li>Среда</li>
+                                                        <li>Пятница</li>
+                                                    </ul>
+                                                    <div class="popup-hall__timetable__line"></div>
+                                                    <ul class="time">
+                                                        <li>
+                                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                            <p>18:20-20:00</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="popup-hall__timetable">
+                                                    <ul class="days">
+                                                        <li>Вторник</li>
+                                                        <li>Четверг</li>
+                                                        <li>Суббота</li>
+                                                    </ul>
+                                                    <div class="popup-hall__timetable__line"></div>
+                                                    <ul class="time">
+                                                        <li>
+                                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                            <p>17:00-18:00</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_school31').style.display='block'" class="timetable__btn">Школа &#8470;&nbsp;31</button>
+                                    <div class="hall_school31" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_school31').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Школа &#8470;&nbsp;31</h3>
+                                                <p>ул. Строительная&nbsp;8</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                    <li>Четверг</li>
+                                                    <li>Суббота</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>19:00-20:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_martial-arts').style.display='block'" class="timetable__btn">&laquo;Зал Единоборств&raquo;</button>
+                                    <div class="hall_martial-arts" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_martial-arts').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>&laquo;Зал Единоборств&raquo;</h3>
+                                                <p>ул. Южная&nbsp;11</p>
+                                            </div>
+                                            <div class="popup-hall__timetables">
+                                                <div class="popup-hall__timetable">
+                                                    <ul class="days">
+                                                        <li>Понедельник</li>
+                                                        <li>Среда</li>
+                                                        <li>Пятница</li>
+                                                    </ul>
+                                                    <div class="popup-hall__timetable__line"></div>
+                                                    <ul class="time">
+                                                        <li>
+                                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                            <p>17:00-18:00</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="popup-hall__timetable">
+                                                    <ul class="days">
+                                                        <li>Вторник</li>
+                                                        <li>Четверг</li>
+                                                        <li>Суббота</li>
+                                                    </ul>
+                                                    <div class="popup-hall__timetable__line"></div>
+                                                    <ul class="time">
+                                                        <li>
+                                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                            <p>15:00-16:00</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="trainer">
+                    <div class="trainer-wrap">
+                        <div class="trainer-info">
+                            <span class="name">Цыварев Игорь Викторович</span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Высшее педагогическое образование</li>
+                                    <li class="deserts-item">Тренер сборной Костромской области</li>
+                                    <li class="deserts-item no-margin">Инструктор I&nbsp;дан</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_blue-bird').style.display='block'" class="timetable__btn">С/Ц &laquo;Синяя птица&raquo;</button>
+                                    <div class="hall_blue-bird" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_blue-bird').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>С/Ц &laquo;Синяя птица&raquo;</h3>
+                                                <p>ул. Кузнецкая 20&nbsp;А</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                    <li>Четверг</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:30-18:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:00-20:30</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Воскресенье</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>09:10-10:40</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>10:40-13:10</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_school37').style.display='block'"  class="timetable__btn">Школа &#8470;&nbsp;37</button>
+                                    <div class="hall_school37" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_school37').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Школа &#8470;&nbsp;37</h3>
+                                                <p>г. Буй ул. Октябрьской революции 130</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Понедельник</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:30-19:00</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>19:00-21:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_recreation-center').style.display='block'" class="timetable__btn">Дворец Культуры</button>
+                                    <div class="hall_recreation-center" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_recreation-center').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Дворец Культуры</h3>
+                                                <p>ул. Октябрьской революции&nbsp;98</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Среда</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:30-18:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:30-19:45</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>19:45-21:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Суббота</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>09:00-10:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>10:30-12:45</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>12:45-15:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_hotel').style.display='block'"  class="timetable__btn">Отель &laquo;Третьяков&raquo;</button>
+                                    <div class="hall_hotel" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_hotel').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>Отель &laquo;Третьяков&raquo;</h3>
+                                                <p>г. Судиславль ул. Советская&nbsp;2</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Суббота</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:00-19:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>19:30-21:30</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Воскресенье</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:00-18:30</p>
+                                                    </li>
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:30-21:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Цыварев1 1.png' %}" alt="Цыварев">
+                        </div>
+                    </div>
+                </li>
+                <li class="trainer">
+                    <div class="trainer-wrap">
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Сер.png' %}" alt="Сер">
+                        </div>
+                        <div class="trainer-info">
+                            <span class="name">Сер Андрей Романович</span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Высшее педагогическое образование</li>
+                                    <li class="deserts-item">Тренер сборной Костромской области</li>
+                                    <li class="deserts-item">Международный инструктор&nbsp;I дан</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_orange').style.display='block'" class="timetable__btn">ФК&nbsp;&laquo;Апельсин&raquo;</button>
+                                    <div class="hall_orange" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_orange').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>ФК&nbsp;&laquo;Апельсин&raquo;</h3>
+                                                <p>ул. Станкостроительная&nbsp;5 &laquo;Б&raquo;, 2-й этаж</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Понедельник</li>
+                                                    <li>Среда</li>
+                                                    <li>Пятница</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:00-20:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button onclick="document.querySelector('.hall_martial-arts__ser').style.display='block'"  class="timetable__btn">&laquo;Зал Единоборств&raquo;</button>
+                                    <div class="hall_martial-arts__ser" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_martial-arts__ser').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>&laquo;Зал Единоборств&raquo;</h3>
+                                                <p>ул. Южная&nbsp;11</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                    <li>Четверг</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>09:00-11:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Суббота</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>11:00-13:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="trainer">
+                    <div class="trainer-wrap">
+                        <div class="trainer-info">
+                            <span class="name">Усачева Ольга Анатольевна </span>
+                            <div class="deserts-container">
+                                <div class="deserts-line"></div>
+                                <ul class="deserts">
+                                    <li class="deserts-item">Высшее педагогическое образование</li>
+                                    <li class="deserts-item">Инструктор I&nbsp;гуп</li>
+                                </ul>
+                            </div>
+                            <div class="timetable">
+                                <div class="timetable__text">Расписание тренеровок:</div>
+                                <div class="timetable__btns">
+                                    <button onclick="document.querySelector('.hall_martial-arts__usacheva').style.display='block'"  class="timetable__btn">&laquo;Зал Единоборств&raquo;</button>
+                                    <div class="hall_martial-arts__usacheva" id="popup">
+                                        <div class="popup popup-hall">
+                                            <svg class="close__svg" onclick="document.querySelector('.hall_martial-arts__usacheva').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                                            </svg>
+                                            <div class="popup-hall__title">
+                                                <h3>&laquo;Зал Единоборств&raquo;</h3>
+                                                <p>ул. Южная&nbsp;11</p>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Вторник</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>17:00-18:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Среда</li>
+                                                    <li>Пятница</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>18:00-19:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="popup-hall__timetable">
+                                                <ul class="days">
+                                                    <li>Суббота</li>
+                                                    <li>Воскресенье</li>
+                                                </ul>
+                                                <div class="popup-hall__timetable__line"></div>
+                                                <ul class="time">
+                                                    <li>
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" fill="#E31E26" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 5V11L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p>10:00-11:00</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-img">
+                            <img src="{% static 'img/Усачева.png' %}" alt="Усачева">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="maklakova">
+            <div class="maklakova-wrap wrapper">
+                <img src="{% static 'img/Маклакова.png' %}" alt="Маклакова">
+                <div class="trainer-info">
+                    <span class="name">Маклакова Светлана Александровна</span>
+                    <div class="deserts-container">
+                        <div class="deserts-line"></div>
+                        <ul class="deserts">
+                            <li class="deserts-item">Высшее  образование</li>
+                            <li class="deserts-item">Менеджер по&nbsp;развитию Региональной Спортивной Общественной Организации &laquo;Ко-стромская Федерация Тхэквондо ИТФ&raquo;.</li>
+                        </ul>
+                    </div>
+                </div>
+                <button onclick="document.querySelector('.popup_subscribe').style.display='block'" class="maklakova__btn">Записаться</button>
+            </div>
+        </div>
+        <div id="popup" class="popup_subscribe popup-container">
+            <div action="" class="popup">
+                <h1>Запись на пробное занятие Вашего ребенка</h1>
+                <svg class="close__svg" onclick="document.querySelector('.popup_subscribe').style.display='none'" width="46" height="46" viewBox="0 0 46 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4551 2.26456C34.7769 2.26456 43.9551 12.1792 43.9551 24.4096C43.9551 36.64 34.7769 46.5547 23.4551 46.5547C12.1332 46.5547 2.95508 36.64 2.95508 24.4096C2.95508 12.1792 12.1332 2.26456 23.4551 2.26456ZM45.9551 24.4096C45.9551 10.986 35.8815 0.104065 23.4551 0.104065C11.0287 0.104065 0.955078 10.986 0.955078 24.4096C0.955078 37.8332 11.0287 48.7152 23.4551 48.7152C35.8815 48.7152 45.9551 37.8332 45.9551 24.4096Z" fill="#ACB0B2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1992 16.5714C16.5246 16.2199 17.0522 16.2199 17.3777 16.5714L23.4551 23.1365L29.5325 16.5714C29.8579 16.2199 30.3856 16.2199 30.711 16.5714C31.0364 16.923 31.0364 17.493 30.711 17.8445L24.6336 24.4096L30.711 30.9747C31.0364 31.3263 31.0364 31.8963 30.711 32.2478C30.3856 32.5994 29.8579 32.5994 29.5325 32.2478L23.4551 25.6827L17.3777 32.2478C17.0522 32.5994 16.5246 32.5994 16.1992 32.2478C15.8737 31.8963 15.8737 31.3263 16.1992 30.9747L22.2766 24.4096L16.1992 17.8445C15.8737 17.493 15.8737 16.923 16.1992 16.5714Z" fill="#ACB0B2"/>
+                </svg>
+                <form action="#">
+                    <input type="text" placeholder="ФИО родителя" name="parentname" required>
+                    <input type="tel" placeholder="Ваш телефон в формате +7 000 000 0000" pattern="+[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                    <input type="text" placeholder="ФИО ребенка"required>
+                    <input type="number" placeholder="Возраст ребенка" min="4" max="18"required>
+                    <select name="hall" placeholder="Выбор зала">
+                        <option value="no-hall-selected">Зал для тренировок</option>
+                        <option value="spartak">С/К &laquo;Спартак&raquo;</option>
+                        <option value="martial-arts">&laquo;Зал единоборств&raquo;</option>
+                        <option value="blue-bird">С/К &laquo;Синяя птица&raquo;</option>
+                        <option value="orange">Ф/К &laquo;Апельсин&raquo;</option>
+                        <option value="lyceum-41">Лицей &#8470;&nbsp;41</option>
+                        <option value="gymnasium-25">Гимназия &#8470;&nbsp;25</option>
+                        <option value="school-21">Школа &#8470;&nbsp;21</option>
+                        <option value="school-31">Школа &#8470;&nbsp;31</option>
+                        <option value="recreation-center">&laquo;Дворец культуры&raquo;</option>
+                        <option value="school-37">Школа &#8470;&nbsp;37</option>
+                        <option value="hotel-tretyakov">Отель &laquo;Третьяков&raquo;</option>
+                    </select>
+                    <select placeholder="Выбор тренера">
+                        <option value="no-trainer-selected">Выбор тренера</option>
+                        <option value="maklakov">Маклаков Вячеслав Павлович</option>
+                        <option value="shustova">Шустова Наталья Александровна</option>
+                        <option value="sokolov">Соколов Павел Игоревич</option>
+                        <option value="koshkarov">Кошкаров Борис Николаевич</option>
+                        <option value="tcyvarev">Цыварев Игорь Викторович</option>
+                        <option value="ser">Сер Андрей Романович</option>
+                        <option value="usacheva">Усачева Ольга Анатольевна</option>
+                    </select>
+                    <button>Отправить</button>
+                </form>
+            </div>
+        </div>
+        <button id="scroll__btn" onclick="topFunction()">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.30732e-05 50C1.18662e-05 77.6142 22.3858 100 50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 -9.78513e-07 50 -2.18557e-06C22.3858 -3.39263e-06 1.42803e-05 22.3858 1.30732e-05 50Z" fill="#ACB0B2"/>
+                <path d="M70 49.999L50 29.999L30 49.999" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M50 69.999L50 29.999" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+{% endblock content %}

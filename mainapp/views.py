@@ -78,6 +78,7 @@ class NewsPageDetailView(TemplateView):
 
 
 class HallsPageView(TemplateView):
+
     template_name = "mainapp/halls.html"
 
 

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load html_mark_save %}
+{% block title %}
+{{ news_object.title|default:"Новости" }}
+{% endblock title %}
+
+{% block content %}
+<div class="news-item-wrap wrapper">
+    <div class="news-item__top">
+        <a href="{% url 'mainapp:news' %}">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.5 44C34.3741 44 44 34.3741 44 22.5C44 10.6259 34.3741 1 22.5 1C10.6259 1 1 10.6259 1 22.5C1 34.3741 10.6259 44 22.5 44Z" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.4994 13.8999L13.8994 22.4999L22.4994 31.0999" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M31.0994 22.5H13.8994" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <div class="news-item__top__text">
+            <h1>{{ news_object.title }}</h1>
+        </div>
+    </div>
+    <div class="news-item__slider">
+        <div class="gallery" data-setting="setup1">
+            <div class="slider">
+                <div class="stage">
+                    <div>
+                        <img src= "{% static news_object.main_picture %}" alt="">
+                    </div>
+
+                      {% for image in news_object.images.all %}
+
+                        <div>
+                            <img src= "{{ image.image.url }}" alt="">
+                        </div>
+
+                     {% endfor %}
+                </div>
+            </div>
+            <div class="control">
+                <div class="nav-ctrl" data-hidden="true">
+                    <span class="prev" data-shift="prev"></span>
+                    <span class="next" data-shift="next"></span>
+                </div>
+                <ul class="dots-ctrl" data-hidden="true"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="news-item__bottom">
+        <svg class="news-item__bottom left" width="71" height="144" viewBox="0 0 71 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70.0613 0.605713C51.4799 0.605713 33.6595 8.10952 20.5205 21.4664C7.38144 34.8232 1.62444e-06 52.939 0 71.8285C-1.62444e-06 90.7179 7.38143 108.834 20.5205 122.191C33.6595 135.547 51.4799 143.051 70.0613 143.051L70.0613 71.8285V0.605713Z" fill="#F95858"/>
+        </svg>
+        <svg class="news-item__bottom right" width="77" height="144" viewBox="0 0 77 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.990379 0C21.1442 -2.35447e-07 40.4726 7.84335 54.7235 21.8046C68.9744 35.7658 76.9805 54.7014 76.9805 74.4455C76.9805 94.1897 68.9744 113.125 54.7235 127.087C40.4726 141.048 21.1442 148.891 0.990395 148.891L0.990379 74.4456L0.990379 0Z" fill="#D9D9D9"/>
+        </svg>
+        <div class="news-item__bottom__text">
+            <h6> {{ news_object.preambule }}</h6>
+                <p> {{ news_object.text|html_mark_save }} </p>
+
+         
+        </div>
+    </div>
+</div>
+<script src="../js/popup.js"></script>
+<script type="text/javascript">
+    const setting = {
+        setup1: {
+            // включаем постраничную навигацию
+            dots: false,
+            // включаем управление с клавиатуры клавишами навигации "вправо / влево"
+            keyControl: true,
+            // настройки галереи в зависимости от разрешения
+            adaptive: {
+                1024: {
+                    // одновременно выводятся 3 элемента
+                    visibleItems: 4
+                }
+            }
+        }
+    };
+</script>
+<script src="/static/js/gallery.js"></script>
+
+{% endblock content%}
