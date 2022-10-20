@@ -41,6 +41,14 @@ def success(request):
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
 
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context['news_qs'] = mainapp_models.News.objects.filter(deleted=False)[
+            :3]
+        return context
+
 
 class AboutPageView(TemplateView):
     template_name = "mainapp/about.html"
