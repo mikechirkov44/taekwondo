@@ -1205,6 +1205,64 @@ header::after {
   margin-left: 23px;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 43px;
+}
+
+.pagination__btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ACB0B2;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pagination__btn:hover {
+  background-color: #E31E26;
+}
+
+.pagination__btn:active {
+  background-color: #E31E26;
+}
+
+.pagination__btn:focus {
+  background-color: #E31E26;
+}
+
+.pagination__hidden-btns {
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ACB0B2;
+  cursor: default;
+}
+
+.pagination__hidden-btns:hover {
+  background-color: #FFFFFF;
+}
+
+.pagination__hidden-btns:active {
+  background-color: #FFFFFF;
+}
+
+.pagination__hidden-btns:focus {
+  background-color: #FFFFFF;
+}
+
 @media (max-width: 1240px) {
   .main-news {
     height: 600px;
@@ -1251,6 +1309,148 @@ header::after {
     line-height: 13px;
     color: #FFFFFF;
     padding: 8px 24px;
+  }
+  .news-img {
+    width: 401px;
+    height: inherit;
+  }
+  .news-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0px;
+    height: 70px;
+    width: 401px;
+    padding: 0 14px 0 19px;
+    background: #424141CC;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .news-link:hover {
+    background-color: #424141;
+    text-decoration: underline;
+    color: #FFFFFF;
+  }
+  .news-link__text {
+    max-width: 300px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .news-wrap h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2B2A29;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .news__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+  }
+  .news__ul li {
+    margin-bottom: 20px;
+  }
+  .news__ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .news__img {
+    height: 234px;
+    width: 334px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 3px 0px #ACB0B2CC;
+            box-shadow: 3px 3px 3px 0px #ACB0B2CC;
+    background-size: cover;
+  }
+  .news__text {
+    margin-top: 6px;
+    margin-left: 0;
+    max-width: 336px;
+  }
+  .news__date {
+    position: absolute;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ACB0B2;
+    top: 205px;
+    right: 12px;
+    z-index: 2;
+    margin-bottom: 0;
+    padding: 3px 8px;
+    background-color: #424141;
+    border-radius: 6px;
+    opacity: 0.7;
+  }
+  .news__heading {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2B2A29;
+  }
+  .news__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #424141;
+  }
+  .summer-vacation {
+    background-image: url("/static/img/news-vacation.png");
+  }
+  .best-trainers {
+    background-image: url("/static/img/news-trainers.png");
+  }
+  .committee {
+    background-image: url("/static/img/news-comitet.png");
+  }
+  .news-item__top {
+    margin: 20px 0 30px 0;
+  }
+  .news-item__top__text h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2B2A29;
+  }
+  .news-item__bottom__text {
+    max-width: 530px;
+  }
+  .news-item__bottom__text h6 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2B2A29;
   }
 }
 
