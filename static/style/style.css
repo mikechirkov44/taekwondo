@@ -2903,6 +2903,154 @@ header::after {
   padding-left: 35px;
 }
 
+@media (max-width: 1240px) {
+  .trainers-wrap {
+    list-style-type: none;
+  }
+  .trainers-wrap .main {
+    height: 700px;
+    position: relative;
+  }
+  .trainers-wrap .main .trainer-wrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .trainers-wrap .main .trainer-info {
+    padding-left: 0px;
+    width: 61%;
+    margin-top: 40px;
+  }
+  .trainers-wrap .main .trainer-info .deserts-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2B2A29;
+  }
+  .trainers-wrap .main .timetable {
+    bottom: 55px;
+    left: 25%;
+    right: 50%;
+  }
+  .trainers h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2B2A29;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .trainer-wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 480px;
+    margin: 0 auto;
+    width: 700px;
+  }
+  .trainer-img {
+    width: 30%;
+    -webkit-transform: scale(0.55);
+            transform: scale(0.55);
+  }
+  .trainer-info {
+    width: 60%;
+  }
+  .trainer-info .name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2B2A29;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .trainer-info .deserts {
+    list-style-type: none;
+  }
+  .trainer-info .deserts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 80px;
+  }
+  .trainer-info .deserts-line {
+    border: 2px solid #F95858;
+    background-color: #F95858;
+    margin-right: 25px;
+  }
+  .trainer-info .deserts-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2B2A29;
+    color: #2B2A29;
+    margin-bottom: 15px;
+  }
+  .trainer-info .deserts-item:last-of-type {
+    margin: 0;
+  }
+  .trainer-info .timetable__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2B2A29;
+  }
+  .trainer-info .timetable__btns {
+    width: 425px;
+  }
+  .trainer-info .timetable__btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 14px;
+    width: 200px;
+  }
+  .maklakova {
+    min-height: 300px;
+  }
+  .maklakova img {
+    width: 180px;
+    height: 177px;
+  }
+  .maklakova-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 47px 0;
+    position: relative;
+  }
+  .maklakova .trainer-info .deserts-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2B2A29;
+  }
+  .maklakova__btn {
+    position: absolute;
+    bottom: 46px;
+    right: 175px;
+    padding: 8px 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+  .maklakova .deserts-container {
+    max-width: 415px;
+    padding-left: 35px;
+  }
+}
+
 .main-contacts-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
