@@ -112,3 +112,49 @@
         }
     }
 }
+
+
+@media (max-width: 1240px) {    
+    .contacts {
+        flex-direction: column;
+        justify-content: center;
+        max-width: 500px;
+    
+        & .map {
+            margin-left: 0;
+
+            & iframe {
+                width: 500px;
+                height: 356px;
+            }
+        }
+    
+        margin-bottom: 45px;
+    }
+    
+    .contact {
+        &__adress {
+            display: flex;
+            align-items: center;
+            margin-bottom: 56px;
+            margin-left: 19px;
+        }
+    
+        &__admin {
+            &-info {
+                @include font(400, 16px, 19px, $main-black);
+                margin-bottom: 60px;
+            }
+        }
+    }
+    
+    .socials {
+        & .social {
+            &__btn {
+                @include red_btn;
+                padding: 8px 24px;
+                @include font(400, 16px, 19px, $main-white);
+            }
+        }
+    }
+}

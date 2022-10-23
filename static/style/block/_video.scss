@@ -1,5 +1,4 @@
 .video {
-    height: 557px;
     &-wrap{
         display: flex;
         flex-direction: column;
@@ -16,6 +15,7 @@
     }
     &-list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -26,8 +26,15 @@
             position: relative;
             width: 400px;
             height: 288px;
+            margin-bottom: 33px;
             border-radius: 10px;
             box-shadow: 3px 3px 3px 0px #ACB0B2CC;
+
+            & iframe {
+                width: inherit;
+                height: inherit;
+                border-radius: 10px;
+            }
         }
     }
     &__link {
@@ -47,8 +54,9 @@
 
 .video {
     &-img {
-        width: 401px;
-        height: inherit;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
     }
     &-link {
         display: flex;
@@ -59,7 +67,8 @@
         height: 70px;
         width: 401px;
         padding: 0 14px 0 19px;
-        background: #424141CC;
+        background: $main-darkgrey;
+        opacity: 0.8;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         text-decoration: none;
@@ -92,4 +101,76 @@
             }
         }
     }
+}
+
+
+@media (max-width: 1240px) {
+    .video {
+        & h1 {
+            @include font(500, 32px, 39px, #050505);
+            margin-top: 60px;
+        }
+        & p {
+            @include small-font;
+            color: $main-darkgrey;
+            margin-top: 13px;
+        }
+        &-list {
+            &__item {
+                width: 332px;
+                height: 235px;
+
+                & iframe {
+                    width: inherit;
+                    height: inherit;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &__link {
+            @include font(500, 16px, 19px, $main-white);
+            text-decoration: none;
+            padding: 6px 11px;
+            background-color: $main-black;
+            border-radius: 6px;
+            transition: 0.5s ease;
+            &:hover {
+                color: $main-black;
+                background-color: transparent;
+            }
+        }
+    }
+    
+    .video {
+        &-img {
+            width: 100%;
+            height: inherit;
+        }
+        &-link {
+            bottom: 0px;
+            height: 52px;
+            width: inherit;
+            padding: 0 10px;
+            &__text {
+                @include font(400, 14px, 17px, $main-white);
+            }
+            & svg {
+                width: 34px;
+                height: 34px;
+            }
+        }
+        &__top {
+            margin-top: 20px;
+            &__text {
+                & h1 {
+                    @include font(600, 20px, 24px, $main-black);
+                    margin-bottom: 9px;
+                    margin-top: 0;
+                }
+                & p {
+                    @include font(400, 14px, 17px, $main-darkgrey);
+                }
+            }
+        }
+    }    
 }
