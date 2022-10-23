@@ -1,0 +1,58 @@
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid $main-darkgrey;
+}
+
+col:nth-child(1) {
+    width: 10%;
+
+}
+
+col:nth-child(2) {
+    width: 20%;
+}
+
+col:nth-child(3) {
+    width: 22%;
+}
+
+col:nth-child(4) {
+    width: 15%;
+}
+
+col:nth-child(5) {
+    width: 15%;
+}
+
+th,
+td {
+    padding: 15px;
+}
+
+tr {
+    border: 1px solid $main-darkgrey;  /* границы между строками */
+}
+td, th {
+    border: 1px solid $main-darkgrey;  /* границы между столбцами */
+}
+
+.column0, .column1, .column2, .column3, .column4 {
+    text-align: center;
+}
+
+.row0 {
+    background-color: $main-darkgrey;
+    @include font(500, 24px, 29px, $main-white)
+}
+
+.row1, .row2 {
+    background-color: $main-lightgrey;
+    @include font(500, 20px, 20px, $main-white)
+}
+
+.style-bggrey {
+    background-color: $main-lightgrey;
+    @include font(400, 16px, 19px, $main-white)
+}

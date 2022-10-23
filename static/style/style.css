@@ -4371,6 +4371,76 @@ form button:active {
   color: #2B2A29;
 }
 
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #424141;
+}
+
+col:nth-child(1) {
+  width: 10%;
+}
+
+col:nth-child(2) {
+  width: 20%;
+}
+
+col:nth-child(3) {
+  width: 22%;
+}
+
+col:nth-child(4) {
+  width: 15%;
+}
+
+col:nth-child(5) {
+  width: 15%;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+tr {
+  border: 1px solid #424141;
+  /* границы между строками */
+}
+
+td, th {
+  border: 1px solid #424141;
+  /* границы между столбцами */
+}
+
+.column0, .column1, .column2, .column3, .column4 {
+  text-align: center;
+}
+
+.row0 {
+  background-color: #424141;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.row1, .row2 {
+  background-color: #ACB0B2;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.style-bggrey {
+  background-color: #ACB0B2;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
 @media (max-width: 1240px) {
   .wrapper {
     width: 700px;
