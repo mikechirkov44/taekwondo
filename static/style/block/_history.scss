@@ -134,32 +134,34 @@
 @media (max-width: 1240px) {
     .history {
         &-wrap {
-            display: flex;
-            justify-content: space-between;
-            & img {
-                margin-top: 10px;
+            & picture {
+                margin-top: 63px;
+                margin-bottom: 14px;
             }
         }
         &-text {
-            margin-top: 61px;
-            margin-bottom: 55px;
-            max-width: 50%;
+            margin-top: 39px;
+
+            max-width: 518px;
+            
             & h3 {
-                @include font(500, 40px, 48px, $main-black);
-                margin-bottom: 6px;
+                @include font(500, 32px, 39px, $main-black);
+                margin-bottom: 5px;
+                margin-left: 40px;
             }
             &__line {
-                width: 307px;
+                margin-left: 40px;
+                width: 243px;
                 background-color: $main-red;
-                border: 2px solid $main-red;
-                margin-bottom: 67px;
+                border: 1px solid $main-red;
+                margin-bottom: 76px;
             }
             &-item {
-                margin-left: 90px;
-                margin-bottom: 30px;
+                margin-left: 0;
+                margin-bottom: 15px;
                 @include small-font;
                 & span {
-                    @include font(500, 32px, 39px, $main-black);
+                    @include font(600, 20px, 24px, $main-black);
                 }
             }
         }
@@ -174,90 +176,90 @@
         }
         &__img{
             position: absolute;
-            bottom: 0;
-            right: 0;
+            bottom: -17%;
+            right: -135px;
+            transform: scale(0.62);
         }
     }
     
     .info {
-        margin-top: 65px;
-        margin-bottom: 100px;
-        max-width: 670px;
+        margin-top: 101px;
         & h3 {
-            @include font(500, 40px, 48px, $main-black);
+            @include font(500, 32px, 39px, $main-black);
             margin-bottom: 6px;
+            margin-left: 51px;
         }
         &__line {
-            width: 307px;
-            background-color: $main-red;
-            border: 2px solid $main-red;
-            margin-bottom: 46px;
+            margin-left: 51px;
+            width: 230px;
+            border: 1px solid $main-red;
+            margin-bottom: 23px;
         }
         &__text {
-            margin-left: 106px;
-            margin-bottom: 22px;
+            margin-left: 0;
+            margin-bottom: 20px;
             @include small-font;
             & span {
                 @include font(500, 32px, 39px, $main-black);
+            }
+
+            &:nth-of-type(3) {
+                max-width: 576px;
+            }
+
+            &:nth-of-type(4) {
+                max-width: 372px;
             }
         }
     }
     
     .quote {
-        position: relative;
-        height: 258px;
-        width: 75%;
-        background-color: $main-darkgrey;
         &::before {
-            content: '';
-            display: block;
-            margin-left: calc(50% - 50vw);
-            background-color: $main-darkgrey;
-            height: inherit;
+            margin-right: calc(-25% - 10vw);
         }
         &-left {
             position: absolute;
             top: -35px;
-            left: 35px;
+            left: 0;
+            width: 60px;
+            height: 70px;
         }
         &-right {
             position: absolute;
             bottom: -35px;
-            right: 163px;
+            right: 105px;
+            width: 60px;
+            height: 70px;
         }
         &-text {
-            position: absolute;
-            top: 31px;
-            left: 150px;
-            max-width: 518px;
-            @include small-font;
-            color: $main-white;
+            top: 42px;
+            left: 10px;
+            max-width: 405px;
+            @include font(400, 14px, 17px, $main-white);
         }
     }
     
     .caption {
-        width: 100%;
-        background-color: #DFE3EB;
         &-wrap {
-            height: 90px;
+            height: 73px;
             display: flex;
             flex-direction: column;
             align-items: end;
             justify-content: center;
-            margin-right: 160px
+            margin-right: 15px
         }
         & h6 {
-            @include font(500, 16px, 19px, $main-black);
-            margin-bottom: 6px;
+            @include font(400, 14px, 17px, $main-black);
+            margin-bottom: 2px;
         }
         &__line {
-            width: 260px;
+            width: 226px;
             background-color: $main-red;
             border: 1px solid $main-red;
-            margin-bottom: 9px;
+            margin-bottom: 6px;
         }
         &__name {
-            @include small-font;
+            @include font(400, 14px, 17px, $main-black);
         }
     }
 }

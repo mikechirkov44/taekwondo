@@ -99,9 +99,21 @@
                     <div class="history-banner__text__promo">Запишите ребенка на&nbsp;бесплатную пробную тренеровку</div>
                     <button onclick="document.getElementById('popup').style.display='block'" class="history-banner__text__btn">Записаться</button>
                 </div>
-                <img class="history-banner__photo"src="./img/group-photo.png" alt="group photo">
+                <picture class="history-banner__photo">
+                    <source media="(min-width: 426px) and (max-width: 1240px)" 
+                        srcset="./img/group-photo__tablet.png">
+                    <source media="(min-width: 1241px)" 
+                        srcset="./img/group-photo.png">
+                    <img  src="./img/group-photo__phone.png" alt="group photo" >
+                </picture>
             </div>
-            <img class="history-banner__img" src="./img/monastery-blue.png" alt="monastery">
+            <picture class="history-banner__img">
+                <source media="(min-width: 426px) and (max-width: 1240px)" 
+                    srcset="./img/monastery-blue__tablet.png">
+                <source media="(min-width: 1241px)" 
+                    srcset="./img/monastery-blue.png">
+                <img  src="./img/monastery-blue__phone.png" alt="monastery" >
+            </picture>
         </div>
         <div class="history">
             <div class="history-wrap wrapper">
@@ -121,7 +133,13 @@
                         для &laquo;Федерации&raquo; стало&nbsp;&mdash; популяризация тхэквондо в&nbsp;г. Костроме и&nbsp;Костромской области, возможность выступления спортсменов на&nbsp;всероссийских и&nbsp;междуранродных соревнованиях.
                     </div>
                 </div>
-                <img src="./img/trainer.png" alt="">
+                <picture>
+                    <source media="(min-width: 426px) and (max-width: 1240px)" 
+                        srcset="./img/trainer__tablet.png">
+                    <source media="(min-width: 1241px)" 
+                        srcset="./img/trainer.png">
+                    <img  src="./img/trainer__phone.png" alt="trainer photo" >
+                </picture>
             </div>
         </div>
         <div class="history-timeline">
@@ -139,12 +157,12 @@
                             <div class="slide">
                                 <ul>
                                     <li class="special">
-                                        <h3>История Костромской Федерации Тхэквандо</h3>
+                                        <h3>История Костромской Федерации Тхэквондо</h3>
                                     </li>
                                     <li>
                                         <h2>1994</h2>
                                         <div class="year-line"></div>
-                                        <p>Дата основания Костромской Федерации Тхэквандо&nbsp;&mdash; 20&nbsp;декабря 1994 год
+                                        <p>Дата основания Костромской Федерации Тхэквондо&nbsp;&mdash; 20&nbsp;декабря 1994 год
                                         </p>
                                     </li>
                                     <li>

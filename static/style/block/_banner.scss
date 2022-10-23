@@ -91,12 +91,12 @@
     }
     &__img {
         position: absolute;
-        bottom: 0;
+        bottom: -3px;
         left: 45%;
     }
     &__photo {
         position: absolute;
-        bottom: 0;
+        bottom: -3px;
         left: 25%;
         z-index: 1;
     }
@@ -153,6 +153,32 @@
                 width: 300px;
                 height: 133px;
             }
+        }
+    }
+
+    .history-banner {
+        &__text {
+            max-width: 378px;
+            margin-top:36px;
+            margin-bottom: 98px;
+            & h2 {
+                @include font(500, 32px, 39px, $main-darkgrey);
+                width: 500px;
+            }
+            &__btn {
+                padding: 8px 24px;
+            }
+        }
+        &__img {
+            bottom: -4px;
+            left: unset;
+            right: 0;
+        }
+        &__photo {
+            image-rendering: auto;
+            bottom: -4px;
+            left: 45%;
+            z-index: 1;
         }
     }
 }

@@ -36,6 +36,7 @@
         display: flex;
     }
     & ul {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         list-style-type: none;
@@ -48,6 +49,7 @@
     }
     & li {
         max-width: 365px;
+        min-width: 350px;
         margin-right: 65px;
         display: flex;
         flex-direction: column;
@@ -109,6 +111,7 @@
         background-color: $main-darkgrey;
     }
     & .timeline-slider {
+        
         & h3 {
             @include font(500, 24px, 29px, $main-black);
         }
@@ -154,6 +157,73 @@
                 stroke: $main-black;
             }
 
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .timeline {
+        &-years {
+            & .timeline-year {
+                @include font(600, 20px, 24px, $main-white);
+                padding: 6px 0;
+                margin-right: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .controls {
+        &-prev {
+            top: -458px;
+            left: 0;
+        }
+        &-next {
+            top: -458px;
+            right: 0;
+        }
+    }
+    
+    .year-line {
+        top: 55px;
+        left: -20px;
+    }
+    
+    .history-timeline {
+        & .years {
+            & .active-year {
+                color: $main-pink;
+            }
+        }
+        & .timeline-slider {
+            & .slide {
+                max-width: 700px;
+
+                & li {
+                    min-width: 200px;
+    
+                    & .big {
+                        min-width: 200px;
+                        max-width: 300px;
+                    }
+                }
+            }
+            & h3 {
+                @include font(600, 20px, 24px, $main-black);
+            }
+            & .special {
+                display: none;
+            }
+            & .year-line {
+                border: 1px solid $main-red;
+            }
+        }
+        & .controls {
+            &-next {
+                & path {
+                    stroke: $main-lightgrey;
+                }
+            }
         }
     }
 }
