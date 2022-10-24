@@ -126,3 +126,274 @@
         @include small-font;
     }
 }
+
+
+
+
+
+@media (max-width: 1240px) {
+    .history {
+        &-wrap {
+            & picture {
+                margin-top: 63px;
+                margin-bottom: 14px;
+            }
+        }
+        &-text {
+            margin-top: 39px;
+
+            max-width: 518px;
+            
+            & h3 {
+                @include font(500, 32px, 39px, $main-black);
+                margin-bottom: 5px;
+                margin-left: 40px;
+            }
+            &__line {
+                margin-left: 40px;
+                width: 243px;
+                background-color: $main-red;
+                border: 1px solid $main-red;
+                margin-bottom: 76px;
+            }
+            &-item {
+                margin-left: 0;
+                margin-bottom: 15px;
+                @include small-font;
+                & span {
+                    @include font(600, 20px, 24px, $main-black);
+                }
+            }
+        }
+    }
+    
+    .history-mission {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        &__img{
+            position: absolute;
+            bottom: -4px;
+            right: -30px;
+        }
+    }
+    
+    .info {
+        margin-top: 101px;
+        & h3 {
+            @include font(500, 32px, 39px, $main-black);
+            margin-bottom: 6px;
+            margin-left: 51px;
+        }
+        &__line {
+            margin-left: 51px;
+            width: 230px;
+            border: 1px solid $main-red;
+            margin-bottom: 23px;
+        }
+        &__text {
+            margin-left: 0;
+            margin-bottom: 20px;
+            @include small-font;
+            & span {
+                @include font(500, 32px, 39px, $main-black);
+            }
+
+            &:nth-of-type(3) {
+                max-width: 576px;
+            }
+
+            &:nth-of-type(4) {
+                max-width: 372px;
+            }
+        }
+    }
+    
+    .quote {
+        &::before {
+            margin-right: calc(-25% - 10vw);
+        }
+        &-left {
+            position: absolute;
+            top: -35px;
+            left: 0;
+            width: 60px;
+            height: 70px;
+        }
+        &-right {
+            position: absolute;
+            bottom: -35px;
+            right: 105px;
+            width: 60px;
+            height: 70px;
+        }
+        &-text {
+            top: 42px;
+            left: 10px;
+            max-width: 405px;
+            @include font(400, 14px, 17px, $main-white);
+        }
+    }
+    
+    .caption {
+        &-wrap {
+            height: 73px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            margin-right: 15px
+        }
+        & h6 {
+            @include font(400, 14px, 17px, $main-black);
+            margin-bottom: 2px;
+        }
+        &__line {
+            width: 226px;
+            background-color: $main-red;
+            border: 1px solid $main-red;
+            margin-bottom: 6px;
+        }
+        &__name {
+            @include font(400, 14px, 17px, $main-black);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .history {
+        &-wrap {
+            position: relative;
+            & picture {
+                position: absolute;
+                right: 0;
+                margin-bottom: 36px;
+            }
+        }
+        &-text {
+            margin-top: 22px;
+            max-width: 267px;
+            
+            
+            & h3 {
+                @include font(500, 20px, 24px, $main-black);
+                margin-bottom: 3px;
+                margin-left: 40px;
+            }
+            &__line {
+                margin-left: 40px;
+                width: 152px;
+                background-color: $main-red;
+                border: 1px solid $main-red;
+                margin-bottom: 51px;
+            }
+            &-item {
+                width: 267px;
+                margin-left: 0;
+                margin-bottom: 15px;
+                @include font(400, 13px, 15px, $main-black);
+                & span {
+                    @include font(600, 16px, 19px, $main-black);
+                }
+            }
+        }
+    }
+    
+    .history-mission {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        &__img{
+            position: absolute;
+            bottom: 140px;
+            right: 0;
+        }
+    }
+    
+    .info {
+        margin-top: 101px;
+        margin-bottom: 61px;
+        & h3 {
+            @include font(500, 20px, 24px, $main-black);
+            margin-bottom: 3px;
+            margin-left: 51px;
+        }
+        &__line {
+            margin-left: 51px;
+            width: 143px;
+            border: 1px solid $main-red;
+            margin-bottom: 23px;
+        }
+        &__text {
+            margin-left: 0;
+            margin-bottom: 20px;
+            @include font(400, 13px, 15px, $main-black);
+            & span {
+                @include font(600, 20px, 24px, $main-black);
+            }
+
+            &:nth-of-type(3) {
+                max-width: 242px;
+            }
+
+            &:nth-of-type(4) {
+                max-width: 167px;
+            }
+        }
+    }
+    
+    .quote {
+        height: 146px;
+        &::before {
+            margin-right: calc(-25% - 10vw);
+        }
+        &-left {
+            position: absolute;
+            top: -18px;
+            left: 0;
+            width: 40px;
+            height: 35px;
+        }
+        &-right {
+            position: absolute;
+            bottom: -18px;
+            right: -95px;
+            width: 40px;
+            height: 35px;
+        }
+        &-text {
+            top: 22px;
+            left: 54px;
+            max-width: 300px;
+            width: 300px;
+            @include font(400, 9px, 10px, $main-white);
+        }
+    }
+    
+    .caption {
+        &-wrap {
+            height: 46px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px
+        }
+        & h6 {
+            @include font(400, 10px, 12px, $main-black);
+        }
+        &__line {
+            width: 181px;
+            margin-bottom: 3px;
+        }
+        &__name {
+            @include font(400, 10px, 12px, $main-black);
+        }
+    }
+}

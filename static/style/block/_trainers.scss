@@ -89,8 +89,8 @@
                 margin-bottom: 80px;
             }
             &-line {
-                border: 2px solid #F95858;
-                background-color: #F95858;
+                border: 2px solid $main-pink;
+                background-color: $main-pink;
                 margin-right: 25px;
             }
             &-item {
@@ -170,4 +170,128 @@
         padding-left: 35px;
     }
 
+}
+
+
+@media (max-width: 1240px) {
+    .trainers {
+        &-wrap {
+            list-style-type: none;
+            & .main {
+                height: 700px;
+                position: relative;
+                & .trainer-wrap {
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                & .trainer-info {
+                    padding-left: 0px;
+                    width: 61%;
+                    margin-top: 40px;
+
+                    & .deserts-item {
+                        @include font(400, 14px, 17px, $main-black);
+                    }
+                }
+                & .timetable {
+                    bottom:55px;
+                    left: 25%;
+                    right: 50%;
+                }
+            }
+        }
+        & h3 {
+            @include font(600, 20px, 24px, $main-black);
+            max-width: 550px;
+            margin: 0 auto;
+            padding-top: 40px;
+        } 
+    }
+    
+    
+    .trainer {
+        &-wrap {
+            justify-content: space-between;
+            height: 480px;
+            margin: 0 auto;
+            width: $tablet-wrap;
+        }
+        &-img {
+            width: 30%;
+            transform: scale(0.55);
+        }
+        &-info {
+            width: 60%;
+            & .name {
+                @include font(600, 20px, 24px, $main-black);
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            & .deserts{
+                list-style-type: none;
+                &-container {
+                    display: flex;
+                    margin-bottom: 80px;
+                }
+                &-line {
+                    border: 2px solid $main-pink;
+                    background-color: $main-pink;
+                    margin-right: 25px;
+                }
+                &-item {
+                    @include small-font;
+                    color: $main-black;
+                    margin-bottom: 15px;
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+            & .timetable {
+                &__text {
+                    @include font(600, 20px, 24px, $main-black);
+                }
+                &__btns {
+                    width: 425px;
+                }
+                &__btn {
+                    @include font(400, 14px, 17px, $main-white);
+                    padding: 14px;
+                    width: 200px;
+                }
+            }     
+        }
+    }
+    
+    .maklakova {
+        min-height: 300px;
+        & img {
+            width: 180px;
+            height: 177px;
+        }
+        &-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 47px 0;
+            position: relative;
+        }
+        & .trainer-info {
+            & .deserts-item {
+                @include font(400, 14px, 17px, $main-black);
+            }
+        }
+        &__btn {
+            position: absolute;
+            bottom: 46px;
+            right: 175px;
+            padding: 8px 24px;
+            @include font(400, 14px, 17px, $main-white);
+        }
+        & .deserts-container {
+            max-width: 415px;
+            padding-left: 35px;
+        }
+    
+    }
 }
