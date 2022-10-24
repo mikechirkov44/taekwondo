@@ -125,6 +125,9 @@
         & .banner-tablet {
             display: block;
         }
+        & .banner-phone {
+            display: none;
+        }
     }
     
     .control {
@@ -157,6 +160,50 @@
                 min-height: unset;
                 height: 300px;
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        & .slider {
+            max-width: $phone-wrap;
+        }
+
+        & .banner-desktop {
+            display: none;
+        }
+
+        & .banner-tablet {
+            display: none;
+        }
+
+        & .banner-phone {
+            display: block;
+        }
+    }
+    
+    .control {
+        width: inherit;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .nav-ctrl {
+        & .main-prev, .main-next {
+            height: 300px;
+        }
+    }
+    
+    .dots-ctrl {
+        display: none
+    
+    }
+    
+    .main-item__slider {
+        & .slider {
+            max-width: 428px;
+            height: 300px;
         }
     }
 }

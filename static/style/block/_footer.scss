@@ -157,3 +157,100 @@
         }
     }  
 }
+
+@media (max-width: 767px) {
+    .footer {
+        &-wrap {
+            padding: 15px 0 21px 0;
+            position: relative;
+            justify-content: flex-start;
+            align-items: baseline;
+        }
+        &-logo {
+            max-width: 97px;
+            text-align: center;
+            @include font(400, 10px, 12px, $main-white);
+            &__svg {
+                margin-bottom: 11px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+        &-admin {
+            @include font(400, 10px, 12px, #BFBFBF);
+            margin-top: 0;
+            position: absolute;
+            right: 0;
+            bottom: 24px;
+            max-width: 88px;
+            text-align: center;
+        }
+        &-info {
+            display: none;
+        }
+        &-forparents {
+            display: none;
+        }
+        &-contacts {
+            width: 194px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-list {
+            @include font(400, 10px, 12px,#BFBFBF);
+            max-width: 130px;
+            &-item {
+                margin-bottom: 6px;
+                &::before {
+                    display:none;
+                }
+            }
+
+            &__span {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &-social {
+            position: absolute;
+            top: 33px;
+            right: 0;
+            &-item {
+                margin: 0 15px 0 0;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+
+                & svg {
+                    display: block;
+                }
+            }
+            &-link svg {
+                margin: 0;
+            }
+            &-link__last svg {
+                margin: 0;
+            }
+            &-link:hover {
+                svg circle {
+                    fill: $main-white;
+                    transition: 0.3s;
+                }
+            }
+            &-link__last:hover {
+                svg {
+                    circle {
+                        fill: $main-darkgrey;
+                        transition: 0.3s;
+                    }
+                    path {
+                        fill: $main-white;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }  
+}

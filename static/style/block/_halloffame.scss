@@ -97,3 +97,42 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .fame {
+        &-wrap {
+            width: $phone-wrap;
+        }
+        &-heading {
+            height: 214px;
+            & h1 {
+                @include font(500, 17px, 20px, $main-darkgrey);
+            }
+            &__line {
+                width: 322px;
+                margin: 10px 0;
+            }
+            &__federation {
+                @include font(400, 15px, 18px, $main-darkgrey);
+            }
+        }
+        &-item {
+            min-height: 186px;
+            margin-top: 26px;
+            &__link {
+                border-radius: 10px;
+                margin-top: 15px;
+                width: 290px;
+                height: 40px;
+                & h5 {
+                    @include font(600, 12px, 14px, $main-black);
+                    margin-top: 5px;
+                }
+                & p {
+                    @include font(400, 10px, 12px, $main-darkgrey);
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

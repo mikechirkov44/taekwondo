@@ -182,3 +182,97 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .banner {
+        height: 346px;
+        &-wrap {
+            position: relative;
+            align-items: center;
+        }
+
+        & img {
+            width: 185px;
+            height: 260px;
+        }
+        &-offer {
+            margin-top: 38px;
+            margin-bottom: 44px;
+            max-width: 50%;
+            &__text {
+                @include font(600, 15px, 18px, $main-white);
+                width: 188px;
+            }
+            &__bottom {
+                &__text {
+                    @include font(400, 12px, 15px, $main-white);
+                    margin-bottom: 20px;
+                    width: 100%;
+                    margin-top: 112px;
+                }
+                &__btn {
+                    display: flex;
+                    align-self: flex-start;
+                    padding: 6px 15px;
+                    @include font(500, 10px, 12px, $main-white);
+                }
+            }
+        }
+        &-cost {
+            position: absolute;
+            top: 82px;
+            left: 0;
+            margin-bottom: 35px;
+            margin-top: 48px;
+            width: 210px;
+            &__text {
+                width: 176px;
+                @include font(400, 13px, 15px, $main-white);
+            }
+
+            & img {
+                display: none;
+            }
+        }
+    }
+
+    .history-banner {
+        min-height: 320px;
+        &-wrap {
+            min-height: 320px;
+        }
+        &__text {
+            max-width: 100%px;
+            margin-top: 37px;
+            margin-bottom: 101px;
+            max-height: 175px;
+            &__promo {
+                @include font(400, 16px, 23px, $main-black);
+                margin-bottom: 40px
+            }
+            & h2 {
+                @include font(500, 18px, 21px, $main-darkgrey);
+                width: 100%;
+                margin: 15px 0 10px 0;
+            }
+            &__btn {
+                padding: 6px 15px;
+                @include font(500, 10px, 12px, $main-red);
+                margin-left: 21px;
+            }
+        }
+
+        &__img {
+            bottom: -4px;
+            left: unset;
+            right: 5px;
+        }
+        &__photo {
+            image-rendering: auto;
+            bottom: -4px;
+            left: unset;
+            right: 5px;
+            z-index: 1;
+        }
+    }
+}
