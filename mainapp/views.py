@@ -1,11 +1,11 @@
-from django.views.generic import CreateView
+from django.views.generic import CreateView, TemplateView
 
-from .models import Contact, News
+from .models import Contact
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from .forms import ContactForm
-from django.views.generic import TemplateView, DetailView, ListView
+
 from django.shortcuts import render, get_object_or_404
 from mainapp import models as mainapp_models
 
@@ -40,6 +40,14 @@ def success(request):
 
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
+
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context['news_qs'] = mainapp_models.News.objects.filter(deleted=False)[
+            :3]
+        return context
 
 
 class AboutPageView(TemplateView):
@@ -92,6 +100,14 @@ class TrainersPageView(TemplateView):
 
 class CalendarPageView(TemplateView):
     template_name = "mainapp/calendar.html"
+
+    def get_context_data(self, **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context['calendar_qs'] = mainapp_models.Calendar.objects.all()[
+            :10]
+        return context
 
 
 class VideoPageView(TemplateView):
