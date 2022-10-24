@@ -227,3 +227,84 @@
         }
     }
 }
+@media (max-width: 767px) {
+    .timeline {
+        &-years {
+            & .timeline-year {
+                @include font(600, 15px, 18px, $main-white);
+                padding: 15px 0;
+                margin-right: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .controls {
+        &-prev {
+            top: -450px;
+            & svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        &-next {
+            top: -450px;
+            & svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    
+    .year-line {
+        top: 55px;
+        left: -20px;
+    }
+    
+    .history-timeline {
+        & .years {
+            & .active-year {
+                color: $main-pink;
+            }
+        }
+        & .timeline-slider {
+            & .slide {
+                max-width: 388px;
+
+                & li {
+                    min-width: 184px;
+                    margin-right: 16px;
+    
+                    & .big {
+                        min-width: 184px;
+                        max-width: 184px;
+                    }
+
+                    & h2 {
+                        @include font(700, 28px, 34px, $main-red);
+                    }
+
+                    & p {
+                        @include font(400, 14px, 17px, $main-black);
+                    }
+                }
+            }
+            & h3 {
+                @include font(600, 20px, 24px, $main-black);
+            }
+            & .special {
+                display: none;
+            }
+            & .year-line {
+                border: 1px solid $main-red;
+            }
+        }
+        & .controls {
+            &-next {
+                & path {
+                    stroke: $main-lightgrey;
+                }
+            }
+        }
+    }
+}

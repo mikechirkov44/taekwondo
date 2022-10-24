@@ -55,3 +55,21 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .advantages {
+        height: 1237px;
+        &-list {
+            flex-wrap: wrap;
+            top: -32px;
+            justify-content: center;
+        }
+        &-card {
+            width: 320px;
+            height: 300px;
+            border-radius: 10px;
+            border: 2px solid $main-darkgrey;
+            margin-bottom: 40px;
+        }
+    }
+}

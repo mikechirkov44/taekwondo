@@ -158,3 +158,65 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .main-contacts-wrap {
+        & h3 {
+            @include font(500, 17px, 20px, $main-black);
+        }
+    } 
+    .contacts {
+        max-width: 386px;
+    
+        & .map {
+            margin-left: 0;
+            margin-top: 0;
+            & iframe {
+                width: 386px;
+                height: 279px;
+                margin-top: 0;
+            }
+        }
+    
+        margin-bottom: 35px;
+    }
+    
+    .contact {
+        &__adress {
+            margin-bottom: 40px;
+            margin-left: 0;
+            & .left-item, .right-item {
+                @include font(400, 13px, 15px, $main-black);
+            }
+        }
+    
+        &__admin {
+            @include font(400, 13px, 15px, $main-black);
+            & span {
+                @include font(600, 13px, 15px, $main-black);
+            }
+            &-info {
+                @include font(400, 13px, 15px, $main-black);
+                margin-bottom: 60px;
+            }
+            &__photo {
+                width: 83px;
+                height: 81px;
+            }
+        }
+    }
+    
+    .socials {
+        margin-bottom: 60px;
+        & .social {
+            & p {
+                @include font(600, 15px, 18px, $main-black);
+            }
+            &__btn {
+                @include red_btn;
+                padding: 6px 14px;
+                @include font(500, 10px, 12px, $main-white);
+            }
+        }
+    }
+}

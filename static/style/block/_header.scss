@@ -203,3 +203,43 @@ header::after {
         position: relative;
     }
 }
+
+@media (max-width: 767px) {
+    .header {
+        &-wrap {
+            padding: 23px 0;
+        }
+
+        &-left {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    
+        &-logo {
+            & svg {
+                width: 35;
+                height: 35;
+            }
+            @include font(400, 12px, 17px, $main-black);
+        }
+    }
+    
+    .phone {
+        display: none;
+    }
+    
+    .subscribe-btn {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        width: 30px;
+        position: relative;
+    }
+    
+    #menu__toggle:checked~.menu__box {
+        visibility: visible;
+        left: -400px;
+    }
+}
