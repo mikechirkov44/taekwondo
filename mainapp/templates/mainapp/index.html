@@ -116,11 +116,11 @@
             <div class="wrapper main-news-wrap">
                 <h1 class="main-news__heading">Последние новости Костромской Федерации Тхэквондо ИТФ</h1>
                 <ul class="main-news-list">
-                    {% for item in news_top %}
+                    {% for item in news_qs %}
                     <li class="main-news-list__item">
                         <img class="news-img" src="{{ item.main_picture.url }}" alt="">
-                        <a href="" class="news-link">
-                            <span class="news-link__text">Летний лагерь</span>
+                        <a href="{% url 'mainapp:news_detail' pk=item.pk %}" class="news-link">
+                            <span class="news-link__text">{{ item.title }}</span>
                             <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">                            
                                 <path d="M22.5 44.7178C10.6259 44.7178 1 35.0919 1 23.2178C1 11.3437 10.6259 1.71777 22.5 1.71777C34.3741 1.71777 44 11.3437 44 23.2178C44 35.0919 34.3741 44.7178 22.5 44.7178Z" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M22.5006 14.6178L31.1006 23.2178L22.5006 31.8178" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
