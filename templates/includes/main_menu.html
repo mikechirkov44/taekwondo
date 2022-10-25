@@ -32,6 +32,9 @@
                         <a class="menu__item" href="{% url 'mainapp:video' %}">Видео</a>
                     </li>
                     <li>
+                        <a class="menu__item" href="{% url 'mainapp:schedule' %}">Расписание    </a>
+                    </li>
+                    <li>
                         <a class="menu__item" href="#">Личный кабинет</a>
                     </li>
                     <li>
@@ -73,6 +76,9 @@
                     </svg>
                 <span class="phone-number"> +7 915 913 9906</span>
             </div>
+            <!--TODO
+            Сделать переход по ссылке на форму (contact_form.html)
+            -->
             <button onclick="document.querySelector('.popup_subscribe').style.display='block'" class="subscribe-btn">Записаться</button>
         </div>
     </div>

@@ -116,6 +116,9 @@
             <div class="wrapper main-news-wrap">
                 <h1 class="main-news__heading">Последние новости Костромской Федерации Тхэквондо ИТФ</h1>
                 <ul class="main-news-list">
+                        <!--TODO
+                Исправить проблему с отображением новостей при загрузке их из БД
+                -->
                     {% for item in news_qs %}
                     <li class="main-news-list__item">
                         <img class="news-img" src="{{ item.main_picture.url }}" alt="">

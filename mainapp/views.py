@@ -98,6 +98,10 @@ class TrainersPageView(TemplateView):
     template_name = "mainapp/trainers.html"
 
 
+class SchedulePageView(TemplateView):
+    template_name = "mainapp/schedule.html"
+
+
 class CalendarPageView(TemplateView):
     template_name = "mainapp/calendar.html"
 

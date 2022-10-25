@@ -1,4 +1,4 @@
-from django.forms import ModelForm, Textarea
+from django.forms import ModelForm
 from .models import Contact
 
 
@@ -8,7 +8,8 @@ class ContactForm(ModelForm):
         """Определяем модель на основе которой создаем форму"""
         model = Contact
         """Поля которые будут использоваться для заполнения"""
-        fields = '__all__'
+        fields = ['parents_name', 'child_name',
+                  'coach_name', 'hall', 'age', 'phone_number']
 
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
