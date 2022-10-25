@@ -17,12 +17,13 @@ class NewsImagesInline(admin.TabularInline):
 
 class NewsAdmin(SummernoteModelAdmin):
     summernote_fields = ('text',)
-    list_display = ('pk', 'title', 'preambule', 'get_prev_photo', 'deleted')
+    list_display = ('pk', 'title', 'preambule',
+                    'get_prev_photo', 'created_at', 'deleted')
     fields = ('title', 'preambule', 'text',
               ('main_picture', 'get_prev_photo'), 'deleted')
     readonly_fields = ['get_prev_photo']
     list_filter = ('deleted', 'created_at')
-    ordering = ('pk',)
+    ordering = ('-created_at',)
     list_per_page = 5
     search_fields = ('title', 'preambule', 'text')
     date_hierarchy = ('created_at')
@@ -45,7 +46,7 @@ class ContactAdmin(admin.ModelAdmin):
                     'phone_number', 'request_date', 'is_contacted')
     list_filter = ('request_date', 'is_contacted')
     ordering = ('-request_date', )
-    list_per_page = 10
+    list_per_page = 15
     search_fields = ('parents_name', 'child_name')
     date_hierarchy = ('request_date')
 
