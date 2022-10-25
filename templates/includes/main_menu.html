@@ -79,7 +79,8 @@
             <!--TODO
             Сделать переход по ссылке на форму (contact_form.html)
             -->
-            <button onclick="document.querySelector('.popup_subscribe').style.display='block'" class="subscribe-btn">Записаться</button>
+
+            <button onclick="document.location='{% url 'mainapp:contact_page' %}'" style.display='block' class="subscribe-btn">Записаться</button>
         </div>
     </div>
 </header>
