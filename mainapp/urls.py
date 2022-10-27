@@ -19,5 +19,6 @@ urlpatterns = [
     path("hall_of_fame/", views.Hall_of_FamePageView.as_view(), name="hall_of_fame"),
     path("trainers/", views.TrainersPageView.as_view(), name="trainers"),
     path("calendar/", views.CalendarPageView.as_view(), name="calendar"),
+    path("success/", views.SuccessPageView.as_view(), name="success_page"),
     path("video/", views.VideoPageView.as_view(), name="video"),
 ]
