@@ -1,4 +1,3 @@
-from datetime import date, datetime
 from django.db import models
 from django.core.validators import RegexValidator
 
@@ -47,48 +46,52 @@ class NewsImages(models.Model):
         verbose_name_plural = "Изображения для новости"
 
 
+class Hall(models.Model):
+    placement = models.CharField(max_length=200, verbose_name="Расположение")
+
+    def __str__(self):
+        return f"{self.placement}"
+
+    class Meta:
+        verbose_name = "Зал"
+        verbose_name_plural = "Залы"
+
+
+class Coach(models.Model):
+    first_name = models.CharField(max_length=128, verbose_name="Имя")
+    father_name = models.CharField(max_length=128, verbose_name="Отчество")
+    last_name = models.CharField(
+        max_length=128, verbose_name="Фамилия")
+    hall = models.ManyToManyField(Hall, verbose_name="Залы")
+
+    def __str__(self):
+        return f"{self.last_name} {self.first_name[0]}.{self.father_name[0]}."
+
+    class Meta:
+        verbose_name = "Тренера"
+        verbose_name_plural = "Тренеры"
+
+
 class Contact(models.Model):
     """Определяем модель для формы обратной связи"""
-
-    CHOICES_HALLS = (
-        ('1', 'С/К Спартак'),
-        ('2', 'Ф/К Апельсин'),
-        ('3', 'Лицей №41'),
-        ('4', 'Гимназия №25'),
-        ('5', 'Школа №21'),
-        ('6', 'Школа №31'),
-        ('7', 'Дворец Культуры'),
-        ('8', 'Школа №37'),
-        ('9', 'Отель "Третьяков"'),
-        ('10', 'С/К "Синия птица"'),
-        ('11', 'Зал единоборств'),
-
-    )
-
-    CHOICES_COACHES = (
-        ('1', 'Маклаков В.П.'),
-        ('2', 'Шустова М.А.'),
-        ('3', 'Соколов П.И.'),
-        ('4', 'Кошкаров Б.Н.'),
-        ('5', 'Цыварев И.В.'),
-        ('6', 'Сер А.Р.'),
-        ('7', 'Усачева О.А.'),
-    )
-
     parents_name = models.CharField(
         max_length=200, verbose_name="ФИО родителя")
     child_name = models.CharField(max_length=50, verbose_name="ФИО ребенка")
     age = models.PositiveSmallIntegerField(verbose_name="Возраст ребенка")
     phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
     phone_number = models.CharField(
-        validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name="Номер телефона")
-    hall = models.CharField(max_length=200, unique=False,
-                            verbose_name="Зал для тренировок", choices=CHOICES_HALLS)
-    coach_name = models.CharField(
-        unique=False, max_length=200, verbose_name="ФИО тренера", choices=CHOICES_COACHES)
+        validators=[phoneNumberRegex], max_length=16, unique=True,
+        verbose_name="Номер телефона")
+    hall = models.ForeignKey(
+        Hall, on_delete=models.PROTECT, verbose_name="Залы")
+    coach_name = models.ForeignKey(
+        Coach, on_delete=models.PROTECT, verbose_name="Тренер")
     request_date = models.DateTimeField(
         auto_now_add=True, verbose_name="Дата заявки")
-    is_contacted = models.BooleanField(default=False, verbose_name="Связались")
+    is_contacted = models.BooleanField(
+        default=False, verbose_name="Связались")
+    is_agreed = models.BooleanField(
+        default=False, verbose_name="Согласие на обработку")
 
     def __str__(self) -> str:
         return f'{self.parents_name} - {self.phone_number}'
@@ -116,3 +119,18 @@ class Calendar(models.Model):
     class Meta():
         verbose_name_plural = "Соревнования"
         verbose_name = "Соревнование"
+
+
+class Video(models.Model):
+    """ Определяем модель для Видео"""
+    title = models.CharField(
+        max_length=256, verbose_name="Название мероприятия")
+    date = models.DateField(verbose_name="Дата мероприятия")
+    video_url = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "Видео"
+        verbose_name = "Видео"

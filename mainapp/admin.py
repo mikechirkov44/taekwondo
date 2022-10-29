@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from django_summernote.admin import SummernoteModelAdmin
-from .models import News, NewsImages, Contact, Calendar
+from .models import News, NewsImages, Contact, Calendar, Coach, Hall, Video
 
 
 class NewsImagesInline(admin.TabularInline):
@@ -17,12 +17,13 @@ class NewsImagesInline(admin.TabularInline):
 
 class NewsAdmin(SummernoteModelAdmin):
     summernote_fields = ('text',)
-    list_display = ('pk', 'title', 'preambule', 'get_prev_photo', 'deleted')
+    list_display = ('pk', 'title', 'preambule',
+                    'get_prev_photo', 'created_at', 'deleted')
     fields = ('title', 'preambule', 'text',
               ('main_picture', 'get_prev_photo'), 'deleted')
     readonly_fields = ['get_prev_photo']
     list_filter = ('deleted', 'created_at')
-    ordering = ('pk',)
+    ordering = ('-created_at',)
     list_per_page = 5
     search_fields = ('title', 'preambule', 'text')
     date_hierarchy = ('created_at')
@@ -45,7 +46,7 @@ class ContactAdmin(admin.ModelAdmin):
                     'phone_number', 'request_date', 'is_contacted')
     list_filter = ('request_date', 'is_contacted')
     ordering = ('-request_date', )
-    list_per_page = 10
+    list_per_page = 15
     search_fields = ('parents_name', 'child_name')
     date_hierarchy = ('request_date')
 
@@ -59,6 +60,27 @@ class CalendarAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ('city',)
     date_hierarchy = ('date')
+
+
+@admin.register(Hall)
+class HallAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'placement',)
+    list_per_page = 10
+    search_fields = ('placement',)
+
+
+@admin.register(Coach)
+class CoachAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'last_name', 'first_name',)
+    list_per_page = 10
+    search_fields = ('placement',)
+
+
+@admin.register(Video)
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title', 'date',)
+    list_per_page = 10
+    search_fields = ('title',)
 
 
 admin.site.site_title = 'Костромская Федерация Тхэквондо-ИТФ'
