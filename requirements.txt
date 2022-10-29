@@ -3,6 +3,7 @@ autopep8==1.7.0
 bleach==5.0.1
 Django==3.2.15
 django-crispy-forms==1.14.0
+django-smart-selects==1.6.0
 django-summernote==0.8.20.0
 flake8==5.0.4
 mccabe==0.7.0

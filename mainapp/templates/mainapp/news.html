@@ -10,13 +10,13 @@
                 Исправить проблему с отображением новостей при загрузке их из БД
                 -->
             <ul class="news__ul">
-                {% for item in news_qs %}
+                
+                {% for item in page_obj %}
                 <li>
                     <a href="{% url 'mainapp:news_detail' pk=item.pk %}">
                         <div class="news__img">
                             <img src ="{{ item.main_picture.url }}" class="news__img">
                         </div>
-                        
                         <div class="news__text">
                             <p class="news__date">{{ item.created_at|date:"Y-m-d" }}</p>
                             <p class="news__heading">{{ item.title }}</p>
@@ -26,8 +26,29 @@
                 </li>
                 {% endfor %}
             </ul>
+            <div class="news-text">
+                <p class="news__date">
+                Страница: {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                </p>
+            </div>
+
+            <div class="pagination">
+
+                {% if page_obj.has_previous %}
+                    <button class="pagination__btn" onclick="document.location='?page=1'">1</button>
+                    <button class="pagination__btn" onclick="document.location='?page={{ page_obj.previous_page_number }}'"><</button>
+                {% endif %}
+        
+                {% if page_obj.has_next %}
+                    <button class="pagination__btn"  onclick="document.location='?page={{ page_obj.next_page_number }}'">></button>
+                    <button class="pagination__btn" onclick="document.location='?page={{ page_obj.paginator.num_pages }}'">{{ page_obj.paginator.num_pages }}</button>
+                {% endif %}
+        
+            </div>
+            <div>
+      
         </div>
-    
+
 
 {%endblock content%}
     

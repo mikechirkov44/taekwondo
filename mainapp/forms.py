@@ -1,17 +1,23 @@
 from django.forms import ModelForm
+from django import forms
+
 from .models import Contact
 
 
 class ContactForm(ModelForm):
+    widgets = {
+        'is_agreed': forms.CheckboxInput()
+    }
 
     class Meta:
         """Определяем модель на основе которой создаем форму"""
         model = Contact
         """Поля которые будут использоваться для заполнения"""
         fields = ['parents_name', 'child_name', 'age', 'phone_number',
-                  'coach_name', 'hall']
+                  'coach_name', 'hall', 'is_agreed']
 
     def __init__(self, *args, **kwargs):
+
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['parents_name'].widget.attrs.update(
             {'placeholder': 'ФИО родителя'})

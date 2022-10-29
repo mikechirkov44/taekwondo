@@ -65,10 +65,10 @@ class Coach(models.Model):
     hall = models.ManyToManyField(Hall, verbose_name="Залы")
 
     def __str__(self):
-        return f"{self.last_name} {self.first_name[0]}.{self.father_name[0]}"
+        return f"{self.last_name} {self.first_name[0]}.{self.father_name[0]}."
 
     class Meta:
-        verbose_name = "Тренер"
+        verbose_name = "Тренера"
         verbose_name_plural = "Тренеры"
 
 
@@ -90,6 +90,8 @@ class Contact(models.Model):
         auto_now_add=True, verbose_name="Дата заявки")
     is_contacted = models.BooleanField(
         default=False, verbose_name="Связались")
+    is_agreed = models.BooleanField(
+        default=False, verbose_name="Согласие на обработку")
 
     def __str__(self) -> str:
         return f'{self.parents_name} - {self.phone_number}'

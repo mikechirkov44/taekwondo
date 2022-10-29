@@ -1553,8 +1553,8 @@ header::after {
 }
 
 .pagination__btn {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border: none;
   border-radius: 10px;
   background-color: #ACB0B2;
