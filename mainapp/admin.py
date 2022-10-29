@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from django_summernote.admin import SummernoteModelAdmin
-from .models import News, NewsImages, Contact
+from .models import News, NewsImages, Contact, Calendar
 
 
 class NewsImagesInline(admin.TabularInline):
@@ -23,7 +23,7 @@ class NewsAdmin(SummernoteModelAdmin):
     readonly_fields = ['get_prev_photo']
     list_filter = ('deleted', 'created_at')
     ordering = ('pk',)
-    list_per_page = 3
+    list_per_page = 5
     search_fields = ('title', 'preambule', 'text')
     date_hierarchy = ('created_at')
     inlines = [NewsImagesInline]
@@ -45,9 +45,20 @@ class ContactAdmin(admin.ModelAdmin):
                     'phone_number', 'request_date', 'is_contacted')
     list_filter = ('request_date', 'is_contacted')
     ordering = ('-request_date', )
-    list_per_page = 3
+    list_per_page = 10
     search_fields = ('parents_name', 'child_name')
     date_hierarchy = ('request_date')
+
+
+@admin.register(Calendar)
+class CalendarAdmin(admin.ModelAdmin):
+    list_display = ('title', 'date',
+                    'city', 'in_archive')
+    list_filter = ('in_archive', 'city')
+    ordering = ('-date', )
+    list_per_page = 10
+    search_fields = ('city',)
+    date_hierarchy = ('date')
 
 
 admin.site.site_title = 'Костромская Федерация Тхэквондо-ИТФ'

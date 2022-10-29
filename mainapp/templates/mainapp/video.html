@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
         <div class="video">
             <div class="wrapper video-wrap">
                 <h1>Видео</h1>
                 <ul class="video-list">
                     <li class="video-list__item">
-                        <img class="video-img" src="./img/video-preview1.png" alt="news-vacation">
-                        <a href="./videos/comp_tyla.html" class="video-link">
+                        <img class="video-img" src="{% static 'img/video-preview1.png' %}" alt="news-vacation">
+                        <a href="/static/videos/comp_tyla.html" class="video-link">
                             <span class="video-link__text">Летний лагерь</span>
                             <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">                            
                                 <path d="M22.5 44.7178C10.6259 44.7178 1 35.0919 1 23.2178C1 11.3437 10.6259 1.71777 22.5 1.71777C34.3741 1.71777 44 11.3437 44 23.2178C44 35.0919 34.3741 44.7178 22.5 44.7178Z" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -80,5 +81,5 @@
                 </form>
             </div>
         </div>
-{% endblock content %}
+{% endblock content%}
   

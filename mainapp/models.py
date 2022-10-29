@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from django.db import models
 from django.core.validators import RegexValidator
 
@@ -93,5 +94,25 @@ class Contact(models.Model):
         return f'{self.parents_name} - {self.phone_number}'
 
     class Meta():
-        verbose_name_plural = " Контакты"
+        verbose_name_plural = "Контакты"
         verbose_name = "Контакт"
+
+
+class Calendar(models.Model):
+    """ Определяем модель для Календаря мероприятий"""
+    title = models.CharField(
+        max_length=256, verbose_name="Название мероприятия")
+    date = models.DateField(verbose_name="Дата мероприятия")
+    duration = models.PositiveSmallIntegerField(
+        verbose_name="Длительность мероприятия")
+    city = models.CharField(max_length=64, verbose_name="Город")
+    file_name = models.FileField(
+        upload_to='uploads/', verbose_name="Файл с положением", default='uploads/default.html')
+    in_archive = models.BooleanField(default=False, verbose_name="В архиве")
+
+    def __str__(self):
+        return self.title
+
+    class Meta():
+        verbose_name_plural = "Соревнования"
+        verbose_name = "Соревнование"
