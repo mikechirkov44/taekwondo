@@ -122,6 +122,32 @@
         }
     }
 
+    .about-promo {
+        &__wrap {
+            min-height: 274px;
+            display: flex;
+        }
+        &__span {
+            @include font(500, 26px, 31px, $main-white);
+            width: 336px;
+            margin-top: 65px;
+        }
+        &__img {
+            bottom: -20px;
+            right: -20px;
+            width: 183px;
+            height: auto;
+        }
+        &__text {
+            &__heading {
+                @include font(600, 20px, 24px, $main-darkgrey);
+            }
+            &__meaning {
+                margin-bottom: 48px;
+            }
+        }
+    }    
+
     .history-promo {
         &-wrap {
             position: relative;
@@ -186,6 +212,34 @@
             }
         }
     }
+
+    .about-promo {
+        &__wrap {
+            min-height: 165px;
+            display: flex;
+        }
+        &__span {
+            @include font(500, 17px, 20px, $main-white);
+            width: 235px;
+            margin-top: 28px;
+        }
+        &__img {
+            bottom: -5px;
+            right: 10px;
+            width: 74px;
+            height: auto;
+        }
+        &__text {
+            &__heading {
+                @include font(600, 15px, 18px, $main-darkgrey);
+                margin-bottom: 10px;
+            }
+            &__meaning {
+                @include font(400, 12px, 14px, $main-darkgrey);
+                margin-bottom: 20px;
+            }
+        }
+    } 
 
     .history-promo {
         &-wrap {

@@ -102,3 +102,108 @@
         margin-top: 60px;
     }
 }
+
+
+
+@media (max-width: 1240px) {
+    .calendar {
+        &-wrap {
+            margin: 0 auto;
+            width: $phone-wrap;
+            height: 100%;
+        }
+        &-heading {
+            background-image: url("/static/img/yellow_background.png");
+            background-size: cover;
+            height: 420px;
+            & h1 {
+                @include font(500, 17px, 20px, $main-darkgrey);
+            }
+            &__line {
+                width: 293px;
+            }
+            &__year {
+                @include font(700, 90px, 109px, #F2D8C5);
+                -webkit-text-stroke: unset;
+            }
+        }
+    }
+    
+    .competition {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        &__heading {
+            margin-bottom: 13px;
+            box-shadow: 0px 2px 0px 0px #000000;
+            &__text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 24px 0;
+                & h3 {
+                    @include font(500, 17px, 20px, $main-black);
+                }
+                & a {
+                    display: none;
+                    @include font(600, 20px, 24px, $main-black);
+                    text-decoration: none;
+                    text-align: center;
+                    padding-right: 34px;
+                }
+            }
+        }
+        & li {
+            margin-bottom: 12px;
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                background-color: $main-darkgrey;
+            }
+        }
+        &-item {
+            padding: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: max-content;
+            & h5 {
+                @include font(500, 15px, 18px, $main-black);
+                max-width: 250px;
+            }
+            & svg {
+                margin-right: 0;
+                & path {
+                   transition: 0.3s; 
+                }
+                &:hover path {
+                    fill: $main-pink;
+                }
+                &:active path {
+                    fill: $main-black;
+                }
+            }
+    
+            & .date {
+                min-width: 104px;
+                &-day {
+                    @include font(600, 15px, 18px, $main-black);
+                }
+                &-late {
+                    @include font(600, 10px, 12px, $main-black);
+                    margin-bottom: 4px;
+                }
+                &-place {
+                    @include font(600, 10px, 12px, $main-black);
+                }
+    
+            }
+        }
+        &-past {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+}

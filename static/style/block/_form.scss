@@ -6,8 +6,7 @@ form {
     & label {
         display: none;
     }
-    & input,
-    select {
+    & .form-input {
         appearance: none;
         padding: 0 16px;
         width: 522px;
@@ -45,6 +44,49 @@ form {
             border: 1px solid $main-black;
             background-color: $main-white;
             color: $main-black;
+        }
+    }
+
+    & .form-checkbox {
+        align-self: flex-start;
+        width: 16px;
+        height: 16px;
+        &-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &__label {
+            margin-left: 6px;
+            display: flex;
+            @include font(400, 14px, 17px, $main-darkgrey)
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    form {
+        margin-bottom: 20px;
+        & .form-input {
+            padding: 0 16px;
+            width: 324px;
+            height: 36px;
+            @include font(400, 10px, 12px, $main-darkgrey);
+            font-family: "Montserrat", sans-serif;
+            &::placeholder {
+                font-family: "Montserrat", sans-serif;
+                @include font(400, 10px, 12px, $main-lightgrey);
+            }
+        }
+        & button {
+            @include font(500, 10px, 12px, $main-white);
+            padding: 6px 15px;
+        }
+    
+        & .form-checkbox {
+            &__label {
+                @include font(400, 10px, 12px, $main-darkgrey)
+            }
         }
     }
 }

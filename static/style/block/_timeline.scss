@@ -17,7 +17,7 @@
             }
         }
         & .active-year {
-            color: $main-pink;
+            color: $main-pink !important;
         }
     }
 }
@@ -161,7 +161,38 @@
     }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1240px) {    
+    .timeline-slider {
+        height: max-content;
+        & .slide {
+            width: $tablet-wrap;
+        }
+        & ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            & h2 {
+                @include font(600, 20px, 24px, $main-lightgrey);
+            }
+            & h3 {
+                @include font(600, 20px, 24px, $main-white);
+            }
+        }
+        & li {
+            max-width: 220px;
+            min-width: 200px;
+            margin-right: 10px;
+            &:last-of-type {
+                margin-right: 0px;
+            }
+            & p {
+                @include font(400, 14px, 17px, $main-white);
+                margin-top: 32px;
+            }
+        }
+    }
+
     .timeline {
         &-years {
             & .timeline-year {
@@ -175,18 +206,24 @@
     
     .controls {
         &-prev {
-            top: -458px;
+            top: -490px;
             left: 0;
+            & path {
+                stroke: $main-lightgrey;
+            }
         }
         &-next {
-            top: -458px;
+            top: -490px;
             right: 0;
+            & path {
+                stroke: $main-lightgrey;
+            }
         }
     }
     
     .year-line {
-        top: 55px;
-        left: -20px;
+        top: 30px;
+        left: -10px;
     }
     
     .history-timeline {
@@ -219,7 +256,16 @@
             }
         }
         & .controls {
+            &-prev {
+                top: -390px;
+                left: 0;
+                & path {
+                    stroke: $main-lightgrey;
+                }
+            }
             &-next {
+                top: -390px;
+                right: 0;
                 & path {
                     stroke: $main-lightgrey;
                 }
@@ -237,18 +283,48 @@
                 cursor: pointer;
             }
         }
+
+        &-slider {
+            & ul {
+                width: $phone-wrap;
+                flex-direction: column;
+                justify-content: unset;
+                & h2 {
+                    @include font(600, 15px, 18px, $main-lightgrey);
+                    margin-bottom: 0;
+                    margin-top: 30px;
+                }
+                & h3 {
+                    @include font(600, 15px, 18px, $main-white);
+                }
+            }
+
+            & li {
+                width: 100%;
+                max-width: 380px;
+                min-width: 360px;
+                margin-right: 0;
+                    &:last-of-type {
+                        margin-right: 0px;
+                    }
+                & p {
+                    @include font(400, 12px, 14px, $main-white);
+                    margin-top: 15px;
+                }
+            }
+        }
     }
     
     .controls {
         &-prev {
-            top: -450px;
+            top: -570px;
             & svg {
                 width: 25px;
                 height: 25px;
             }
         }
         &-next {
-            top: -450px;
+            top: -570px;
             & svg {
                 width: 25px;
                 height: 25px;
@@ -257,6 +333,7 @@
     }
     
     .year-line {
+        display: none;
         top: 55px;
         left: -20px;
     }
@@ -269,7 +346,7 @@
         }
         & .timeline-slider {
             & .slide {
-                max-width: 388px;
+                max-width: $phone-wrap ;
 
                 & li {
                     min-width: 184px;
@@ -293,14 +370,18 @@
                 @include font(600, 20px, 24px, $main-black);
             }
             & .special {
-                display: none;
+                display: block;
             }
             & .year-line {
                 border: 1px solid $main-red;
             }
         }
         & .controls {
+            &-prev {
+                top: -495px;
+            }
             &-next {
+                top: -495px;
                 & path {
                     stroke: $main-lightgrey;
                 }
