@@ -3731,7 +3731,7 @@ header::after {
 
 .history-mission__img {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   right: 0;
 }
 
@@ -4019,8 +4019,9 @@ header::after {
   }
   .history-wrap picture {
     position: absolute;
-    right: 0;
+    right: -15px;
     margin-bottom: 36px;
+    z-index: -1;
   }
   .history-text {
     margin-top: 22px;
