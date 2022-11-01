@@ -25,8 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(url="mainapp/")),
     path("mainapp/", include("mainapp.urls", namespace="mainapp")),
-    path("form/", ContactCreate.as_view(), name="contact_page"),
     path("summernote/", include("django_summernote.urls")),
-    path("success/", success, name="success_page")
+    path("chaining/", include('smart_selects.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = page_not_found
