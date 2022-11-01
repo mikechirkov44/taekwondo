@@ -295,3 +295,215 @@
     
     }
 }
+
+@media (max-width: 767px) {
+    .trainers {
+        &-wrap {
+            list-style-type: none;
+            & .main {
+                height: 609px;
+                & .trainer-info {
+                    padding-left: 12px;
+                    width: $phone-wrap;
+                    margin-top: 20px;
+                }
+
+                & .trainer-img {
+                    bottom: -48%;
+                    right: 15px;
+                    left: auto;
+                }
+                & .timetable {
+                    position: unset;
+                    &__text {
+                        width: 205px;
+                        @include font(600, 15px, 18px, $main-black);
+                    }
+                }
+            }
+        }
+        & h3 {
+            @include font(500, 17px, 20px, $main-black);
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 0;
+            max-width: 330px;
+        } 
+    }
+    
+    
+    .trainer {
+        &:nth-of-type(2n) {
+            background-color: $main-darkgrey;
+            & .name {
+                color: $main-white;
+            }
+            & .deserts-item {
+                color: $main-white;
+            }
+            & .timetable {
+                align-self: flex-end;
+            }
+            & .timetable__text {
+                width: 100px;
+                color: $main-white;
+            }
+            & .timetable__btn {
+                font-family: 'Montserrat', sans-serif;
+                color: $main-darkgrey;
+                background-color: $main-white;
+                border: 1px solid $main-white;
+                &:hover {
+                    color: $main-white;
+                    background-color: $main-lightgrey;
+                    border: 1px solid $main-lightgrey;
+                }
+                &:active {
+                    color: $main-white;
+                    background-color: transparent;
+                    border: 1px solid $main-white;
+                }
+            }
+            & .trainer-img {
+                position: absolute;
+                bottom: -150px;
+                left: 0;
+                z-index: 0;
+            }
+        }
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 480px;
+            margin: 0 auto;
+            width: $phone-wrap;
+            position: relative;
+        }
+        &-img {
+            position: absolute;
+            width: 200px;
+            height: auto;
+            bottom: -100px;
+            left: 50%;
+            z-index: -1;
+        }
+        &-info {
+            width: unset;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            & .name {
+                @include font(600, 15px, 18px, $main-black);
+                margin-bottom: 20px;
+            }
+            & .deserts{
+                list-style-type: none;
+                &-container {
+                    width: $phone-wrap;
+                    display: flex;
+                    margin-bottom: 40px;
+                }
+                &-line {
+                    border: 1px solid $main-pink;
+                    background-color: $main-pink;
+                    margin-right: 15px;
+                }
+                &-item {
+                    @include font(400, 12px, 14px, $main-black);
+                    color: $main-black;
+                    margin-bottom: 10px;
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+            & .timetable {
+                align-self: flex-start;
+                position: unset;
+                bottom: unset;
+                left: unset;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &__text {
+                    width: 205px;
+                    @include font(600, 15px, 18px, $main-black);
+                    margin-bottom: 20px;
+                }
+                &__btns {
+                    width: 205px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                &__btn {
+                    font-family: 'Montserrat', sans-serif;
+                    @include font(400, 10px, 12px, $main-white);
+                    padding: 11px 0;
+                    width: 135px;
+                    margin-bottom: 10px;
+                    &:nth-of-type(1) {
+                        margin-right: unset;
+                        margin-bottom: 10px;
+                    }
+                    &:nth-of-type(2) {
+                        margin-right: unset;
+                        margin-bottom: 10px;
+                    }
+                    &:nth-of-type(4) {
+                        margin-left: unset;
+                    }
+                    &:hover {
+                        color: $main-white;
+                        background-color: $main-lightgrey;
+                        border: 1px solid $main-lightgrey;
+                    }
+                    &:active {
+                        color: $main-darkgrey;
+                        background-color: transparent;
+                        border: 1px solid $main-darkgrey;
+                    }
+                }
+            }     
+        }
+    }
+    
+    .maklakova {
+        background-image: url('/static/img/Маклакова-bg.png');
+        background-size: cover;
+        min-height: 400px;
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 0;
+
+            & img {
+                width: 120px;
+                height: 118px;
+            }
+
+            & .trainer-info {
+                & .name {
+                    @include font(600, 15px, 18px, $main-black);
+                }
+            }
+        }
+        &__btn {
+            @include font(600, 10px, 12px, $main-white);
+            bottom: 0px;
+            right: calc(50% - 60px);
+        }
+        & .deserts-container {
+            max-width: 415px;
+            padding-left: 35px;
+        }
+    
+    }
+    
+}

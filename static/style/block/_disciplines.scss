@@ -139,3 +139,125 @@
 .invisible {
     visibility: hidden;
 }
+
+
+@media (max-width: 1240px) {
+    .disciplines {
+        &-wrap {
+            position: relative;
+        }
+    
+        &-about {
+            position: absolute;
+            top: 0px;
+    
+            & h3 {
+                @include font(500, 32px, 39px, $main-darkgrey);
+                max-width: 330px;
+                margin-bottom: 10px;
+            }
+    
+            &__line {
+                width: 330px;
+                background-color: $main-red;
+                border: 1px solid $main-red;
+                margin-bottom: 14px;
+            }
+    
+            &__text {
+                @include font(500, 20px, 24px, $main-darkgrey);
+                max-width: 330px;
+            }
+        }
+    
+        &-cards {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: unset;
+            margin-top: 40px;
+            margin-left: 0;
+        }
+    
+        &-card {
+            width: 330px;
+            height: 425px;
+            margin-bottom: 60px;
+            &:nth-of-type(odd) {
+                margin-top: -180px;
+                margin-bottom: 60px;
+            }
+        }
+
+        & .front {
+            border-radius: 32px;
+        }
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .disciplines {
+        &-wrap {
+            position: relative;
+        }
+    
+        &-about {
+            position: absolute;
+            top: 0px;
+    
+            & h3 {
+                @include font(500, 17px, 20px, $main-darkgrey);
+                max-width: 330px;
+                margin-bottom: 10px;
+            }
+    
+            &__line {
+                width: 330px;
+                background-color: $main-red;
+                border: 1px solid $main-red;
+                margin-bottom: 14px;
+            }
+    
+            &__text {
+                @include font(500, 15px, 18px, $main-darkgrey);
+                max-width: 330px;
+            }
+        }
+    
+        &-cards {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 46px;
+            margin-left: 0;
+            padding-top: 150px;
+        }
+    
+        &-card {
+            width: 330px;
+            height: 425px;
+            margin-bottom: 30px;
+            &:nth-of-type(odd) {
+                margin-top: unset;
+                margin-bottom: 30px;
+            }
+        }
+
+        & .invisible {
+            display: none;
+        }
+
+        & .front {
+            border-radius: 32px;
+        }
+
+        & .back {
+            padding: 25px;
+        }
+    }
+    
+}
