@@ -126,7 +126,12 @@ class Video(models.Model):
     title = models.CharField(
         max_length=256, verbose_name="Название мероприятия")
     date = models.DateField(verbose_name="Дата мероприятия")
-    video_url = models.TextField()
+    video_url_1 = models.TextField(
+        default="https://www.youtube.com/embed/KiTkCnowAdY")
+    video_url_2 = models.TextField(
+        default="https://www.youtube.com/embed/KiTkCnowAdY")
+    video_url_3 = models.TextField(
+        default="https://www.youtube.com/embed/KiTkCnowAdY")
 
     def __str__(self):
         return self.title

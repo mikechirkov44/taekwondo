@@ -14,9 +14,6 @@
                         <a class="menu__item" href="{% url 'mainapp:history' %}">Информация о Федерации</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="{% url 'mainapp:halls' %}">Наши залы</a>
-                    </li>
-                    <li>
                         <a class="menu__item" href="{% url 'mainapp:trainers' %}">Тренерский состав</a>
                     </li>
                     <li>
@@ -32,13 +29,22 @@
                         <a class="menu__item" href="{% url 'mainapp:video' %}">Видео</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="{% url 'mainapp:schedule' %}">Расписание    </a>
-                    </li>
-                    <li>
-                        <a class="menu__item" href="#">Личный кабинет</a>
+                        <a class="menu__item" href="{% url 'mainapp:schedule' %}">Расписание</a>
                     </li>
                     <li>
                         <a class="menu__item" href="{% url 'mainapp:contacts' %}">Контакты</a>
+                    </li>
+                    <li>
+                        <a class="menu__item">--------------------------</a>
+                    </li>
+                    <li>
+                        <a class="menu__item">Разделы в разработке:</a>
+                    </li>
+                    <li>
+                        <a class="menu__item">Личный кабинет</a>
+                    </li>
+                    <li>
+                        <a class="menu__item">Наши залы</a>
                     </li>
                 </ul>
             </div>
@@ -76,9 +82,6 @@
                     </svg>
                 <span class="phone-number"> +7 915 913 9906</span>
             </div>
-            <!--TODO
-            Сделать переход по ссылке на форму (contact_form.html)
-            -->
             <button onclick="document.location='{% url 'mainapp:contact_page' %}'" style.display='block' class="subscribe-btn">Записаться</button>
         </div>
     </div>

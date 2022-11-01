@@ -11,24 +11,48 @@
                             <path d="M31.0994 22.5H13.8994" stroke="#ACB0B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
-                    {% for item in video_qs %}
-                    <div class="video__top__text">
-                        <h1>{{ item.title }}</h1>
-                        <p>{{ item.date|date:"Y-m-d" }}</p>
-                    </div>
                 </div>
-                <ul class="video-list">
-                    <li class="video-list__item">
-                        <iframe width="400" height="288" border-radius="10px" src= "{{ item.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </li>
-                    <li class="video-list__item">
-                        <iframe width="400" height="288" border-radius="10px" src="https://www.youtube.com/embed/nNNDxcSed6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </li>
-                    <li class="video-list__item">
-                        <iframe width="400" height="288" border-radius="10px" src="https://www.youtube.com/embed/nNNDxcSed6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </li>
-                </ul>
-                {% endfor %}
-            </div>
+            
+                    {% for item in page_obj %}
+                        <div class="video__top__text">
+                            <h1>{{ item.title }}</h1>
+                            <p>{{ item.date|date:"Y-m-d" }}</p>
+                        </div>
+                        <ul class="video-list">
+                                <li class="video-list__item">
+                                    <iframe width="400" height="288" border-radius="10px" src= "{{ item.video_url_1 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li class="video-list__item">
+                                    <iframe width="400" height="288" border-radius="10px" src="{{ item.video_url_2 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li class="video-list__item">
+                                    <iframe width="400" height="288" border-radius="10px" src="{{ item.video_url_3 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                        </ul> 
+                    {% endfor %} 
+                        <div class="pagination">
+                            Страница: {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                        </div>
+                        <div class="pagination">
+                            {% if page_obj.has_previous %}
+                                <button class="pagination__btn" onclick="document.location='?page=1'">1</button>
+                                <button class="pagination__btn" onclick="document.location='?page={{ page_obj.previous_page_number }}'"><</button>
+                            {% endif %}
+
+                            {% if page_obj.has_next %}
+                                <button class="pagination__btn"  onclick="document.location='?page={{ page_obj.next_page_number }}'">></button>
+                                <button class="pagination__btn" onclick="document.location='?page={{ page_obj.paginator.num_pages }}'">{{ page_obj.paginator.num_pages }}</button>
+                            {% endif %}
+                        </div>
+                </div>
+            <div>
         </div>
+        <button id="scroll__btn" onclick="topFunction()">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.30732e-05 50C1.18662e-05 77.6142 22.3858 100 50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 -9.78513e-07 50 -2.18557e-06C22.3858 -3.39263e-06 1.42803e-05 22.3858 1.30732e-05 50Z" fill="#ACB0B2"/>
+                <path d="M70 49.999L50 29.999L30 49.999" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M50 69.999L50 29.999" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
 {% endblock content %}

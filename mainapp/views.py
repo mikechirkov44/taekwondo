@@ -1,6 +1,6 @@
 from django.views.generic import CreateView, TemplateView, ListView
 
-from .models import Contact, News
+from .models import Contact, News, Video, Calendar
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.core.mail import send_mail
@@ -18,7 +18,7 @@ class ContactCreate(CreateView):
     def form_valid(self, form):
         # Формируем сообщение для отправки
         data = form.data
-        subject = f'Новое заявка с сайта. От: {data["parents_name"]}. Телефон: {data["phone_number"]}'
+        subject = f'Новая заявка с сайта. От: {data["parents_name"]}. Телефон: {data["phone_number"]}'
         email(subject, data['phone_number'])
         return super().form_valid(form)
 
@@ -106,8 +106,10 @@ class SuccessPageView(TemplateView):
     template_name = "mainapp/success.html"
 
 
-class CalendarPageView(TemplateView):
+class CalendarPageView(ListView):
+    model = Calendar
     template_name = "mainapp/calendar.html"
+    paginate_by = 10
 
     def get_context_data(self, **kwargs):
         # Get all previous data
@@ -118,15 +120,16 @@ class CalendarPageView(TemplateView):
         return context
 
 
-class VideoPageView(TemplateView):
+class VideoPageView(ListView):
+    model = Video
     template_name = "mainapp/video.html"
+    paginate_by = 2
 
     def get_context_data(self, **kwargs):
         # Get all previous data
         context = super().get_context_data(**kwargs)
         # Create your own data
-        context['video_qs'] = mainapp_models.Video.objects.all()[
-            :10]
+        context['video_qs'] = mainapp_models.Video.objects.all()
         return context
 
 
