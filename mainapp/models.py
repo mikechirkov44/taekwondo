@@ -8,7 +8,7 @@ class BaseModel(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True, verbose_name="Дата изменения")
 
-    deleted = models.BooleanField(default=False, verbose_name="Удален")
+    deleted = models.BooleanField(default=False, verbose_name="В архиве")
 
     class Meta:
         abstract = True
