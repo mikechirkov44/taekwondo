@@ -3,9 +3,11 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     & label {
         display: none;
     }
+
     & .form-input {
         appearance: none;
         padding: 0 16px;
@@ -16,15 +18,18 @@ form {
         border-radius: 6px;
         @include small-font;
         font-family: "Montserrat", sans-serif;
+
         &::placeholder {
             font-family: "Montserrat", sans-serif;
             @include small-font;
             color: $main-lightgrey;
         }
     }
+
     & option {
         color: $main-darkgrey;
     }
+
     & button {
         margin-top: 23px;
         font-family: "Montserrat", sans-serif;
@@ -35,6 +40,7 @@ form {
         border-radius: 6px;
         transition: 0.3s;
         cursor: pointer;
+
         &:hover {
             background-color: $main-lightgrey;
             border: 1px solid $main-lightgrey;
@@ -51,11 +57,13 @@ form {
         align-self: flex-start;
         width: 16px;
         height: 16px;
+
         &-container {
             width: 100%;
             display: flex;
             align-items: center;
         }
+
         &__label {
             margin-left: 6px;
             display: flex;
@@ -67,22 +75,25 @@ form {
 @media (max-width: 767px) {
     form {
         margin-bottom: 20px;
+
         & .form-input {
             padding: 0 16px;
             width: 324px;
             height: 36px;
             @include font(400, 10px, 12px, $main-darkgrey);
             font-family: "Montserrat", sans-serif;
+
             &::placeholder {
                 font-family: "Montserrat", sans-serif;
                 @include font(400, 10px, 12px, $main-lightgrey);
             }
         }
+
         & button {
             @include font(500, 10px, 12px, $main-white);
             padding: 6px 15px;
         }
-    
+
         & .form-checkbox {
             &__label {
                 @include font(400, 10px, 12px, $main-darkgrey)

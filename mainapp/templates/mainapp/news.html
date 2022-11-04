@@ -6,11 +6,7 @@
 
 <div class="news-wrap wrapper">
             <h3>Новости Костромской Федерации Тхэквондо ИТФ</h3>
-                <!--TODO
-                Исправить проблему с отображением новостей при загрузке их из БД
-                -->
             <ul class="news__ul">
-                
                 {% for item in page_obj %}
                 <li>
                     <a href="{% url 'mainapp:news_detail' pk=item.pk %}">
@@ -26,10 +22,8 @@
                 </li>
                 {% endfor %}
             </ul>
-            <div class="news-text">
-                <p class="news__date">
+            <div class="pagination">
                 Страница: {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-                </p>
             </div>
 
             <div class="pagination">
@@ -45,9 +39,16 @@
                 {% endif %}
         
             </div>
-            <div>
-      
         </div>
+      
+    </div>
+    <button id="scroll__btn" onclick="topFunction()">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.30732e-05 50C1.18662e-05 77.6142 22.3858 100 50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 -9.78513e-07 50 -2.18557e-06C22.3858 -3.39263e-06 1.42803e-05 22.3858 1.30732e-05 50Z" fill="#ACB0B2"/>
+            <path d="M70 49.999L50 29.999L30 49.999" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M50 69.999L50 29.999" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
 
 
 {%endblock content%}

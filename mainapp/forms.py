@@ -5,9 +5,6 @@ from .models import Contact
 
 
 class ContactForm(ModelForm):
-    widgets = {
-        'is_agreed': forms.CheckboxInput()
-    }
 
     class Meta:
         """Определяем модель на основе которой создаем форму"""
@@ -31,3 +28,11 @@ class ContactForm(ModelForm):
             {'placeholder': 'Тренер'})
         self.fields['hall'].widget.attrs.update(
             {'placeholder': 'Спортивный зал'})
+
+        self.fields['parents_name'].widget.attrs['class'] = 'form-input'
+        self.fields['child_name'].widget.attrs['class'] = 'form-input'
+        self.fields['age'].widget.attrs['class'] = 'form-input'
+        self.fields['phone_number'].widget.attrs['class'] = 'form-input'
+        self.fields['coach_name'].widget.attrs['class'] = 'form-input'
+        self.fields['hall'].widget.attrs['class'] = 'form-input'
+        self.fields['is_agreed'].widget.attrs['class'] = 'form-checkbox'
