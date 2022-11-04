@@ -249,6 +249,11 @@ header::after {
   text-decoration: none;
   transition-duration: 0.3s in;
 }
+.menu__item.disabled {
+  color: #ACB0B2;
+  cursor: default;
+  pointer-events: none;
+}
 
 .menu__item:hover {
   background-color: #ACB0B2;
