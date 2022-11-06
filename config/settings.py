@@ -97,17 +97,13 @@ if DEBUG:
     }
 
 else:
-    pass
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.postgresql',
-    #         'NAME': '',
-    #         'USER': '',
-    #         'PASSWORD': '',
-    #         'HOST': '',
-    #         'PORT': ''
-    #     }
-    # }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'taekwondo',
+            'USER': 'postgres',
+        }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
