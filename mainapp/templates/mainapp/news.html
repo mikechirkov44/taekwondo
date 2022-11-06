@@ -8,6 +8,7 @@
             <h3>Новости Костромской Федерации Тхэквондо ИТФ</h3>
             <ul class="news__ul">
                 {% for item in page_obj %}
+                {% if item.deleted == False %}
                 <li>
                     <a href="{% url 'mainapp:news_detail' pk=item.pk %}">
                         <div class="news__img">
@@ -20,6 +21,7 @@
                         </div>
                     </a>
                 </li>
+                {% endif %}
                 {% endfor %}
             </ul>
             <div class="pagination">

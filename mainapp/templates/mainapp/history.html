@@ -12,18 +12,18 @@
                 </div> 
                 <picture class="history-banner__photo">
                     <source media="(min-width: 768px) and (max-width: 1240px)" 
-                        srcset="{% static '/img/group-photo__tablet.png' %}">
+                        srcset="{% static 'img/group-photo__tablet.png' %}">
                     <source media="(min-width: 1241px)" 
-                        srcset="{% static '/img/group-photo.png' %}">
-                    <img  src="{% static '/img/group-photo__phone.png' %}" alt="group photo" >
+                        srcset="{% static 'img/group-photo.png' %}">
+                    <img  src="{% static 'img/group-photo__phone.png' %}" alt="group photo" >
                 </picture>
             </div>
             <picture class="history-banner__img">
                 <source media="(min-width: 768px) and (max-width: 1240px)" 
-                    srcset="{% static './img/monastery-blue__tablet.png' %}">
+                    srcset="{% static 'img/monastery-blue__tablet.png' %}">
                 <source media="(min-width: 1241px)"
-                    srcset="{% static  './img/monastery-blue.png' %}">
-                <img  src="{% static './img/monastery-blue__phone.png' %}" alt="monastery" >
+                    srcset="{% static  'img/monastery-blue.png' %}">
+                <img  src="{% static 'img/monastery-blue__phone.png' %}" alt="monastery" >
             </picture>
         </div>
         <div class="history">
@@ -46,10 +46,10 @@
                 </div>
                 <picture>
                     <source media="(min-width: 768px) and (max-width: 1240px)" 
-                        srcset="{% static '/img/trainer__tablet.png' %}">
+                        srcset="{% static 'img/trainer__tablet.png' %}">
                     <source media="(min-width: 1241px)" 
-                        srcset="{% static '/img/trainer.png' %}">
-                    <img  src="{% static '/img/trainer__phone.png' %}" alt="trainer photo" >
+                        srcset="{% static 'img/trainer.png' %}">
+                    <img  src="{% static 'img/trainer__phone.png' %}" alt="trainer photo" >
                 </picture>
             </div>
         </div>
@@ -181,7 +181,7 @@
                         <path d="M35 0C28.1766 0 21.5063 2.02339 15.8328 5.8143C10.1593 9.6052 5.73739 14.9934 3.12617 21.2974C0.514949 27.6015 -0.168267 34.5383 1.16292 41.2306C2.49411 47.923 5.77992 54.0703 10.6048 58.8952C15.4297 63.7201 21.5771 67.0059 28.2694 68.3371C34.9617 69.6683 41.8985 68.985 48.2026 66.3738C54.5066 63.7626 59.8948 59.3407 63.6857 53.6672C67.4766 47.9937 69.5 41.3234 69.5 34.5C69.4897 25.3532 65.8515 16.584 59.3838 10.1162C52.916 3.64848 44.1468 0.0103488 35 0ZM35 66.7C28.6315 66.7 22.4059 64.8115 17.1106 61.2733C11.8154 57.7351 7.68823 52.7062 5.25109 46.8224C2.81395 40.9386 2.17629 34.4643 3.41873 28.2181C4.66117 21.9719 7.72792 16.2344 12.2312 11.7312C16.7344 7.22791 22.4719 4.16116 28.7181 2.91871C34.9643 1.67627 41.4386 2.31394 47.3224 4.75108C53.2062 7.18822 58.2351 11.3154 61.7733 16.6106C65.3115 21.9059 67.2 28.1314 67.2 34.5C67.1903 43.037 63.7946 51.2215 57.7581 57.2581C51.7215 63.2946 43.537 66.6902 35 66.7Z" fill="#E31E26"/>
                         </svg>
                         <div class="history-promo-card__text">
-                            Стоимость занятий от 1600 руб
+                            Гибкий подход к стоимости занятий
                         </div>
                     </div>
                 </div>
@@ -215,15 +215,15 @@
                     <path d="M64.8962 36.765C61.1902 35.4679 58.3181 33.337 56.2798 30.3722C54.2415 27.4074 53.2224 23.7941 53.2224 19.5322C53.2224 13.9733 54.9827 9.43344 58.5034 5.91277C62.0241 2.3921 66.3786 0.63176 71.5669 0.63176C76.9406 0.63176 81.3878 2.3921 84.9084 5.91277C88.4291 9.61874 90.1895 14.1586 90.1895 19.5322C90.1895 22.1264 89.9115 24.7206 89.3556 27.3147C88.6144 30.0942 87.2247 34.0781 85.1864 39.2665L72.1228 78.1792H54.6121L64.8962 36.765ZM12.3641 36.765C8.6581 35.4679 5.78598 33.337 3.7477 30.3722C1.70941 27.4074 0.690262 23.7941 0.690262 19.5322C0.690262 13.9733 2.45061 9.43344 5.97128 5.91277C9.49195 2.3921 13.8465 0.63176 19.0348 0.63176C24.4085 0.63176 28.8556 2.3921 32.3763 5.91277C35.897 9.61874 37.6573 14.1586 37.6573 19.5322C37.6573 22.1264 37.3794 24.7206 36.8235 27.3147C36.0823 30.0942 34.6925 34.0781 32.6543 39.2665L19.5907 78.1792H2.08001L12.3641 36.765Z" fill="#F95858"/>
                     </svg>
                     <div class="quote-text">
-                        Мы&nbsp;занимаемся с&nbsp;детьми, возрастом от&nbsp;5&nbsp;лет. Каждый возраст у&nbsp;ребёнка несёт в&nbsp;себе определенные функции. Так, до&nbsp;10&nbsp;лет между детьми на&nbsp;занятиях нет прямого контакта. Обычно, им&nbsp;сложно даже решиться на&nbsp;удар. Непосредственный контакт друг с&nbsp;другом начинается в&nbsp;11&nbsp;&mdash; 12&nbsp;лет. Впрочем, и&nbsp;здесь родителям переживать о&nbsp;травмах не&nbsp;стоит&nbsp;&mdash; тхэквандо, как спорт гораздо менее травмоопасен, чем многие другие. У&nbsp;нас нет жёсткого воздействия и борьбы, нет задачи ударить куда угодно, запрещён полный контакт руками.
+                        Мы&nbsp;занимаемся с&nbsp;детьми, возрастом от&nbsp;5&nbsp;лет. Каждый возраст у&nbsp;ребёнка несёт в&nbsp;себе определенные функции. Так, до&nbsp;10&nbsp;лет между детьми на&nbsp;занятиях нет прямого контакта. Обычно, им&nbsp;сложно даже решиться на&nbsp;удар. Непосредственный контакт друг с&nbsp;другом начинается в&nbsp;11&nbsp;&mdash; 12&nbsp;лет. Впрочем, и&nbsp;здесь родителям переживать о&nbsp;травмах не&nbsp;стоит&nbsp;&mdash; тхэквондо, как спорт гораздо менее травмоопасен, чем многие другие. У&nbsp;нас нет жёсткого воздействия и борьбы, нет задачи ударить куда угодно, запрещён полный контакт руками.
                     </div>
                 </div>
                 <picture class="history-mission__img">
                     <source media="(min-width: 768px) and (max-width: 1240px)" 
-                        srcset="{% static '/img/maklakov-tablet.png' %}">
+                        srcset="{% static 'img/maklakov-tablet.png' %}">
                     <source media="(min-width: 1241px)" 
-                        srcset="{% static '/img/maklakov-big.png' %}">
-                    <img  src="{% static '/img/maklakov-phone.png' %}" alt="maklakov">
+                        srcset="{% static 'img/maklakov-big.png' %}">
+                    <img  src="{% static 'img/maklakov-phone.png' %}" alt="maklakov">
                 </picture>
             </div>
             <div class="caption">

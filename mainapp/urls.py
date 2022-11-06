@@ -12,13 +12,15 @@ urlpatterns = [
     path("contacts/", views.ContactsPageView.as_view(), name="contacts"),
     path("history/", views.HistoryPageView.as_view(), name="history"),
     path("schedule/", views.SchedulePageView.as_view(), name="schedule"),
-    path("news/", views.NewsListView.as_view(), name="news"),
+    path("news/", views.NewsListView.as_view(),
+         name="news"),  # cache 5 min
     path("form/", views.ContactCreate.as_view(), name="contact_page"),
     path("news/<int:pk>/", views.NewsPageDetailView.as_view(), name="news_detail"),
     path("halls/", views.HallsPageView.as_view(), name="halls"),
     path("hall_of_fame/", views.Hall_of_FamePageView.as_view(), name="hall_of_fame"),
     path("trainers/", views.TrainersPageView.as_view(), name="trainers"),
-    path("calendar/", views.CalendarPageView.as_view(), name="calendar"),
+    path("calendar/",
+         views.CalendarPageView.as_view(), name="calendar"),
     path("success/", views.SuccessPageView.as_view(), name="success_page"),
     path("video/", views.VideoPageView.as_view(), name="video"),
 ]
