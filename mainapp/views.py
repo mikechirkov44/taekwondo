@@ -115,8 +115,7 @@ class CalendarPageView(ListView):
         # Get all previous data
         context = super().get_context_data(**kwargs)
         # Create your own data
-        context['calendar_qs'] = mainapp_models.Calendar.objects.all()[
-            :10]
+        context['calendar_qs'] = mainapp_models.Calendar.objects.all()
         return context
 
 

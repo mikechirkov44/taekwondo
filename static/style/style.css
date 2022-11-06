@@ -182,6 +182,7 @@ header::after {
   opacity: 0;
 }
 
+
 #menu__toggle:checked~.menu__btn>span {
   transform: rotate(45deg);
   background-color: #ACB0B2;
@@ -227,6 +228,7 @@ header::after {
   transition-duration: 0.3s;
 }
 
+
 .menu__btn>span::before {
   content: "";
   top: -8px;
@@ -264,6 +266,13 @@ header::after {
   color: #FFFFFF;
   text-decoration: none;
   transition-duration: 0.3s in;
+
+}
+
+.menu__item.disabled {
+  color: #ACB0B2;
+  cursor: default;
+  pointer-events: none;
 }
 
 .menu__item:hover {
@@ -5272,6 +5281,7 @@ header::after {
   display: block;
 }
 
+
 .nav-ctrl span,
 .dots-ctrl li {
   transition: all 0.3s;
@@ -7033,6 +7043,7 @@ tr {
   border: 1px solid #424141;
   /* границы между строками */
 }
+
 
 td,
 th {

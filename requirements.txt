@@ -10,9 +10,11 @@ django-redis==5.2.0
 django-smart-selects==1.6.0
 django-summernote==0.8.20.0
 flake8==5.0.4
+gunicorn==20.1.0
 mccabe==0.7.0
 packaging==21.3
 Pillow==9.2.0
+psycopg2-binary==2.9.5
 pycodestyle==2.9.1
 pyflakes==2.5.0
 pyparsing==3.0.9

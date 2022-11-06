@@ -119,6 +119,7 @@ class Calendar(models.Model):
     class Meta():
         verbose_name_plural = "Соревнования"
         verbose_name = "Соревнование"
+        ordering = ('-date',)
 
 
 class Video(models.Model):
@@ -139,3 +140,4 @@ class Video(models.Model):
     class Meta:
         verbose_name_plural = "Видео"
         verbose_name = "Видео"
+        ordering = ('-date',)
