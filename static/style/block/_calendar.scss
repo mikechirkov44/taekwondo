@@ -257,9 +257,11 @@
             background-image: url("/static/img/yellow_background.png");
             background-size: cover;
             height: 420px;
+
             & h1 {
                 @include font(500, 17px, 20px, $main-darkgrey);
             }
+
             &__line {
                 width: 293px;
             }
@@ -270,10 +272,11 @@
             }
         }
     }
-    
+
     .competition {
         margin-top: 20px;
         margin-bottom: 60px;
+
         &__heading {
             margin-bottom: 13px;
             box-shadow: 0px 2px 0px 0px #000000;
@@ -327,8 +330,9 @@
                 margin-right: 0;
 
                 & path {
-                   transition: 0.3s; 
+                    transition: 0.3s;
                 }
+
                 &:hover path {
                     fill: $main-pink;
                 }
@@ -337,9 +341,10 @@
                     fill: $main-black;
                 }
             }
-    
+
             & .date {
                 min-width: 104px;
+
                 &-day {
                     @include font(600, 15px, 18px, $main-black);
                 }
@@ -352,7 +357,7 @@
                 &-place {
                     @include font(600, 10px, 12px, $main-black);
                 }
-    
+
             }
         }
 

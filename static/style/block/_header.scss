@@ -157,12 +157,6 @@ header::after {
     @include font(600, 20px, 20px, $main-white);
     text-decoration: none;
     transition-duration: 0.3s in;
-
-    &.disabled {
-        color: $main-lightgrey;
-        cursor: default;
-        pointer-events: none;
-    }
 }
 
 .menu__item:hover {
