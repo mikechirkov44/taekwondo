@@ -13,7 +13,6 @@
             <ul class="fame__list">
                 {% for item in page_obj %}
                 <li class="fame-item">
-                   
                     <div class="fame-item__slider">
                         <div class="gallery" data-setting="setup1">
                             <div class="slider">
@@ -37,11 +36,9 @@
                     <a href="" class="fame-item__link">
                         <h5>{{ item.title }}</h5>
                         <p>2{{ item.date_start }} - {{ item.date_finish }}</p>
-                    </a>
-                   
+                    </a>  
                 </li>
                 {% endfor %}
-
             </ul>
             <div class="pagination">
                 Страница: {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}

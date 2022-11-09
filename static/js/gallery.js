@@ -1,22 +1,22 @@
-;(function() {
+; (function () {
 	'use strict';
 
 	class Gallery {
 		// настройки по-умолчанию
 		static defaults = {
-			margin:			20,		// расстояние между элементами [px]
-			visibleItems: 	1,		// сколько элементов показывать одновременно
-			border:			0,		// толщина рамки изображения прописанная в CSS [px]
-			responsive:		true,	// адаптивная галерея
-			autoScroll:		false,	// автоматическое прокручивание
-			interval: 		10000,	// задержка при автоматическом прокручивании [ms]
-			nav:			true,	// показать/скрыть кнопки next/prev
-			dots:			false,	// показать/скрыть постраничную навигацию
-			keyControl: 	false,	// управление клавишами вправо / влево
-			animated:		false,	// включение анимации
-			baseTransition:	0.6,	// скорость анимации, при изменении CSS свойств
-			delayTimer:		250,	// время задержки при resize страницы [ms]
-			limit:			20		// ограничиваем перемещение крайних элементов [px]
+			margin: 20,		// расстояние между элементами [px]
+			visibleItems: 1,		// сколько элементов показывать одновременно
+			border: 0,		// толщина рамки изображения прописанная в CSS [px]
+			responsive: true,	// адаптивная галерея
+			autoScroll: false,	// автоматическое прокручивание
+			interval: 10000,	// задержка при автоматическом прокручивании [ms]
+			nav: true,	// показать/скрыть кнопки next/prev
+			dots: false,	// показать/скрыть постраничную навигацию
+			keyControl: false,	// управление клавишами вправо / влево
+			animated: false,	// включение анимации
+			baseTransition: 0.6,	// скорость анимации, при изменении CSS свойств
+			delayTimer: 500,	// время задержки при resize страницы [ms]
+			limit: 20		// ограничиваем перемещение крайних элементов [px]
 		};
 		static LEFT = 37;	// код клавиши 'стрелочка влево' 
 		static RIGHT = 39;	// код клавиши 'стрелочка вправо'
@@ -516,14 +516,14 @@
 		/* Прокручивание галереи */
 
 		getNextCoordinates(direction) {
-			if (typeof(direction) !== 'number') return this.coordinates[this.current];
+			if (typeof (direction) !== 'number') return this.coordinates[this.current];
 
 			// direction - направление перемещения: -1 - left, 1 - right
 			if (this.options.autoScroll && this.current >= this.count - this.options.visibleItems) {
 				this.next = 0;
 			} else {
 				// попытка прокрутить к предыдущему элементу, когда текущим является первый элемент
-				if (this.current == 0 && direction == -1 || 
+				if (this.current == 0 && direction == -1 ||
 					// попытка просмотреть следующую группу элементов при постраничной навигации, но
 					// все элементы после текущего выведены во вьюпорт слайдера
 					(this.current >= this.max) && direction == 1) return;
@@ -537,7 +537,7 @@
 
 		scroll(x, transition) {
 			// если аргумент х не является числом, прекращаем работу функции
-			if (typeof(x) !== 'number') return;
+			if (typeof (x) !== 'number') return;
 
 			// прописываем новые стили для смещения (прокручивания) галереи
 			// к следующему элементу
