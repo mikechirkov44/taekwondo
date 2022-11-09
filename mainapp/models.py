@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, MinValueValidator
 
 
 class BaseModel(models.Model):
@@ -77,10 +77,13 @@ class Contact(models.Model):
     parents_name = models.CharField(
         max_length=200, verbose_name="ФИО родителя")
     child_name = models.CharField(max_length=50, verbose_name="ФИО ребенка")
-    age = models.PositiveSmallIntegerField(verbose_name="Возраст ребенка")
+    age = models.PositiveSmallIntegerField(
+        verbose_name="Возраст ребенка", validators=[MinValueValidator(
+            4, "Минимальный возраст для занятий 4 года")
+        ])
     phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
     phone_number = models.CharField(
-        validators=[phoneNumberRegex], max_length=16, unique=True,
+        validators=[phoneNumberRegex], max_length=16, unique=False,
         verbose_name="Номер телефона")
     hall = models.ForeignKey(
         Hall, on_delete=models.PROTECT, verbose_name="Залы")
@@ -141,3 +144,27 @@ class Video(models.Model):
         verbose_name_plural = "Видео"
         verbose_name = "Видео"
         ordering = ('-date',)
+
+
+class HallOfFame(models.Model):
+    """Определяем модель для Зала Славы"""
+    title = models.CharField(max_length=64, verbose_name="Заголовок")
+    date_start = models.DateField(verbose_name="Дата начала мероприятия")
+    date_finish = models.DateField(verbose_name="Дата окончания мероприятия")
+
+    def __str__(self):
+        return f"{self.pk} {self.title}"
+
+    class Meta():
+        verbose_name_plural = "Доска почета"
+        verbose_name = "Доски почета"
+
+
+class HallOfFameImages(models.Model):
+    halloffame = models.ForeignKey(HallOfFame, default=None, related_name='images',
+                                   on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='img/hall_of_fame', blank=True)
+
+    class Meta:
+        verbose_name = "Изображение для доски почета"
+        verbose_name_plural = "Изображения для доски почета"

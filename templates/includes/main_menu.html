@@ -23,9 +23,6 @@
                         <a class="menu__item" href="{% url 'mainapp:calendar' %}">Календарь мероприятий</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="{% url 'mainapp:hall_of_fame' %}">Доска почета</a>
-                    </li>
-                    <li>
                         <a class="menu__item" href="{% url 'mainapp:video' %}">Видео</a>
                     </li>
                     <li>
@@ -38,10 +35,10 @@
                         <a class="menu__item disabled"><hr></a>
                     </li>
                     <li>
-                        <a class="menu__item disabled">Разделы в разработке:</a>
+                        <a class="menu__item disabled">Личный кабинет</a>
                     </li>
                     <li>
-                        <a class="menu__item disabled">Личный кабинет</a>
+                        <a class="menu__item disabled" href="{% url 'mainapp:hall_of_fame' %}">Доска почета</a>
                     </li>
                     <li>
                         <a class="menu__item disabled">Наши залы</a>

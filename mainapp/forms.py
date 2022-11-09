@@ -11,7 +11,7 @@ class ContactForm(ModelForm):
         model = Contact
         """Поля которые будут использоваться для заполнения"""
         fields = ['parents_name', 'child_name', 'age', 'phone_number',
-                  'coach_name', 'hall', 'is_agreed']
+                  'coach_name', 'hall', ]
 
     def __init__(self, *args, **kwargs):
 
@@ -35,4 +35,3 @@ class ContactForm(ModelForm):
         self.fields['phone_number'].widget.attrs['class'] = 'form-input'
         self.fields['coach_name'].widget.attrs['class'] = 'form-input'
         self.fields['hall'].widget.attrs['class'] = 'form-input'
-        self.fields['is_agreed'].widget.attrs['class'] = 'form-checkbox'

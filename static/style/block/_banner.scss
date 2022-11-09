@@ -1,10 +1,12 @@
 .banner {
     height: 400px;
     background: #595959;
+
     &-wrap {
         display: flex;
         justify-content: space-between;
     }
+
     &-offer {
         display: flex;
         flex-direction: column;
@@ -12,30 +14,36 @@
         justify-content: space-between;
         margin-top: 68px;
         margin-bottom: 55px;
+
         &__text {
             width: 228px;
             @include font(500, 20px, 24px, $main-white);
         }
+
         &__bottom {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             &__text {
                 @include small-font;
                 color: $main-white;
                 margin-bottom: 15px;
                 width: 388px;
             }
+
             &__btn {
                 @include red_btn;
             }
         }
     }
+
     &-cost {
         display: flex;
         position: relative;
         margin-bottom: 45px;
         margin-top: 69px;
+
         &__text {
             position: absolute;
             top: 90px;
@@ -52,11 +60,13 @@
     width: 100%;
     min-height: 400px;
     position: relative;
+
     &-wrap {
         display: flex;
         position: relative;
         min-height: 400px;
     }
+
     &__text {
         display: flex;
         flex-direction: column;
@@ -65,35 +75,43 @@
         max-width: 400px;
         margin-top: 53px;
         margin-bottom: 53px;
+
         & h2 {
             @include font(600, 40px, 48px, $main-darkgrey);
             width: 500px;
         }
+
         &__small {
             @include small-font;
         }
+
         &__promo {
             @include font(400, 20px, 29px, $main-black);
         }
+
         &__btn {
             @include red_btn;
             background-color: transparent;
             color: $main-red;
+
             &:hover {
                 background-color: $main-pink;
                 color: $main-white;
             }
+
             &:active {
                 background-color: $main-red;
                 color: $main-white;
             }
         }
     }
+
     &__img {
         position: absolute;
         bottom: -3px;
         left: 45%;
     }
+
     &__photo {
         position: absolute;
         bottom: -3px;
@@ -112,6 +130,7 @@
             width: 221px;
             height: 311px;
         }
+
         &-offer {
             display: flex;
             flex-direction: column;
@@ -119,26 +138,31 @@
             justify-content: space-between;
             margin-top: 48px;
             margin-bottom: 37px;
+
             &__text {
                 width: 228px;
                 @include font(600, 15px, 19px, $main-white);
             }
+
             &__bottom {
                 &__text {
                     @include font(400, 12px, 15px, $main-white);
                     margin-bottom: 25px;
                     width: 322px;
                 }
+
                 &__btn {
                     padding: 8px 24px;
                     @include font(400, 11px, 13px, $main-white);
                 }
             }
         }
+
         &-cost {
             margin-bottom: 35px;
             margin-top: 48px;
             width: 210px;
+
             &__text {
                 position: absolute;
                 top: 0;
@@ -159,21 +183,25 @@
     .history-banner {
         &__text {
             max-width: 378px;
-            margin-top:36px;
+            margin-top: 36px;
             margin-bottom: 98px;
+
             & h2 {
                 @include font(500, 32px, 39px, $main-darkgrey);
                 width: 500px;
             }
+
             &__btn {
                 padding: 8px 24px;
             }
         }
+
         &__img {
             bottom: -4px;
             left: unset;
             right: 0;
         }
+
         &__photo {
             image-rendering: auto;
             bottom: -4px;
@@ -186,6 +214,8 @@
 @media (max-width: 767px) {
     .banner {
         height: 346px;
+
+
         &-wrap {
             position: relative;
             align-items: center;
@@ -195,14 +225,17 @@
             width: 185px;
             height: 260px;
         }
+
         &-offer {
             margin-top: 38px;
             margin-bottom: 44px;
             max-width: 50%;
+
             &__text {
                 @include font(600, 15px, 18px, $main-white);
                 width: 188px;
             }
+
             &__bottom {
                 &__text {
                     @include font(400, 12px, 15px, $main-white);
@@ -210,6 +243,7 @@
                     width: 100%;
                     margin-top: 112px;
                 }
+
                 &__btn {
                     display: flex;
                     align-self: flex-start;
@@ -217,62 +251,72 @@
                     @include font(500, 10px, 12px, $main-white);
                 }
             }
-        }
-        &-cost {
-            position: absolute;
-            top: 82px;
-            left: 0;
-            margin-bottom: 35px;
-            margin-top: 48px;
-            width: 210px;
-            &__text {
-                width: 176px;
-                @include font(400, 13px, 15px, $main-white);
-            }
 
-            & img {
-                display: none;
-            }
+
         }
     }
 
-    .history-banner {
-        min-height: 320px;
-        &-wrap {
-            min-height: 320px;
-        }
+    .-cost {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        margin-bottom: 35px;
+        margin-top: 48px;
+        width: 210px;
+
         &__text {
-            max-width: 100%px;
-            margin-top: 37px;
-            margin-bottom: 101px;
-            max-height: 175px;
-            &__promo {
-                @include font(400, 16px, 23px, $main-black);
-                margin-bottom: 40px
-            }
-            & h2 {
-                @include font(500, 18px, 21px, $main-darkgrey);
-                width: 100%;
-                margin: 15px 0 10px 0;
-            }
-            &__btn {
-                padding: 6px 15px;
-                @include font(500, 10px, 12px, $main-red);
-                margin-left: 21px;
-            }
+            width: 176px;
+            @include font(400, 13px, 15px, $main-white);
         }
 
-        &__img {
-            bottom: -4px;
-            left: unset;
-            right: 5px;
+        & img {
+            display: none;
         }
-        &__photo {
-            image-rendering: auto;
-            bottom: -4px;
-            left: unset;
-            right: 5px;
-            z-index: 1;
+    }
+}
+
+.history-banner {
+    min-height: 320px;
+
+    &-wrap {
+        min-height: 320px;
+    }
+
+    &__text {
+        max-width: 100%px;
+        margin-top: 37px;
+        margin-bottom: 101px;
+        max-height: 175px;
+
+        &__promo {
+            @include font(400, 16px, 23px, $main-black);
+            margin-bottom: 40px
         }
+
+        & h2 {
+            @include font(500, 18px, 21px, $main-darkgrey);
+            width: 100%;
+            margin: 15px 0 10px 0;
+        }
+
+        &__btn {
+            padding: 6px 15px;
+            @include font(500, 10px, 12px, $main-red);
+            margin-left: 21px;
+        }
+    }
+
+    &__img {
+        bottom: -4px;
+        left: unset;
+        right: 5px;
+    }
+
+    &__photo {
+        image-rendering: auto;
+        bottom: -4px;
+        left: unset;
+        right: 5px;
+        z-index: 1;
     }
 }

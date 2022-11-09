@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from django_summernote.admin import SummernoteModelAdmin
-from .models import News, NewsImages, Contact, Calendar, Coach, Hall, Video
+from .models import News, NewsImages, Contact, Calendar, Coach, Hall, Video, HallOfFame, HallOfFameImages
 from django.contrib import messages
 from django.utils.translation import ngettext
 
@@ -134,6 +134,20 @@ class VideoAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
 
+class HallOfFameImageInline(admin.StackedInline):
+    model = HallOfFameImages
+    max_num = 10
+    extra = 0
+
+
+class HallOfFameAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title',)
+    list_per_page = 10
+    search_fields = ('title',)
+    inlines = [HallOfFameImageInline, ]
+
+
 admin.site.site_title = 'Костромская Федерация Тхэквондо-ИТФ'
 admin.site.site_header = 'Костромская Федерация Тхэквондо-ИТФ'
 admin.site.register(News, NewsAdmin)
+admin.site.register(HallOfFame, HallOfFameAdmin)
