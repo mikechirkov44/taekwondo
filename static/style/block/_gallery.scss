@@ -1,11 +1,21 @@
-[data-hidden = true] { display: none; }
-[data-hidden = false] { display: block; }
-.nav-ctrl span, .dots-ctrl li { transition: all 0.3s; }
+[data-hidden=true] {
+    display: none;
+}
+
+[data-hidden=false] {
+    display: block;
+}
+
+.nav-ctrl span,
+.dots-ctrl li {
+    transition: all 0.3s;
+}
 
 .gallery {
     width: 100%;
     margin: 0 auto;
     visibility: hidden;
+
     & .slider {
         width: 100%;
         max-width: 1240px;
@@ -23,6 +33,7 @@
     display: flex;
     overflow: hidden;
     min-height: 380px;
+
     & div {
         float: left;
         position: relative;
@@ -42,27 +53,34 @@
 .nav-ctrl {
     height: 100%;
     width: 100%;
+
     & span {
         display: block;
         position: absolute;
         bottom: 0;
         opacity: 0;
         transition: 0.3s;
+
         &.disable {
             opacity: 0;
         }
     }
+
     & .prev {
         left: 0;
     }
+
     & .next {
         right: 0;
     }
-    & .main-prev, .main-next {
+
+    & .main-prev,
+    .main-next {
         bottom: 0;
         width: 13%;
         height: 400px;
         background-color: $main-darkgrey;
+
         &:hover {
             opacity: 0.2;
         }
@@ -98,15 +116,19 @@
 
 .main-item__slider {
     position: relative;
+
     & .slider {
         max-width: 1440px;
     }
+
     & .stage {
         height: 400px;
+
         & img {
             height: 400px;
         }
     }
+
     & .dots-ctrl {
         margin-bottom: 15px;
     }
@@ -124,34 +146,38 @@
 
         & .banner-tablet {
             display: block;
+            max-width: 100vw;
         }
+
         & .banner-phone {
             display: none;
         }
     }
-    
+
     .control {
         width: inherit;
         position: absolute;
         bottom: 0;
     }
-    
+
     .nav-ctrl {
-        & .main-prev, .main-next {
+
+        & .main-prev,
+        .main-next {
             height: 300px;
         }
     }
-    
+
     .dots-ctrl {
         display: none
-    
     }
-    
+
     .main-item__slider {
         & .slider {
             max-width: 768px;
             height: 300px;
         }
+
         & .stage {
             min-height: unset;
             height: inherit;
@@ -180,26 +206,28 @@
 
         & .banner-phone {
             display: block;
+            max-width: 100vw;
         }
     }
-    
+
     .control {
         width: inherit;
         position: absolute;
         bottom: 0;
     }
-    
+
     .nav-ctrl {
-        & .main-prev, .main-next {
+
+        & .main-prev,
+        .main-next {
             height: 300px;
         }
     }
-    
+
     .dots-ctrl {
         display: none
-    
     }
-    
+
     .main-item__slider {
         & .slider {
             max-width: 428px;

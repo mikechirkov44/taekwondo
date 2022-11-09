@@ -3,22 +3,26 @@
         @include font(500, 40px, 48px, $main-black);
         margin-bottom: 16px;
     }
+
     &__line {
         width: 410px;
         background-color: $main-red;
         border: 2px solid $main-red;
         margin-bottom: 24px;
     }
+
     &__meaning {
         @include small-font;
         margin-bottom: 64px;
     }
+
     &-cards {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
         margin-bottom: 64px;
     }
+
     &-card {
         position: relative;
         display: flex;
@@ -29,6 +33,7 @@
         padding: 64px 16px 0 16px;
         border-radius: 10px;
         border: 2px solid $main-darkgrey;
+
         &__icon {
             position: absolute;
             width: 72px;
@@ -40,11 +45,13 @@
             align-items: center;
             justify-content: center;
         }
+
         &__heading {
             margin-bottom: 32px;
             @include font(600, 20px, 24px, $main-black);
             text-align: center;
         }
+
         &__meaning {
             @include small-font;
             text-align: center;
@@ -58,20 +65,24 @@
             @include font(600, 20px, 24px, $main-black);
             margin-bottom: 9px;
         }
+
         &__line {
             width: 209px;
             border: 1px solid $main-red;
             margin-bottom: 9px;
         }
+
         &__meaning {
             @include small-font;
             margin-bottom: 50px;
         }
+
         &-cards {
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 0px;
         }
+
         &-card {
             margin-right: 41px;
             margin-bottom: 41px;
@@ -88,20 +99,24 @@
             @include font(600, 15px, 18px, $main-black);
             margin-bottom: 5px;
         }
+
         &__line {
             width: 205px;
             border: 1px solid $main-red;
             margin-bottom: 10px;
         }
+
         &__meaning {
             @include font(400, 12px, 14px, $main-black);
             margin-bottom: 50px;
         }
+
         &-cards {
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             margin-bottom: 0px;
         }
+
         &-card {
             height: 263px;
             width: 175px;
@@ -110,6 +125,7 @@
             padding: 20px 15px 0 15px;
             border-radius: 10px;
             border: 2px solid $main-darkgrey;
+
             &__icon {
                 position: absolute;
                 width: 50px;
@@ -121,11 +137,13 @@
                 align-items: center;
                 justify-content: center;
             }
+
             &__heading {
                 margin-bottom: 32px;
                 @include font(600, 16px, 19px, $main-black);
                 text-align: center;
             }
+
             &__meaning {
                 @include font(400, 14px, 17px, $main-black);
                 text-align: center;

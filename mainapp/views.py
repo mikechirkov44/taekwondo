@@ -1,6 +1,6 @@
 from django.views.generic import CreateView, TemplateView, ListView
 
-from .models import Contact, News, Video, Calendar
+from .models import Contact, HallOfFame, News, Video, Calendar
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.core.mail import send_mail
@@ -28,7 +28,7 @@ def email(subject, content):
     send_mail(subject,
               f'Поступила новая заявка c сайта. Просьба позвонить по телефону {content}',
               'ya.mikechirkov@yandex.ru',
-              ['ya.mikechirkov@yandex.ru']
+              ['ya.mikechirkov@yandex.ru', 'mail@taekwondo44.ru']
               )
 
 # Функция, которая вернет сообщение в случае успешного заполнения формы
@@ -90,8 +90,17 @@ class HallsPageView(TemplateView):
     template_name = "mainapp/halls.html"
 
 
-class Hall_of_FamePageView(TemplateView):
+class Hall_of_FamePageView(ListView):
+    model = HallOfFame
+    paginate_by = 2
     template_name = "mainapp/hall_of_fame.html"
+
+    def get_context_data(self, pk=None,  **kwargs):
+        # Get all previous data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context['halloffame_qs'] = mainapp_models.HallOfFame.objects.all()
+        return context
 
 
 class TrainersPageView(TemplateView):
