@@ -1061,7 +1061,6 @@ header::after {
 }
 .news-link:hover {
   background-color: #424141;
-  text-decoration: underline;
   color: #FFFFFF;
 }
 .news-link__text {
@@ -4660,6 +4659,21 @@ header::after {
 }
 .main-item__slider .dots-ctrl {
   margin-bottom: 15px;
+}
+.main-item__slider .banner-desktop {
+  display: block;
+  width: auto;
+  max-width: 100vw;
+}
+.main-item__slider .banner-tablet {
+  display: none;
+  width: auto;
+  max-width: 100vw;
+}
+.main-item__slider .banner-phone {
+  display: none;
+  width: auto;
+  max-width: 100vw;
 }
 
 .banner-desktop {

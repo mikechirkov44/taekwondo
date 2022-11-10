@@ -1,19 +1,23 @@
 .main-news {
     height: 557px;
-    &-wrap{
+
+    &-wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     & h1 {
         @include font(500, 32px, 39px, #050505);
         margin-top: 60px;
     }
+
     & p {
         @include small-font;
         color: $main-darkgrey;
         margin-top: 13px;
     }
+
     &-list {
         display: flex;
         justify-content: space-between;
@@ -22,6 +26,7 @@
         list-style-type: none;
         margin-bottom: 30px;
         margin-top: 40px;
+
         &__item {
             position: relative;
             width: 400px;
@@ -31,6 +36,7 @@
             overflow: hidden;
         }
     }
+
     &__link {
         @include font(500, 16px, 19px, $main-white);
         text-decoration: none;
@@ -39,10 +45,12 @@
         border: 2px solid $main-black;
         border-radius: 6px;
         transition: 0.5s ease;
-        &:hover{
+
+        &:hover {
             background-color: $main-darkgrey;
         }
-        &:active{
+
+        &:active {
             color: $main-black;
             background-color: transparent;
         }
@@ -54,6 +62,7 @@
         width: 401px;
         height: 100%;
     }
+
     &-link {
         display: flex;
         justify-content: space-between;
@@ -68,11 +77,12 @@
         border-bottom-left-radius: 10px;
         text-decoration: none;
         transition: 0.3s;
+
         &:hover {
             background-color: $main-darkgrey;
-            text-decoration: underline;
             color: $main-white;
         }
+
         &__text {
             max-width: 300px;
             @include font(500, 20px, 24px, $main-white);
@@ -85,19 +95,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         & h3 {
             @include font(500, 32px, 39px, $main-black);
             margin-top: 60px;
             margin-bottom: 40px;
         }
     }
+
     &__ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         list-style-type: none;
+
         & li {
             margin-bottom: 40px;
+
             & a {
                 display: flex;
                 text-decoration: none;
@@ -105,6 +119,7 @@
             }
         }
     }
+
     &__img {
         overflow: hidden;
         height: 200px;
@@ -113,21 +128,25 @@
         box-shadow: 3px 3px 3px 0px #ACB0B2CC;
         background-size: cover;
     }
+
     &__text {
         margin-top: 11px;
         margin-left: 20px;
         max-width: 300px;
     }
+
     &__date {
         @include small-font;
         color: $main-lightgrey;
         margin-bottom: 8px;
     }
+
     &__heading {
         @include small-font;
         font-weight: 500;
         margin-bottom: 8px;
     }
+
     &__description {
         @include small-font;
         color: $main-darkgrey;
@@ -152,70 +171,86 @@
         align-items: center;
         justify-content: space-between;
         margin: 60px 0 40px 0;
+
         & path {
             transition: 0.3s;
         }
+
         & a:hover path {
             stroke: $main-pink;
         }
+
         & a:active path {
             stroke: $main-black;
         }
+
         &__text {
             width: -webkit-fill-available;
             text-align: center;
+
             & h1 {
                 @include font(500, 32px, 39px, $main-black);
             }
         }
     }
+
     &__slider {
         margin-bottom: 40px;
     }
+
     &__bottom {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         padding-bottom: 40px;
+
         & .left {
             position: absolute;
             top: 0;
             left: 0;
         }
+
         & .right {
             position: absolute;
             bottom: 0;
             right: 0;
         }
+
         &__text {
             max-width: 1040px;
+
             & p {
                 @include font(400, 14px, 17px, $main-black);
                 margin-bottom: 23px;
             }
-            
+
             & h6 {
                 @include font(500, 16px, 19px, $main-black);
                 margin-bottom: 25px;
             }
+
             & span {
                 @include font(500, 16px, 19px, $main-black);
             }
+
             & ul {
                 @include small-font;
                 list-style-type: disc;
+
                 & p {
                     @include font(500, 16px, 19px, $main-black);
                 }
             }
+
             & li {
                 @include font(400, 14px, 17px, $main-black);
                 margin-left: 23px;
             }
-       }
+        }
     }
 }
+
 .pagination {
     display: flex;
     align-self: flex-end;
@@ -235,9 +270,11 @@
         &:hover {
             background-color: $main-red;
         }
+
         &:active {
             background-color: $main-red;
         }
+
         &:focus {
             background-color: $main-red;
         }
@@ -247,12 +284,15 @@
         background-color: #fff;
         @include font(600, 20px, 24px, $main-lightgrey);
         cursor: default;
+
         &:hover {
             background-color: $main-white;
         }
+
         &:active {
             background-color: $main-white;
         }
+
         &:focus {
             background-color: $main-white;
         }
@@ -264,32 +304,39 @@
 @media (max-width: 1240px) {
     .main-news {
         height: 600px;
+
         & h1 {
             margin-top: 121px;
             text-align: center;
         }
+
         &-list {
             margin-bottom: 34px;
             margin-top: 34px;
+
             &__item {
                 position: relative;
                 width: 300px;
                 height: 210px;
                 border-radius: 10px;
                 box-shadow: 3px 3px 3px 0px #ACB0B2CC;
+
                 & img {
                     width: inherit;
                     height: inherit;
                 }
+
                 &:last-of-type {
                     display: none;
                 }
 
                 & .news-link {
                     width: inherit;
+
                     & span {
                         @include font(600, 16px, 19px, $main-white);
                     }
+
                     & svg {
                         width: 25px;
                         height: 25px;
@@ -297,6 +344,7 @@
                 }
             }
         }
+
         &__link {
             @include font(400, 11px, 13px, $main-white);
             padding: 8px 24px;
@@ -308,6 +356,7 @@
             width: 401px;
             height: inherit;
         }
+
         &-link {
             display: flex;
             justify-content: space-between;
@@ -322,18 +371,20 @@
             border-bottom-left-radius: 10px;
             text-decoration: none;
             transition: 0.3s;
+
             &:hover {
                 background-color: $main-darkgrey;
                 text-decoration: underline;
                 color: $main-white;
             }
+
             &__text {
                 max-width: 300px;
                 @include font(500, 20px, 24px, $main-white);
             }
         }
     }
-    
+
     .news {
         &-wrap {
             & h3 {
@@ -342,13 +393,16 @@
                 margin-bottom: 30px;
             }
         }
+
         &__ul {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             list-style-type: none;
+
             & li {
                 margin-bottom: 20px;
+
                 & a {
                     display: flex;
                     flex-direction: column;
@@ -359,19 +413,22 @@
                 }
             }
         }
+
         &__img {
             height: 234px;
             width: 334px;
             border-radius: 10px;
             box-shadow: 3px 3px 3px 0px #ACB0B2CC;
             background-size: cover;
-            
+
         }
+
         &__text {
             margin-top: 6px;
             margin-left: 0;
             max-width: 336px;
         }
+
         &__date {
             position: absolute;
             @include font(400, 14px, 17px, $main-lightgrey);
@@ -384,31 +441,35 @@
             border-radius: 6px;
             opacity: 0.7;
         }
+
         &__heading {
             @include font(500, 14px, 17px, $main-black);
         }
+
         &__description {
             @include font(400, 14px, 17px, $main-darkgrey);
         }
     }
-    
+
     .news-item {
         &__top {
             margin: 20px 0 30px 0;
+
             &__text {
                 & h1 {
                     @include font(600, 20px, 24px, $main-black);
                 }
             }
         }
+
         &__bottom {
             &__text {
                 max-width: 530px;
-                
+
                 & h6 {
                     @include font(400, 16px, 19px, $main-black);
                 }
-           }
+            }
         }
     }
 }
@@ -416,34 +477,41 @@
 @media (max-width: 767px) {
     .main-news {
         height: 500px;
+
         & h1 {
             @include font(500, 17px, 20px, $main-darkgrey);
             margin-top: 102px;
             text-align: center;
         }
+
         &-list {
             margin-bottom: 34px;
             margin-top: 34px;
             justify-content: center;
+
             &__item {
                 position: relative;
                 width: 300px;
                 height: 210px;
                 border-radius: 10px;
                 box-shadow: 3px 3px 3px 0px #ACB0B2CC;
+
                 & img {
                     width: inherit;
                     height: inherit;
                 }
+
                 &:nth-of-type(2n+1) {
                     display: none;
                 }
 
                 & .news-link {
                     width: inherit;
+
                     & span {
                         @include font(400, 10px, 12px, $main-white);
                     }
+
                     & svg {
                         width: 25px;
                         height: 25px;
@@ -451,6 +519,7 @@
                 }
             }
         }
+
         &__link {
             @include font(400, 11px, 13px, $main-white);
             padding: 8px 24px;
@@ -462,6 +531,7 @@
             width: 401px;
             height: inherit;
         }
+
         &-link {
             display: flex;
             justify-content: space-between;
@@ -476,18 +546,20 @@
             border-bottom-left-radius: 10px;
             text-decoration: none;
             transition: 0.3s;
+
             &:hover {
                 background-color: $main-darkgrey;
                 text-decoration: underline;
                 color: $main-white;
             }
+
             &__text {
                 max-width: 300px;
                 @include font(500, 20px, 24px, $main-white);
             }
         }
     }
-    
+
     .news {
         &-wrap {
             & h3 {
@@ -497,19 +569,22 @@
                 text-align: center;
             }
         }
+
         &__ul {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             & li {
                 margin-bottom: 30px;
             }
         }
     }
-    
+
     .news-item {
         &__top {
             margin: 20px 0 30px 0;
+
             &__text {
                 & h1 {
                     @include font(500, 17px, 20px, $main-black);
@@ -521,10 +596,11 @@
                 height: 30px;
             }
         }
+
         &__bottom {
             &__text {
                 max-width: 330px;
-                
+
                 & h6 {
                     @include font(600, 15px, 18px, $main-black);
                 }

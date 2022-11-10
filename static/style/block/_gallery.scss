@@ -133,6 +133,24 @@
     & .dots-ctrl {
         margin-bottom: 15px;
     }
+
+    & .banner-desktop {
+        display: block;
+        width: auto;
+        max-width: 100vw;
+    }
+
+    & .banner-tablet {
+        display: none;
+        width: auto;
+        max-width: 100vw;
+    }
+
+    & .banner-phone {
+        display: none;
+        width: auto;
+        max-width: 100vw;
+    }
 }
 
 .banner-desktop {
