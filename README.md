@@ -1,5 +1,5 @@
 # Website for Taekwondo-ITF
-[тхэквондо-кострома.рф](тхэквондо-кострома.рф)
+[тхэквондо-кострома.рф](http://xn----8sbei2adoeiccaznfk4byk.xn--p1ai/mainapp/)
 
 ## Quick Start
 
